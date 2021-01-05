@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="pane" styleClass="anchor-pane" stylesheets="@../../../../../res/comp.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.VeiculosPajeu.Controle.ControleAjuda">
+   <children>
+      <BorderPane styleClass="border-pane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <VBox prefHeight="52.0" prefWidth="780.0" styleClass="vbox-titulo" BorderPane.alignment="CENTER">
+               <children>
+                  <Label styleClass="label-header" text="Ajuda" />
+                  <Separator prefWidth="200.0" />
+               </children>
+            </VBox>
+         </top>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" styleClass="vbox-corpo" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Sistema: VP - Veículos Pajeú" />
+                  <Label text="Desenvolvedor: Abimael Jonas" />
+                  <Label text="Versão: 1.0" />
+                  <Label text="Sistema Desenvolvido em Java" />
+                  <Label text="Dependências: Java 8 ou superior, Bando de dados Postgres 10 ou superior" />
+                  <Label text="Dependências de Funcionalidades: Backup automático apenas suportado em Windows e Linux" />
+                  <Label text="Quaisquer erros ou eventuais falhas contatar o ADM" />
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

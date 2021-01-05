@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="pane" styleClass="anchor-pane" stylesheets="@../../../../../res/comp.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.VeiculosPajeu.Controle.ControleAparencia">
+   <children>
+      <BorderPane styleClass="border-pane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <FlowPane styleClass="flow-pane" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Cor de Fundo:" />
+                  <ColorPicker fx:id="cpkFundo" editable="true" onAction="#action" prefHeight="35.0">
+                     <tooltip>
+                        <Tooltip text="Cor Atual" />
+                     </tooltip></ColorPicker>
+                  <Button fx:id="btnRedefinirPadrao" mnemonicParsing="false" onAction="#action">
+                     <tooltip>
+                        <Tooltip text="Redefinir Padrões" />
+                     </tooltip>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icon/reset%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               </children>
+            </FlowPane>
+         </center>
+         <top>
+            <VBox prefHeight="0.0" prefWidth="680.0" styleClass="vbox-titulo" BorderPane.alignment="CENTER">
+               <children>
+                  <Label styleClass="label-header" text="Aparência" />
+                  <Separator prefWidth="200.0" />
+               </children>
+            </VBox>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

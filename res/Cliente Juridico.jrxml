@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Cliente Fisico" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="902e823e-12f2-4082-898e-195884b0b929">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="nome" class="java.lang.String"/>
+	<field name="codigo" class="java.lang.String"/>
+	<field name="cnpj" class="java.lang.String"/>
+	<field name="inscricao_estadual" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="db1b4bc6-d1c9-4fda-a5ae-b0988e8cc4e6"/>
+				<staticText>
+					<reportElement x="20" y="20" width="290" height="43" forecolor="#FFFFFF" uuid="cff9971e-fb26-4db0-b1d8-09ec1332a4dc"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Cliente Jurídico]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="360" y="43" width="215" height="20" forecolor="#FFFFFF" uuid="be2e6007-942a-4e3e-826e-dfb0928384c3"/>
+					<textElement textAlignment="Left">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Relatório de clientes jurídicos]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="fb57e0f6-7fb9-48e6-a5bb-5ad93f7ff0f9"/>
+			</line>
+			<staticText>
+				<reportElement x="9" y="0" width="100" height="21" uuid="9d306363-330c-41c2-916a-48a92619f5d1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6eda56f3-fbf6-46d5-9eda-ef9ecc50834c"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="0" width="100" height="21" uuid="4e652617-aeff-4356-877c-e6b2e20434a0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ea128d11-1a90-42ba-b76a-72efc9c01a6f"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="288" y="0" width="100" height="21" uuid="af07ae62-357f-4645-a4f4-e192dccccc60">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ffb60fcc-98da-4f0b-90b4-c84f0fa7fa10"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CNPJ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="419" y="0" width="100" height="21" uuid="2efba1a1-0b24-4c1f-a448-8783ba61c99d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="306bf8f4-64ae-4e8b-9735-bc7f3ed538f1"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Inscrição Estadual]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="52">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="31" width="555" height="1" uuid="eb75a375-24c6-47e4-842c-f10239a06fab"/>
+			</line>
+			<textField>
+				<reportElement x="9" y="9" width="161" height="30" uuid="89903ffd-5496-453d-9333-07af6bfe4e81">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6eda56f3-fbf6-46d5-9eda-ef9ecc50834c"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="10" width="100" height="30" uuid="3e961500-04f7-447d-99a9-e08f7d8f90a9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ea128d11-1a90-42ba-b76a-72efc9c01a6f"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{codigo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="288" y="9" width="122" height="30" uuid="2576e74f-846f-4e6c-a408-0d9e969dc2ee">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ffb60fcc-98da-4f0b-90b4-c84f0fa7fa10"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{cnpj}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="419" y="9" width="100" height="30" uuid="675965d6-4cf3-4d24-9680-3e2a7770586c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="306bf8f4-64ae-4e8b-9735-bc7f3ed538f1"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{inscricao_estadual}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="31aa1990-6c4d-4c64-9100-2c7b9bbb5602"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="b26a7966-3375-4ecc-bf28-fc074732938c"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="9aaf3980-6700-4f08-81ef-526a3b480bb2"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

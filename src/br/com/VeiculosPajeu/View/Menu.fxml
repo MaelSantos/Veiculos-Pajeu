@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane fx:id="pane" prefHeight="600.0" prefWidth="983.0" styleClass="background" stylesheets="@../../../../../res/comp.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.VeiculosPajeu.Controle.ControleMenu">
+   <children>
+      <BorderPane layoutX="-37.0" prefHeight="600.0" prefWidth="900.0" styleClass="border-pane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                  <Menu fx:id="mnuHome" mnemonicParsing="false">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icon/house.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <items>
+                        <MenuItem fx:id="mniAtrasados" mnemonicParsing="false" onAction="#action" text="Atrasados">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icon/car%20(9).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem fx:id="mniDisponiveis" mnemonicParsing="false" onAction="#action" text="Disponiveis">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icon/car%20(8).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                     </items>
+                  </Menu>
+                  <Menu fx:id="mnuVeiculos" mnemonicParsing="false">
+                    <items>
+                      <MenuItem fx:id="mniAlugar" mnemonicParsing="false" onAction="#action" text="Alugar">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icon/rent-a-car%20(3).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                        <MenuItem fx:id="mniReservar" mnemonicParsing="false" onAction="#action" text="Reservar">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icon/booked%20(1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                        <MenuItem fx:id="mniRetirarReserva" mnemonicParsing="false" onAction="#action" text="Retirar Reserva">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icon/booking%20(1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                        <MenuItem fx:id="mniDevolucao" mnemonicParsing="false" onAction="#action" text="Devolução">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icon/car%20(3).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                        <MenuItem fx:id="mniManutencao" mnemonicParsing="false" onAction="#action" text="Manutenção">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icon/car%20(2).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                    </items>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icon/car%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Menu>
+                <Menu fx:id="mnuCadastro" mnemonicParsing="false">
+                  <items>
+                    <MenuItem fx:id="mniCadastrarCliente" mnemonicParsing="false" onAction="#action" text="Cliente">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icon/user1.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                        <MenuItem fx:id="mniCadastrarVeiculo" mnemonicParsing="false" onAction="#action" text="Veículo">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icon/car%20(1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                        <MenuItem fx:id="mniCadastrarFilial" mnemonicParsing="false" onAction="#action" text="Filial">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icon/company%20(1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                        <MenuItem fx:id="mniCadastroCategoria" mnemonicParsing="false" onAction="#action" text="Categoria">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icon/car-parts%20(1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                        <MenuItem fx:id="mniCadastrarUsuario" mnemonicParsing="false" onAction="#action" text="Usuário">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icon/user%20(3).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                  </items>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icon/notepad.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                </Menu>
+                  <Menu fx:id="mnuBusca" mnemonicParsing="false">
+                    <items>
+                        <MenuItem fx:id="mniBuscar" mnemonicParsing="false" onAction="#action" text="Buscar">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icon/loupe%20(2).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                    </items>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icon/loupe%20(2).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Menu>
+                  <Menu fx:id="mnuFinanceiro" mnemonicParsing="false">
+                     <items>
+                        <MenuItem fx:id="mniFinanceiro" mnemonicParsing="false" onAction="#action" text="Financeiro">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icon/account.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem fx:id="mniGerenciarFinanceiro" mnemonicParsing="false" onAction="#action" text="Gerenciar Financeiro">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icon/money%20(2).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                     </items>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icon/piggy-bank%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Menu>
+                  <Menu fx:id="mnuEstatistica" mnemonicParsing="false">
+                    <items>
+                      <MenuItem fx:id="mniEstatistica" mnemonicParsing="false" onAction="#action" text="Estatística">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icon/diagram.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem fx:id="mniRelatorio" mnemonicParsing="false" onAction="#action" text="Relatório">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icon/statistics.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                    </items>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icon/report%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Menu>
+                  <Menu fx:id="mnuHistorico" mnemonicParsing="false">
+                     <items>
+                        <MenuItem fx:id="mniHistorio" mnemonicParsing="false" onAction="#action" text="Histórico">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icon/clock.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                     </items>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icon/back%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Menu>
+                <Menu fx:id="mnuAjuda" mnemonicParsing="false">
+                  <items>
+                    <MenuItem fx:id="mniAjuda" mnemonicParsing="false" onAction="#action" text="Ajuda">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icon/question%20(1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                        <MenuItem fx:id="mniInformacacoes" mnemonicParsing="false" onAction="#action" text="Informações">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icon/customer-service.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                        <MenuItem fx:id="mniContatarADM" mnemonicParsing="false" onAction="#action" text="Contatar ADM">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icon/email.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                  </items>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icon/question%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                </Menu>
+                  <Menu fx:id="mnuConfiguracoes" mnemonicParsing="false">
+                    <items>
+                        <MenuItem fx:id="mniConfiguracoes" mnemonicParsing="false" onAction="#action" text="Configurações Gerais">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icon/project-management.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                        <MenuItem fx:id="mniPerfil" mnemonicParsing="false" onAction="#action" text="Perfil">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icon/user%20(4).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                    </items>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icon/configuration.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Menu>
+                  <Menu mnemonicParsing="false">
+                    <items>
+                      <MenuItem fx:id="mniDeslocar" mnemonicParsing="false" onAction="#action" text="Sair">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icon/exit%20(1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                        <MenuItem fx:id="mniEncerrar" mnemonicParsing="false" onAction="#action" text="Encerrar">
+                           <graphic>
+                              <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icon/exit%20(1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></MenuItem>
+                    </items>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icon/exit%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <center>
+            <StackPane BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="288.0" fitWidth="605.0" opacity="0.2" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../res/Logo.png" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane fx:id="paneEdit" prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </StackPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

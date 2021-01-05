@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="pane" styleClass="anchor-pane" stylesheets="@../../../../../res/comp.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.VeiculosPajeu.Controle.ControleConfiguracoes">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" styleClass="border-pane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <VBox prefHeight="23.0" prefWidth="680.0" styleClass="vbox" BorderPane.alignment="CENTER">
+               <children>
+                  <Label styleClass="label-header" text="Configurações" />
+                  <Separator prefWidth="200.0" />
+               </children>
+            </VBox>
+         </top>
+         <center>
+            <FlowPane styleClass="flow-pane" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnAlterarConf" mnemonicParsing="false" onAction="#action">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icon/gear.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Alterar Configurações" />
+                     </tooltip></Button>
+                  <Button fx:id="btnAparencia" mnemonicParsing="false" onAction="#action">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icon/palette.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Mudar Aparência" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="btnBackup" mnemonicParsing="false" onAction="#action">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icon/database%20(2).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Backup" />
+                     </tooltip></Button>
+                  <Button fx:id="btnAtualizar" mnemonicParsing="false" onAction="#action">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icon/refresh.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Atualizar Sistema" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="btnResetarSenha" mnemonicParsing="false" onAction="#action">
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icon/key%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Resetar Senha" />
+                     </tooltip></Button>
+               </children>
+            </FlowPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

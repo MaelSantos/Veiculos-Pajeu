@@ -1,0 +1,310 @@
+.background {
+
+    -fx-pref-width: 1000.0;
+	-fx-pref-height: 650.0;
+}
+
+.anchor-pane {
+    
+    -fx-pref-width: 800.0;
+	-fx-pref-height: 650.0;
+}
+
+.button-bar{
+	-fx-pref-height: 90.0;
+}
+
+.border-pane {
+    -fx-pref-width: 700.0;
+	-fx-pref-height: 600.0;
+	-fx-padding: 10.0, 10.0, 10.0, 10.0;
+}
+
+.grid-pane {
+	-fx-alignment: center;
+	-fx-hgap: 5.0;
+	-fx-vgap: 5.0;
+}
+
+.flow-pane{
+	-fx-alignment: center;
+	-fx-column-halignment: center;
+	-fx-hgap: 10.0;
+	-fx-vgap: 10.0;
+}
+
+.vbox-titulo{
+	-fx-alignment: center_left;
+	-fx-spacing: 10.0;
+}
+
+.vbox-corpo{
+	-fx-alignment: center;
+	-fx-spacing: 10.0;
+}
+
+.hbox{
+	-fx-alignment: center;
+	-fx-spacing: 10.0;
+}
+
+.tab-pane{
+	-fx-background-color: transparent;
+	-fx-alignment: top_center;
+	-fx-font-size: 11.0pt;
+    -fx-font-family: "Verdana";
+    -fx-text-fill: white;
+}
+.tab .tab-label 
+{
+	-fx-background-color: transparent;    
+	-fx-alignment: CENTER;
+	-fx-text-fill: -fx-text-base-color;
+}
+.tab{
+	-fx-background-color: #DCDCDC;
+	-fx-alignment: top_center;
+	-fx-font-size: 11.0pt;
+    -fx-font-family: "Verdana";
+}
+
+mama {
+  	-jfx-default-color: white;
+}
+
+mama .label{
+  	-fx-text-fill: white;
+}
+
+.tooltip {
+     -fx-font-family: "Verdana";
+}
+
+.tab-content-area 
+{
+-fx-padding: 0.0em; /* 0 */
+/* -fx-opacity: -fx-disabled-opacity;*/
+}
+
+/* 
+.dialog-pane {
+	-fx-background-color: #800000;
+	-fx-text-fill: white;
+}
+.dialog-pane > .content.label {
+   -fx-background-color: #800000;
+   -fx-text-fill:white;
+}
+.dialog-pane:header .header-panel {
+  -fx-background-color: #800000;
+}
+*/
+
+chart-title {
+  	-fx-text-fill: white;
+}
+
+.chart-pie-label {
+    -fx-fill: white;
+    -fx-font-size: 1em;
+}
+
+.combo-box {
+        -fx-background-color: #DCDCDC; 
+        -fx-mark-color: black;
+        -fx-font-size: 11.0pt;
+    	-fx-font-family: "Verdana";
+    	-fx-pref-width: 200;   
+}
+
+.radio-button{
+     	-fx-font-size: 11.0pt;
+    	-fx-font-family: "Verdana";
+    	-fx-text-fill: white;
+}
+
+.check-box {
+     	-fx-font-size: 11.0pt;
+    	-fx-font-family: "Verdana";  
+    	-fx-text-fill: white;
+}
+
+.progress-indicator .percentage {
+    -fx-fill: white ;
+    -fx-font-family: "Verdana"; 
+}
+
+.color-picker .label{
+    -fx-font-size: 11.0pt;
+    -fx-font-family: "Verdana";
+    -fx-text-fill: black;
+    -fx-fill: black;
+}
+
+.date-picker .label{
+    -fx-font-size: 11.0pt;
+    -fx-font-family: "Verdana";
+    -fx-text-fill: black;
+    -fx-fill: black;
+}
+
+.date-picker .button{
+    fx-background-color:white;
+    -fx-text-fill: black;
+    -fx-font-family: "Verdana", Helvetica, Arial, sans-serif;
+    -fx-font-size: 14.0px;
+    -fx-padding: 5.0 22.0 5.0 22.0;
+}
+
+.label {
+    -fx-font-size: 11.0pt;
+    -fx-font-family: "Verdana";
+    -fx-text-fill: white;
+    -fx-fill: white;
+    -fx-opacity: 1.0;
+}
+
+.label-descricao {
+    -fx-font-size: 15.0pt;
+    -fx-font-family: "Verdana";
+    -fx-text-fill: white;
+    -fx-opacity: 1.0;
+}
+
+.label-bright {
+    -fx-font-size: 11.0pt;
+    -fx-font-family: "Verdana";
+    -fx-text-fill: white;
+    -fx-opacity: 1.0;
+}
+
+.label-header {
+    -fx-font-size: 32.0pt;
+    -fx-font-family: "Verdana";
+    -fx-text-fill: white;
+    -fx-opacity: 1.0;
+}
+
+.table-view {
+    -fx-base: #DCDCDC;
+    -fx-control-inner-background: #DCDCDC;
+    -fx-background-color: #DCDCDC;
+    -fx-border-color: #e2e2e2;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 5.0;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 30.0;
+    -fx-border-width: 0.0 0.0 1.0 0.0;
+    -fx-background-color: transparent;
+    -fx-border-color: #DCDCDC;
+    -fx-border-color: black;
+    -fx-border-insets: 0.0 10.0 1.0 0.0;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 12.0pt;
+    -fx-font-family: "Verdana";
+    -fx-text-fill: black;
+    -fx-alignment: center-left;
+    -fx-opacity: 1.0;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: -fx-focus-color;
+}
+
+.split-pane:horizontal > .split-pane-divider {
+    -fx-border-color: transparent #1d1d1d transparent #1d1d1d;
+    -fx-background-color: transparent, derive(#1d1d1d,20.0%);
+}
+
+.split-pane {
+    -fx-padding: 1.0 0.0 0.0 0.0;
+}
+
+.menu-bar {
+    -fx-background-color: #DCDCDC;
+}
+
+.context-menu {
+    -fx-background-color: derive(#DCDCDC,50.0%);
+}
+
+.menu-bar .label {
+    -fx-font-size: 14.0pt;
+    -fx-font-family: "Verdana";
+    -fx-text-fill: black;
+    -fx-opacity: 1.0;
+}
+
+.menu .left-container {
+    -fx-background-color: black;
+}
+
+.text-field {
+    -fx-font-size: 11.0pt;
+    -fx-font-family: "Verdana";
+}
+
+/* 
+ * Metro style Push Button
+ * Author: Pedro Duque Vieira
+ * http://pixelduke.wordpress.com/2012/10/23/jmetro-windows-8-controls-on-java/
+ */
+.button {
+    fx-background-color: 
+        black,
+        linear-gradient(#38424b 0.0%, #1f2429 20.0%, #191d22 100.0%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50.0% 0.0%, radius 100.0%, rgba(114.0,131.0,148.0,0.9), rgba(255.0,255.0,255.0,0.0));
+    -fx-text-fill: black;
+    -fx-font-family: "Verdana", Helvetica, Arial, sans-serif;
+    -fx-font-size: 14.0px;
+    -fx-padding: 5.0 22.0 5.0 22.0; 
+}
+
+.button:hover {
+    -fx-background-color: derive(-fx-focus-color,30.0%);
+    -fx-text-fill: black;
+}
+
+.button:pressed, .button:default:hover:pressed {
+  -fx-background-color: derive(-fx-focus-color,30.0%);
+  -fx-text-fill: black;
+}
+
+.button:focused {
+    fx-background-color: 
+        black,
+        linear-gradient(#38424b 0.0%, #1f2429 20.0%, #191d22 100.0%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50.0% 0.0%, radius 100.0%, rgba(114.0,131.0,148.0,0.9), rgba(255.0,255.0,255.0,0.0));
+}
+
+.button:disabled, .button:default:disabled {
+    -fx-opacity: 0.4;
+    fx-background-color: 
+        black,
+        linear-gradient(#38424b 0.0%, #1f2429 20.0%, #191d22 100.0%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50.0% 0.0%, radius 100.0%, rgba(114.0,131.0,148.0,0.9), rgba(255.0,255.0,255.0,0.0));
+    -fx-text-fill: white;
+}
+
+.button:default {
+    -fx-background-color: -fx-focus-color;
+    -fx-text-fill: white;
+}
+
+.button:default:hover {
+    -fx-background-color: derive(-fx-focus-color,30.0%);
+}
+
+

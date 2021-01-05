@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" styleClass="anchor-pane" stylesheets="@../../../../../res/comp.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.VeiculosPajeu.Controle.ControleInformacoes">
+   <children>
+      <BorderPane layoutX="201.0" layoutY="156.0" styleClass="border-pane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <VBox prefHeight="30.0" prefWidth="680.0" styleClass="vbox-titulo" BorderPane.alignment="CENTER">
+               <children>
+                  <Label styleClass="label-header" text="Informações" />
+                  <Separator prefWidth="200.0" />
+               </children>
+            </VBox>
+         </top>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" styleClass="vbox-corpo" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="301.0" fitWidth="601.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../res/Logo.png" />
+                     </image>
+                  </ImageView>
+                  <GridPane alignment="CENTER" prefHeight="60.0" prefWidth="643.0" styleClass="grid-pane">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="283.0" minWidth="10.0" prefWidth="259.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="238.0" minWidth="10.0" prefWidth="219.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="238.0" minWidth="10.0" prefWidth="161.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Abimael Jonas Furtuoso Dos Santos" textFill="WHITE">
+                           <font>
+                              <Font name="Verdana" size="14.0" />
+                           </font>
+                        </Label>
+                        <Hyperlink fx:id="emailM" onAction="#action" text="clike para mais informações" textFill="WHITE" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Verdana" size="14.0" />
+                           </font>
+                           <tooltip>
+                              <Tooltip text="https://MaelSantos.github.io/" />
+                           </tooltip>
+                        </Hyperlink>
+                        <Label text="+55 (88)9 8116-9372" textFill="WHITE" GridPane.columnIndex="2">
+                           <font>
+                              <Font name="Verdana" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
