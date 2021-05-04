@@ -52,10 +52,12 @@ public class ControleDevolucao extends Controle {
 
 	@FXML
 	private Label lblValor;
-	
+
 	private Veiculo veiculo;
 	private Filial filial;
 	private Locacao locacao;
+
+	private MaskFieldUtil maskFieldUtil;
 
 	@Override
 	public void update(Tela tela, Entidade entidade) {
@@ -64,8 +66,9 @@ public class ControleDevolucao extends Controle {
 	@Override
 	protected void init() {
 
-		MaskFieldUtil.numericField(tfdQuilometragem);
-		
+		maskFieldUtil = MaskFieldUtil.getInstance();
+		maskFieldUtil.numericField(tfdQuilometragem);
+
 	}
 
 	@Override
@@ -76,7 +79,8 @@ public class ControleDevolucao extends Controle {
 		if (obj == btnDevolver) {
 			try {
 
-				if (veiculo != null && locacao != null && filial != null && !tfdQuilometragem.getText().trim().isEmpty()) {
+				if (veiculo != null && locacao != null && filial != null
+						&& !tfdQuilometragem.getText().trim().isEmpty()) {
 
 					devolucao();
 
@@ -89,21 +93,21 @@ public class ControleDevolucao extends Controle {
 					}
 
 					fachada.createOrUpdateLocacao(locacao);
-					
+
 					ControlePagamento.setDescricao("Devolução do Veículo", -1F);
-					
+
 					Financeiro financeiro = fachada.searchFinanceiro(locacao.getId());
-					if(financeiro.getMulta() != null)
+					if (financeiro.getMulta() != null)
 						locacao.getFinanceiro().setMulta(locacao.getFinanceiro().getMulta() + calcularMulta());
-					else 
+					else
 						locacao.getFinanceiro().setMulta(calcularMulta());
-					
+
 					App.notificarOuvintes(Tela.FINANCEIRO, locacao.getFinanceiro());
 					notificacao.showDialogo(Tela.PAGAMENTO);
 					notificacao.mensagemSucesso("Veículo Devolvido Com Sucesso");
-					
+
 					limparCampos();
-					
+
 				} else
 					notificacao.mensagemAtencao();
 
@@ -139,14 +143,13 @@ public class ControleDevolucao extends Controle {
 				if (!tfdFilial.getText().trim().isEmpty()) {
 					Filial filial = notificacao.selecionar(fachada.searchAllFilial(tfdFilial.getText().trim()));
 
-					if (filial != null)
-					{
+					if (filial != null) {
 						this.filial = filial;
 						tfdFilial.setText(filial + "");
 					}
 				} else
 					notificacao.mensagemAtencao();
-				
+
 			} catch (BusinessException e) {
 				notificacao.mensagemErro("Buscar Filial", e.getMessage());
 				e.printStackTrace();
@@ -168,16 +171,13 @@ public class ControleDevolucao extends Controle {
 
 			inicial = locacao.getValor_total();
 
-			if (locacao.getTipoLocacao() == TipoLocacao.KM_CONTROLE)
-			{
+			if (locacao.getTipoLocacao() == TipoLocacao.KM_CONTROLE) {
 				if (!tfdQuilometragem.getText().trim().isEmpty()) {
-					
+
 					km = Float.parseFloat(tfdQuilometragem.getText().trim());
 					valor = (float) (inicial + (km * 0.1));
-				}				
-			}
-			else if(locacao.getTipoLocacao() == TipoLocacao.KM_LIVRE)
-			{
+				}
+			} else if (locacao.getTipoLocacao() == TipoLocacao.KM_LIVRE) {
 				valor = inicial;
 			}
 			if (ckbLimpeza.isSelected()) {// calcula taxa de higienização
@@ -201,8 +201,7 @@ public class ControleDevolucao extends Controle {
 
 	}
 
-	private float calcularMulta()
-	{
+	private float calcularMulta() {
 		Float multa = 0F;
 		Float inicial = 0F;
 		Float km = 0F;
@@ -213,13 +212,12 @@ public class ControleDevolucao extends Controle {
 
 			inicial = locacao.getValor_total();
 
-			if (locacao.getTipoLocacao() == TipoLocacao.KM_CONTROLE)
-			{
+			if (locacao.getTipoLocacao() == TipoLocacao.KM_CONTROLE) {
 				if (!tfdQuilometragem.getText().trim().isEmpty()) {
-					
+
 					km = Float.parseFloat(tfdQuilometragem.getText().trim());
 					multa = (float) (km * 0.1);
-				}				
+				}
 			}
 			if (ckbLimpeza.isSelected()) {// calcula taxa de higienização
 				limpeza = (float) (inicial * 0.02);
@@ -233,7 +231,7 @@ public class ControleDevolucao extends Controle {
 
 		return multa;
 	}
-	
+
 	private void devolucao() {
 
 		veiculo.setAlugado(false);
@@ -241,13 +239,13 @@ public class ControleDevolucao extends Controle {
 		locacao.setFilial_devolucao(filial);
 		locacao.setAtivo(false);
 
-		//atualiza quilometragem rodada
-		if(veiculo.getQuilometragem() != null)
+		// atualiza quilometragem rodada
+		if (veiculo.getQuilometragem() != null)
 			veiculo.setQuilometragem(veiculo.getQuilometragem() + Float.parseFloat(tfdQuilometragem.getText().trim()));
-		else 
+		else
 			veiculo.setQuilometragem(Float.parseFloat(tfdQuilometragem.getText().trim()));
 
-		//verifica se é preciso enviar para manutenção 
+		// verifica se é preciso enviar para manutenção
 		if (veiculo instanceof Automovel) {
 
 			if (veiculo.getQuilometragem() >= 5000) {

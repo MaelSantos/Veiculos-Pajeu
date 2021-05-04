@@ -19,7 +19,8 @@ public class ControleAtualizacao {
 	private LocalTime update;
 	private LocalTime atual;
 	
-	private boolean backup;
+	private boolean isBackup;
+	private Backup backup;
 	private int minutos;
 
 	private Text text;
@@ -29,7 +30,8 @@ public class ControleAtualizacao {
 		
 		update = LocalTime.of(12, 00);
 		atual = LocalTime.now();
-		backup = true;
+		isBackup = true;
+		backup = Backup.getInstance();
 		
 		createService();		
 		service.start();
@@ -66,11 +68,11 @@ public class ControleAtualizacao {
 								
 								minutos = 0;
 								
-								if(backup && atual.isAfter(update))
+								if(isBackup && atual.isAfter(update))
 								{
 									//realizar backup 
-									Backup.backup(System.getProperty("user.home")+"/backup");
-									backup = false;
+									backup.backup(System.getProperty("user.home")+"/backup");
+									isBackup = false;
 									System.out.println("Backup Realizado");
 								}
 							}

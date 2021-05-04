@@ -21,37 +21,41 @@ import javafx.scene.input.MouseEvent;
 public class ControleCadastroCategoria extends Controle {
 
 	@FXML
-    private Button btnSalvar;
+	private Button btnSalvar;
 
-    @FXML
-    private Label lblTitulo;
+	@FXML
+	private Label lblTitulo;
 
-    @FXML
-    private TextField tfdFilial;
+	@FXML
+	private TextField tfdFilial;
 
-    @FXML
-    private Button btnBuscarFilial;
+	@FXML
+	private Button btnBuscarFilial;
 
-    @FXML
-    private ComboBox<TipoCategoria> cbxTipoCategoria;
+	@FXML
+	private ComboBox<TipoCategoria> cbxTipoCategoria;
 
-    @FXML
-    private TextField tfdNome;
+	@FXML
+	private TextField tfdNome;
 
-    @FXML
-    private ComboBox<Tamanho> cbxTamanho;
+	@FXML
+	private ComboBox<Tamanho> cbxTamanho;
 
-    @FXML
-    private TextField tfdValor;
+	@FXML
+	private TextField tfdValor;
 
-    @FXML
-    private Button btnMaisFilial;
-    
+	@FXML
+	private Button btnMaisFilial;
+
 	private Categoria categoria;
 	private Filial filial;
 
+	private MaskFieldUtil maskFieldUtil;
+
 	@Override
 	protected void init() {
+		maskFieldUtil = MaskFieldUtil.getInstance();
+
 		cbxTamanho.getItems().setAll(Tamanho.values());
 		cbxTipoCategoria.getItems().setAll(TipoCategoria.values());
 
@@ -78,8 +82,8 @@ public class ControleCadastroCategoria extends Controle {
 				}
 			}
 		});
-		
-		MaskFieldUtil.numericField(tfdValor);
+
+		maskFieldUtil.numericField(tfdValor);
 	}
 
 	@Override
@@ -91,8 +95,7 @@ public class ControleCadastroCategoria extends Controle {
 			try {
 				if (!tfdFilial.getText().trim().isEmpty()) {
 					Filial filial = notificacao.selecionar(fachada.searchAllFilial(tfdFilial.getText().trim()));
-					if (filial != null)
-					{
+					if (filial != null) {
 						this.filial = filial;
 						tfdFilial.setText(filial + "");
 					}
@@ -113,9 +116,7 @@ public class ControleCadastroCategoria extends Controle {
 				notificacao.mensagemErro("Salva Categoria", e.getMessage());
 				e.printStackTrace();
 			}
-		}
-		else if(obj == btnMaisFilial)
-		{
+		} else if (obj == btnMaisFilial) {
 			notificacao.showDialogo(Tela.CADASTRO_FILIAL);
 		}
 	}
@@ -143,9 +144,9 @@ public class ControleCadastroCategoria extends Controle {
 
 		if (categoria == null)
 			categoria = new Categoria();
-		else if(filial == null)
+		else if (filial == null)
 			filial = categoria.getFilial();
-		categoria.setFilial(filial);			
+		categoria.setFilial(filial);
 		categoria.setNome(tfdNome.getText().trim());
 		categoria.setTamanho(cbxTamanho.getValue());
 		categoria.setTipo(cbxTipoCategoria.getValue());
@@ -154,11 +155,11 @@ public class ControleCadastroCategoria extends Controle {
 
 	private void carregarCampo() {
 
-		tfdFilial.setText(categoria.getFilial()+"");
+		tfdFilial.setText(categoria.getFilial() + "");
 		tfdNome.setText(categoria.getNome());
 		cbxTamanho.setValue(categoria.getTamanho());
 		cbxTipoCategoria.setValue(categoria.getTipo());
-		tfdValor.setText(categoria.getValor()+"");
+		tfdValor.setText(categoria.getValor() + "");
 	}
 
 	@Override
@@ -176,17 +177,14 @@ public class ControleCadastroCategoria extends Controle {
 	@Override
 	public void update(Tela tela, Entidade entidade) {
 
-		if(tela == Tela.EDITAR_CATEGORIA)
-		{
+		if (tela == Tela.EDITAR_CATEGORIA) {
 			if (entidade instanceof Categoria) {
 				categoria = (Categoria) entidade;
 				carregarCampo();
 				lblTitulo.setText(tela + "");
 			}
-			
-		}
-		else if(tela == Tela.CADASTRO_CATEGORIA)
-		{
+
+		} else if (tela == Tela.CADASTRO_CATEGORIA) {
 			lblTitulo.setText(tela + "");
 			limparCampos();
 		}

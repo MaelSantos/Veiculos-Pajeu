@@ -78,6 +78,8 @@ public class ControleRetirarReserva extends Controle {
 	private Configuracao configuracao;
 
 	private Float valorTotal;
+	
+	private DateUtil dateUtil;
 
 	@Override
 	public void update(Tela tela, Entidade entidade) {
@@ -94,6 +96,8 @@ public class ControleRetirarReserva extends Controle {
 
 	@Override
 	protected void init() {
+		
+		dateUtil = DateUtil.getInstance();
 
 		try {
 			configuracao = fachada.searchConfiguracao(1);
@@ -196,11 +200,11 @@ public class ControleRetirarReserva extends Controle {
 		if (reserva != null && !dtpDevolucao.getEditor().getText().isEmpty()) {
 			switch (reserva.getTipo_locacao()) {
 			case KM_CONTROLE:
-				valor *= DateUtil.DiferencaDias(reserva.getData_locacao(), dtpDevolucao.getValue());
+				valor *= dateUtil.DiferencaDias(reserva.getData_locacao(), dtpDevolucao.getValue());
 				valor += configuracao.getValorKmControle();
 				break;
 			case KM_LIVRE:
-				valor *= DateUtil.DiferencaDias(reserva.getData_locacao(), dtpDevolucao.getValue());
+				valor *= dateUtil.DiferencaDias(reserva.getData_locacao(), dtpDevolucao.getValue());
 				valor += configuracao.getValorKmLivre();
 				break;
 			default:

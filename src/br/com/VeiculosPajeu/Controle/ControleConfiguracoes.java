@@ -20,22 +20,24 @@ import javafx.stage.DirectoryChooser;
 public class ControleConfiguracoes extends Controle {
 
 	@FXML
-    private Button btnAlterarConf;
+	private Button btnAlterarConf;
 
-    @FXML
-    private Button btnAparencia;
+	@FXML
+	private Button btnAparencia;
 
-    @FXML
-    private Button btnBackup;
+	@FXML
+	private Button btnBackup;
 
-    @FXML
-    private Button btnAtualizar;
+	@FXML
+	private Button btnAtualizar;
 
-    @FXML
-    private Button btnResetarSenha;
-	
+	@FXML
+	private Button btnResetarSenha;
+
 	private DirectoryChooser chooser;
-	
+
+	private Backup backup;
+
 	@Override
 	public void update(Tela tela, Entidade entidade) {
 
@@ -46,19 +48,15 @@ public class ControleConfiguracoes extends Controle {
 					btnAlterarConf.setVisible(true);
 					btnResetarSenha.setVisible(true);
 				} else if (entidade instanceof Funcionario) {
-					
-					if(((Funcionario) entidade).getTipoFuncionario() == TipoFuncionario.ATENDENTE)
-					{
+
+					if (((Funcionario) entidade).getTipoFuncionario() == TipoFuncionario.ATENDENTE) {
 						btnAlterarConf.setVisible(false);
-						btnResetarSenha.setVisible(true);						
-					}
-					else
-					{
+						btnResetarSenha.setVisible(true);
+					} else {
 						btnAlterarConf.setVisible(true);
 						btnResetarSenha.setVisible(true);
 					}
-				}
-				else {
+				} else {
 					btnAlterarConf.setVisible(false);
 					btnResetarSenha.setVisible(false);
 				}
@@ -70,6 +68,8 @@ public class ControleConfiguracoes extends Controle {
 	protected void init() {
 		chooser = new DirectoryChooser();
 		chooser.setInitialDirectory(new File(System.getProperty("user.home")));
+
+		backup = Backup.getInstance();
 	}
 
 	@Override
@@ -81,37 +81,31 @@ public class ControleConfiguracoes extends Controle {
 
 			try {
 				File file = chooser.showDialog(App.stage);
-				
-				if(file != null)
-				{
-					Backup.backup(file.getAbsolutePath()+"/backup");					
+
+				if (file != null) {
+					backup.backup(file.getAbsolutePath() + "/backup");
 					notificacao.mensagemSucesso("Backup Realizado Com Sucesso");
 				}
 			} catch (IOException e) {
 				e.printStackTrace();
 				notificacao.mensagemErro("Erro ao Fazer Backup", e.getMessage());
 			}
-		}
-		else if(obj == btnAtualizar)
-		{
+		} else if (obj == btnAtualizar) {
 			try {
 				fachada.verificarAtrasadosFinanceiro();
 				fachada.verificarAtrasadosReserva();
 				fachada.verificarManutencaoVeiculo();
-				
+
 				notificacao.mensagemSucesso("Sistema Atualizado");
 			} catch (BusinessException e) {
 				notificacao.mensagemErro("Atualizar Sistema", e.getMessage());
 			}
-		}
-		else if (obj == btnResetarSenha) {
+		} else if (obj == btnResetarSenha) {
 			notificacao.showDialogo(Tela.RESETAR_SENHA);
 			App.notificarOuvintes(Tela.RESETAR_SENHA);
-		}
-		else if (obj == btnAlterarConf) {
+		} else if (obj == btnAlterarConf) {
 			App.notificarOuvintes(Tela.EDITAR_CONFIGURACAO);
-		}
-		else if(obj == btnAparencia) {
+		} else if (obj == btnAparencia) {
 			App.notificarOuvintes(Tela.APARENCIA);
 		}
 	}

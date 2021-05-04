@@ -7,7 +7,18 @@ import java.io.InputStreamReader;
 
 public class Backup {
 
-	public static void backup(String diretorio) throws IOException {
+	private static Backup instance;
+
+	private Backup() {
+	}
+
+	public static Backup getInstance() {
+		if (instance == null)
+			instance = new Backup();
+		return instance;
+	}
+
+	public void backup(String diretorio) throws IOException {
 		ProcessBuilder pb = null;
 		Process p;
 		BufferedReader br = null;
@@ -37,25 +48,25 @@ public class Backup {
 	}
 
 	public static void main(String[] args) {
-		
+
 //		try {
 //			backup("/home/mael/Área de Trabalho/backup");
 //		} catch (IOException e) {
 //			e.printStackTrace();
 //		}
-		
+
 		try {
 			System.out.println("/  -> " + new File("/").getCanonicalPath());
 			System.out.println(".. -> " + new File("..").getCanonicalPath());
 			System.out.println(".  -> " + new File(".").getCanonicalPath());
-			
-			 System.out.println( System.getProperty("user.home"));
-			 System.out.println( System.getProperty("user.desktop"));
+
+			System.out.println(System.getProperty("user.home"));
+			System.out.println(System.getProperty("user.desktop"));
 
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+
 	}
 
 }

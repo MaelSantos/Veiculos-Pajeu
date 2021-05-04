@@ -5,15 +5,26 @@ import java.time.temporal.ChronoUnit;
 
 public class DateUtil {
 
-	public static long DiferencaDias(LocalDate primeira, LocalDate segunda) {
+	private static DateUtil instance;
+
+	private DateUtil() {
+	}
+
+	public static DateUtil getInstance() {
+		if (instance == null)
+			instance = new DateUtil();
+		return instance;
+	}
+
+	public long DiferencaDias(LocalDate primeira, LocalDate segunda) {
 		long dias;
-		
+
 		dias = primeira.until(segunda, ChronoUnit.DAYS);
-		
+
 		return dias;
 	}
 
-	public static int DiferencaAnos(LocalDate primeira, LocalDate segunda) {
+	public int DiferencaAnos(LocalDate primeira, LocalDate segunda) {
 		int anos;
 
 		int atual = primeira.getYear();
@@ -24,16 +35,16 @@ public class DateUtil {
 		return anos;
 	}
 
-	public static long DiferencaDias(LocalDate data) {
+	public long DiferencaDias(LocalDate data) {
 		long dias;
 
 		LocalDate atual = LocalDate.now();
 		dias = data.until(atual, ChronoUnit.DAYS);
-		
+
 		return dias;
 	}
 
-	public static int DiferencaAnos(LocalDate data) {
+	public int DiferencaAnos(LocalDate data) {
 		int anos;
 
 		int atual = LocalDate.now().getYear();
@@ -43,14 +54,15 @@ public class DateUtil {
 
 		return anos;
 	}
-	
+
 	public static void main(String[] args) {
-		
+
+		DateUtil dateUtil = getInstance();
+
 		LocalDate locacao = LocalDate.of(2019, 1, 20);
 		LocalDate devolucao = LocalDate.of(2019, 1, 27);
 
-		System.out.println(DiferencaDias(locacao, devolucao));
-		
-		
+		System.out.println(dateUtil.DiferencaDias(locacao, devolucao));
+
 	}
 }

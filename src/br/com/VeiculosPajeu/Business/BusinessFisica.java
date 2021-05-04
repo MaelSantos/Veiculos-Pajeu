@@ -10,38 +10,42 @@ import br.com.VeiculosPajeu.Exception.ValidationException;
 import br.com.VeiculosPajeu.Util.CriptografiaUtil;
 import br.com.VeiculosPajeu.Util.DateUtil;
 
-public class BusinessFisica extends Business<Fisica> implements IBusinessFisica{
+public class BusinessFisica extends Business<Fisica> implements IBusinessFisica {
 
 	private IDaoFisica daoFisica;
-	
+	private CriptografiaUtil criptografiaUtil;
+	private DateUtil dateUtil;
+
 	public BusinessFisica() {
 		daoFisica = new DaoFisica();
+		criptografiaUtil = CriptografiaUtil.getInstance();
+		dateUtil = DateUtil.getInstance();
 		init(daoFisica);
 	}
 
 	@Override
 	public void validation(Fisica entidade) throws ValidationException {
-		
-		if(entidade.getCodigo().trim().isEmpty())
+
+		if (entidade.getCodigo().trim().isEmpty())
 			throw new ValidationException("INFORME UM CODIGO");
-		if(entidade.getCpf().trim().isEmpty())
+		if (entidade.getCpf().trim().isEmpty())
 			throw new ValidationException("INFORME UM CPF");
-		if(entidade.getData_de_nascimento() == null)
+		if (entidade.getData_de_nascimento() == null)
 			throw new ValidationException("INFORME UMA DATA DE NASCIMENTO");
-		if(entidade.getNome().trim().isEmpty())
+		if (entidade.getNome().trim().isEmpty())
 			throw new ValidationException("INFORME UM NOME");
-		if(entidade.getNumero_habilitacao().trim().isEmpty())
+		if (entidade.getNumero_habilitacao().trim().isEmpty())
 			throw new ValidationException("INFORME O NUMERO DA HABILITAÇÃO");
-		if(entidade.getSexo() == null)
+		if (entidade.getSexo() == null)
 			throw new ValidationException("INFORME O GÊNERO");
-		if(entidade.getVencimento_habilitacao() == null)
+		if (entidade.getVencimento_habilitacao() == null)
 			throw new ValidationException("INFORME A DATA DE VENCIMENTO DA CARTEIRA");
-		if(DateUtil.DiferencaAnos(entidade.getData_de_nascimento()) < 21)
+		if (dateUtil.DiferencaAnos(entidade.getData_de_nascimento()) < 21)
 			throw new ValidationException("É NESCESSARIO TER 21 ANOS OU MAIS PARA RELAIZAR O CADASTRO");
-		if(entidade.getVencimento_habilitacao().isBefore(LocalDate.now()))
+		if (entidade.getVencimento_habilitacao().isBefore(LocalDate.now()))
 			throw new ValidationException("HABILITAÇÃO VENCIDA");
-		
-		//usuário
+
+		// usuário
 		if (entidade.getLogin().trim().isEmpty())
 			throw new ValidationException("INFORME UM LOGIN");
 		if (entidade.getNome().trim().isEmpty())
@@ -51,9 +55,9 @@ public class BusinessFisica extends Business<Fisica> implements IBusinessFisica{
 
 		if (entidade.getSenha().length() < 6 || entidade.getSenha().length() > 11)
 			throw new ValidationException("A SENHA TEM QUE TER NO MINIMO 6 E NO MAXIMO 11 CARACTERES");
-		else if (!CriptografiaUtil.isCriptografado(entidade.getSenha()))
-			entidade.setSenha(CriptografiaUtil.criptografar(entidade.getSenha().getBytes()));
+		else if (!criptografiaUtil.isCriptografado(entidade.getSenha()))
+			entidade.setSenha(criptografiaUtil.criptografar(entidade.getSenha().getBytes()));
 
-	}	
-	
+	}
+
 }

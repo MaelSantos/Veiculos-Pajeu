@@ -10,9 +10,11 @@ import br.com.VeiculosPajeu.Util.CriptografiaUtil;
 public class BusinessSuperUsuario extends Business<SuperUsuario> implements IBusinessSuperUsuario {
 
 	private IDaoSuperUsuario daoSuperUsuario;
+	private CriptografiaUtil criptografiaUtil;
 
 	public BusinessSuperUsuario() {
 		daoSuperUsuario = new DaoSuperUsuario();
+		criptografiaUtil = CriptografiaUtil.getInstance();
 		init(daoSuperUsuario);
 	}
 
@@ -30,12 +32,12 @@ public class BusinessSuperUsuario extends Business<SuperUsuario> implements IBus
 
 		if (entidade.getSenha().length() < 6 || entidade.getSenha().length() > 11)
 			throw new ValidationException("A SENHA TEM QUE TER NO MINIMO 6 E NO MAXIMO 11 CARACTERES");
-		else if (!CriptografiaUtil.isCriptografado(entidade.getSenha()))
-			entidade.setSenha(CriptografiaUtil.criptografar(entidade.getSenha().getBytes()));
+		else if (!criptografiaUtil.isCriptografado(entidade.getSenha()))
+			entidade.setSenha(criptografiaUtil.criptografar(entidade.getSenha().getBytes()));
 		
 		if (entidade.getSenha_padrao().length() < 6 || entidade.getSenha_padrao().length() > 11)
 			throw new ValidationException("A SENHA PADRÃO TEM QUE TER NO MINIMO 6 E NO MAXIMO 11 CARACTERES");
-		else if (!CriptografiaUtil.isCriptografado(entidade.getSenha_padrao()))
-			entidade.setSenha_padrao(CriptografiaUtil.criptografar(entidade.getSenha_padrao().getBytes()));
+		else if (!criptografiaUtil.isCriptografado(entidade.getSenha_padrao()))
+			entidade.setSenha_padrao(criptografiaUtil.criptografar(entidade.getSenha_padrao().getBytes()));
 	}
 }

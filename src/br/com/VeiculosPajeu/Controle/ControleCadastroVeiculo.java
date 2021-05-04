@@ -33,151 +33,156 @@ import javafx.scene.layout.GridPane;
 public class ControleCadastroVeiculo extends Controle {
 
 	@FXML
-    private Button btnAnterior;
+	private Button btnAnterior;
 
-    @FXML
-    private Button btnSalvar;
+	@FXML
+	private Button btnSalvar;
 
-    @FXML
-    private Button btnProximo;
+	@FXML
+	private Button btnProximo;
 
-    @FXML
-    private Label lblTitulo;
+	@FXML
+	private Label lblTitulo;
 
-    @FXML
-    private ComboBox<TipoVeiculo> cbxTipoVeiculo;
+	@FXML
+	private ComboBox<TipoVeiculo> cbxTipoVeiculo;
 
-    @FXML
-    private TextField tfdFilial;
+	@FXML
+	private TextField tfdFilial;
 
-    @FXML
-    private Button btnBuscarFilial;
+	@FXML
+	private Button btnBuscarFilial;
 
-    @FXML
-    private Button btnMaisFilial;
+	@FXML
+	private Button btnMaisFilial;
 
-    @FXML
-    private ComboBox<Categoria> cbxCategoria;
+	@FXML
+	private ComboBox<Categoria> cbxCategoria;
 
-    @FXML
-    private Button btnMaisCategoria;
+	@FXML
+	private Button btnMaisCategoria;
 
-    @FXML
-    private Tab tabGeral;
+	@FXML
+	private Tab tabGeral;
 
-    @FXML
-    private TextField tfdFabricante;
+	@FXML
+	private TextField tfdFabricante;
 
-    @FXML
-    private TextField tfdModelo;
+	@FXML
+	private TextField tfdModelo;
 
-    @FXML
-    private Spinner<Integer> spnNumPassageiros;
+	@FXML
+	private Spinner<Integer> spnNumPassageiros;
 
-    @FXML
-    private Spinner<Integer> spnNumPortas;
+	@FXML
+	private Spinner<Integer> spnNumPortas;
 
-    @FXML
-    private TextField tfdAnoFabricacao;
+	@FXML
+	private TextField tfdAnoFabricacao;
 
-    @FXML
-    private TextField tfdAnoModelo;
+	@FXML
+	private TextField tfdAnoModelo;
 
-    @FXML
-    private TextField tfdPlaca;
+	@FXML
+	private TextField tfdPlaca;
 
-    @FXML
-    private TextField tfdNumChassi;
+	@FXML
+	private TextField tfdNumChassi;
 
-    @FXML
-    private TextField tfdNumMotor;
+	@FXML
+	private TextField tfdNumMotor;
 
-    @FXML
-    private TextField tfdCor;
+	@FXML
+	private TextField tfdCor;
 
-    @FXML
-    private TextField tfdTorqueMotor;
+	@FXML
+	private TextField tfdTorqueMotor;
 
-    @FXML
-    private ComboBox<TipoCombustivel> cbxTipoCombustivel;
+	@FXML
+	private ComboBox<TipoCombustivel> cbxTipoCombustivel;
 
-    @FXML
-    private Tab tabVeiculos;
+	@FXML
+	private Tab tabVeiculos;
 
-    @FXML
-    private GridPane paneAutomovel;
+	@FXML
+	private GridPane paneAutomovel;
 
-    @FXML
-    private ComboBox<Tamanho> cbxTamanho;
+	@FXML
+	private ComboBox<Tamanho> cbxTamanho;
 
-    @FXML
-    private ComboBox<TipoCambio> cbxTipoCambio;
+	@FXML
+	private ComboBox<TipoCambio> cbxTipoCambio;
 
-    @FXML
-    private CheckBox ckbArcondicionado;
+	@FXML
+	private CheckBox ckbArcondicionado;
 
-    @FXML
-    private CheckBox ckbRadio;
+	@FXML
+	private CheckBox ckbRadio;
 
-    @FXML
-    private CheckBox ckbDvd;
+	@FXML
+	private CheckBox ckbDvd;
 
-    @FXML
-    private CheckBox ckbMp3;
+	@FXML
+	private CheckBox ckbMp3;
 
-    @FXML
-    private CheckBox ckbDirecaoHidraulica;
+	@FXML
+	private CheckBox ckbDirecaoHidraulica;
 
-    @FXML
-    private CheckBox ckbCameraRe;
+	@FXML
+	private CheckBox ckbCameraRe;
 
-    @FXML
-    private GridPane panePassageiros;
+	@FXML
+	private GridPane panePassageiros;
 
-    @FXML
-    private ComboBox<TipoAirBag> cbxAirbag;
+	@FXML
+	private ComboBox<TipoAirBag> cbxAirbag;
 
-    @FXML
-    private CheckBox ckbDirecaoAssistida;
+	@FXML
+	private CheckBox ckbDirecaoAssistida;
 
-    @FXML
-    private CheckBox ckbCintosRetrateis;
+	@FXML
+	private CheckBox ckbCintosRetrateis;
 
-    @FXML
-    private CheckBox ckbRodasLigaLeve;
+	@FXML
+	private CheckBox ckbRodasLigaLeve;
 
-    @FXML
-    private CheckBox ckbControlePoluicao;
+	@FXML
+	private CheckBox ckbControlePoluicao;
 
-    @FXML
-    private GridPane paneCarga;
+	@FXML
+	private GridPane paneCarga;
 
-    @FXML
-    private TextField tfdCapacidadeCarga;
+	@FXML
+	private TextField tfdCapacidadeCarga;
 
-    @FXML
-    private ComboBox<Acionamento> cbxAcionamento;
+	@FXML
+	private ComboBox<Acionamento> cbxAcionamento;
 
-    @FXML
-    private TextField tfdDesempenho;
+	@FXML
+	private TextField tfdDesempenho;
 
-    @FXML
-    private TextField tfdPotencia;
+	@FXML
+	private TextField tfdPotencia;
 
-    @FXML
-    private TextField tfdVolume;
+	@FXML
+	private TextField tfdVolume;
 
-    @FXML
-    private TextField tfdDistancia;
-    
+	@FXML
+	private TextField tfdDistancia;
+
 	private Carga carga;
 	private Passageiro passageiro;
 	private Automovel automovel;
 
 	private Filial filial;
-	
+
+	private MaskFieldUtil maskFieldUtil;
+
 	@Override
 	protected void init() {
+
+		maskFieldUtil = MaskFieldUtil.getInstance();
+
 		cbxAirbag.getItems().setAll(TipoAirBag.values());
 		cbxTamanho.getItems().setAll(Tamanho.values());
 		cbxTipoCambio.getItems().setAll(TipoCambio.values());
@@ -253,7 +258,7 @@ public class ControleCadastroVeiculo extends Controle {
 				}
 			}
 		});
-		
+
 		cbxTipoVeiculo.setButtonCell(new ListCell<TipoVeiculo>() {
 			@Override
 			protected void updateItem(TipoVeiculo item, boolean empty) {
@@ -265,7 +270,7 @@ public class ControleCadastroVeiculo extends Controle {
 				}
 			}
 		});
-		
+
 		cbxAcionamento.setButtonCell(new ListCell<Acionamento>() {
 			@Override
 			protected void updateItem(Acionamento item, boolean empty) {
@@ -277,12 +282,11 @@ public class ControleCadastroVeiculo extends Controle {
 				}
 			}
 		});
-		
-		MaskFieldUtil.numericField(tfdAnoFabricacao);
-		MaskFieldUtil.numericField(tfdAnoModelo);
-		MaskFieldUtil.numericField(tfdCapacidadeCarga);
-		
-		
+
+		maskFieldUtil.numericField(tfdAnoFabricacao);
+		maskFieldUtil.numericField(tfdAnoModelo);
+		maskFieldUtil.numericField(tfdCapacidadeCarga);
+
 	}
 
 	@Override
@@ -301,7 +305,7 @@ public class ControleCadastroVeiculo extends Controle {
 			btnProximo.setVisible(false);
 			if (cbxTipoVeiculo.getValue() != null)
 				btnSalvar.setVisible(true);
-			
+
 		} else if (obj == btnSalvar) {
 
 			try {
@@ -326,34 +330,25 @@ public class ControleCadastroVeiculo extends Controle {
 				notificacao.mensagemErro("Salvar Veículo!!!", e.getMessage());
 				e.printStackTrace();
 			}
-		}
-		else if(obj == btnBuscarFilial)
-		{
+		} else if (obj == btnBuscarFilial) {
 			try {
-				if(!tfdFilial.getText().trim().isEmpty())
-				{
+				if (!tfdFilial.getText().trim().isEmpty()) {
 					Filial filial = notificacao.selecionar(fachada.searchAllFilial(tfdFilial.getText().trim()));
-					
-					if(filial != null)
-					{
+
+					if (filial != null) {
 						this.filial = filial;
-						tfdFilial.setText(filial+"");
+						tfdFilial.setText(filial + "");
 					}
-				}
-				else
+				} else
 					notificacao.mensagemAtencao();
-				
+
 			} catch (BusinessException e) {
 				notificacao.mensagemErro("Buscar Filial", e.getMessage());
 				e.printStackTrace();
 			}
-		}
-		else if(obj == btnMaisCategoria)
-		{
-			notificacao.showDialogo(Tela.CADASTRO_CATEGORIA);			
-		}
-		else if(obj == btnMaisFilial)
-		{
+		} else if (obj == btnMaisCategoria) {
+			notificacao.showDialogo(Tela.CADASTRO_CATEGORIA);
+		} else if (obj == btnMaisFilial) {
 			notificacao.showDialogo(Tela.CADASTRO_FILIAL);
 		}
 
@@ -362,8 +357,7 @@ public class ControleCadastroVeiculo extends Controle {
 	@FXML
 	void selected(ActionEvent event) {
 
-		if(cbxTipoVeiculo.getValue() != null)
-		{
+		if (cbxTipoVeiculo.getValue() != null) {
 			switch (cbxTipoVeiculo.getValue()) {
 			case AUTOMOVEL:
 				paneAutomovel.setVisible(true);
@@ -383,27 +377,23 @@ public class ControleCadastroVeiculo extends Controle {
 			default:
 				break;
 			}
-			
+
 			btnSalvar.setVisible(tabVeiculos.isSelected());
 			tabVeiculos.setText(cbxTipoVeiculo.getValue() + "");
-			
+
 		}
 	}
-
 
 	@FXML
 	void click(MouseEvent event) {
 
 		System.out.println("click");
 
-		if(tabGeral.isSelected())
-		{
+		if (tabGeral.isSelected()) {
 			btnProximo.setVisible(true);
 			btnAnterior.setVisible(false);
 			btnSalvar.setVisible(false);
-		}
-		else if(tabVeiculos.isSelected())
-		{
+		} else if (tabVeiculos.isSelected()) {
 			btnAnterior.setVisible(true);
 			btnProximo.setVisible(false);
 			if (cbxTipoVeiculo.getValue() != null)
@@ -411,13 +401,12 @@ public class ControleCadastroVeiculo extends Controle {
 		}
 
 	}
-	
-	
+
 	@Override
 	protected void limparCampos() {
-		
+
 		cbxTipoVeiculo.getSelectionModel().clearSelection();
-		
+
 		cbxAirbag.getSelectionModel().clearSelection();
 		cbxCategoria.getSelectionModel().clearSelection();
 		cbxTamanho.getSelectionModel().clearSelection();
@@ -461,16 +450,16 @@ public class ControleCadastroVeiculo extends Controle {
 		panePassageiros.setVisible(false);
 
 		tabVeiculos.setText("Veículo");
-		
+
 		carga = null;
 		passageiro = null;
 		automovel = null;
 		filial = null;
-		
+
 		btnAnterior.setVisible(false);
 		btnSalvar.setVisible(false);
 		btnProximo.setVisible(true);
-		
+
 	}
 
 	private void carregarVeiculo() {
@@ -580,10 +569,10 @@ public class ControleCadastroVeiculo extends Controle {
 	}
 
 	private void carregarCampo(Automovel automovel) {
-		
+
 		filial = automovel.getFilial();
-		tfdFilial.setText(filial+"");
-		
+		tfdFilial.setText(filial + "");
+
 		tfdAnoFabricacao.setText(automovel.getAno_fabricacao() + "");
 		tfdAnoModelo.setText(automovel.getAno_modelo() + "");
 		ckbArcondicionado.setSelected(automovel.getArcondicionado());
@@ -610,8 +599,8 @@ public class ControleCadastroVeiculo extends Controle {
 	private void carregarCampo(Passageiro passageiro) {
 
 		filial = passageiro.getFilial();
-		tfdFilial.setText(filial+"");
-		
+		tfdFilial.setText(filial + "");
+
 		cbxAirbag.setValue(passageiro.getAirbag());
 		tfdAnoFabricacao.setText(passageiro.getAno_fabricacao() + "");
 		tfdAnoModelo.setText(passageiro.getAno_modelo() + "");
@@ -632,10 +621,10 @@ public class ControleCadastroVeiculo extends Controle {
 	}
 
 	private void carregarCampo(Carga carga) {
-		
+
 		filial = carga.getFilial();
-		tfdFilial.setText(filial+"");
-		
+		tfdFilial.setText(filial + "");
+
 		cbxAcionamento.setValue(carga.getAcionamento());
 		tfdAnoFabricacao.setText(carga.getAno_fabricacao() + "");
 		tfdAnoModelo.setText(carga.getAno_modelo() + "");

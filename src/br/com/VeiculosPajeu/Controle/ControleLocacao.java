@@ -93,8 +93,12 @@ public class ControleLocacao extends Controle {
 
 	private Float valorFinal;
 
+	private DateUtil dateUtil;
+
 	@Override
 	protected void init() {
+		dateUtil = DateUtil.getInstance();
+
 		valorFinal = (float) 0;
 
 		dtpAlocacao.setValue(LocalDate.now());
@@ -129,12 +133,11 @@ public class ControleLocacao extends Controle {
 		if (obj == btnAlocar) {
 
 			try {
-				
-				if(veiculo != null && filial != null)
-				{
+
+				if (veiculo != null && filial != null) {
 					carregarLocacao();
 					fachada.createOrUpdateLocacao(locacao);
-					
+
 					if (veiculo instanceof Automovel) {
 						fachada.createOrUpdateAutomovel((Automovel) veiculo);
 					} else if (veiculo instanceof Carga) {
@@ -142,18 +145,17 @@ public class ControleLocacao extends Controle {
 					} else if (veiculo instanceof Passageiro) {
 						fachada.createOrUpdatePassageiro((Passageiro) veiculo);
 					}
-					
-					ControlePagamento.setDescricao("Valor De Entrada da Locação", locacao.getDiaria()/2);
+
+					ControlePagamento.setDescricao("Valor De Entrada da Locação", locacao.getDiaria() / 2);
 					App.notificarOuvintes(fachada.searchFinanceiro(locacao.getId()));
 					notificacao.showDialogo(Tela.PAGAMENTO);
-					
+
 					notificacao.mensagemSucesso("Locação Salva Com Sucesso");
-					
-					limparCampos();					
-				}
-				else
+
+					limparCampos();
+				} else
 					notificacao.mensagemAtencao();
-				
+
 			} catch (BusinessException e) {
 				notificacao.mensagemErro("Salvar Locação", e.getMessage());
 				e.printStackTrace();
@@ -168,8 +170,8 @@ public class ControleLocacao extends Controle {
 
 					if (cliente != null)
 						this.cliente = cliente;
-						tfdCliente.setText(cliente + "");
-						
+					tfdCliente.setText(cliente + "");
+
 				} else
 					notificacao.mensagemAtencao();
 
@@ -177,8 +179,7 @@ public class ControleLocacao extends Controle {
 				notificacao.mensagemErro("Buscar Cliente", e.getMessage());
 				e.printStackTrace();
 			}
-		}
-		else if (obj == btnBuscarVeiculo) {
+		} else if (obj == btnBuscarVeiculo) {
 
 			try {
 				if (!tfdVeiculo.getText().trim().isEmpty()) {
@@ -187,11 +188,11 @@ public class ControleLocacao extends Controle {
 
 					if (veiculo != null) {
 						this.veiculo = veiculo;
-						
+
 						tfdVeiculo.setText(veiculo + "");
 						valorFinal = calcularValorFinal();
 						tfdValorFinal.setText(valorFinal + "");
-						
+
 						filial = veiculo.getFilial();
 						tfdFilial.setText(filial + "");
 					}
@@ -230,11 +231,11 @@ public class ControleLocacao extends Controle {
 		if (cbxTipoLocacao.getValue() != null && !dtpDevolucao.getEditor().getText().isEmpty()) {
 			switch (cbxTipoLocacao.getValue()) {
 			case KM_CONTROLE:
-				valor *= DateUtil.DiferencaDias(dtpAlocacao.getValue(), dtpDevolucao.getValue());
+				valor *= dateUtil.DiferencaDias(dtpAlocacao.getValue(), dtpDevolucao.getValue());
 				valor += configuracao.getValorKmControle();
 				break;
 			case KM_LIVRE:
-				valor *= DateUtil.DiferencaDias(dtpAlocacao.getValue(), dtpDevolucao.getValue());
+				valor *= dateUtil.DiferencaDias(dtpAlocacao.getValue(), dtpDevolucao.getValue());
 				valor += configuracao.getValorKmLivre();
 				break;
 			default:
@@ -283,7 +284,7 @@ public class ControleLocacao extends Controle {
 		dtpAlocacao.getEditor().setText(getDate(locacao.getData_locacao()));
 		dtpDevolucao.setValue(locacao.getData_devolucao());
 		dtpAlocacao.setValue(locacao.getData_locacao());
-		
+
 	}
 
 	protected void limparCampos() {
@@ -292,9 +293,9 @@ public class ControleLocacao extends Controle {
 		veiculo = null;
 		cliente = null;
 		filial = null;
-		
+
 		valorFinal = (float) 0;
-		
+
 		tfdCliente.setText("");
 		tfdDiaria.setText("");
 		tfdFilial.setText("");
@@ -318,19 +319,17 @@ public class ControleLocacao extends Controle {
 				usuario = (Usuario) entidade;
 				if (usuario instanceof Funcionario) {
 					Funcionario funcionario = (Funcionario) usuario;
-					
-					if(funcionario.getTipoFuncionario() == TipoFuncionario.ATENDENTE)
-					{
+
+					if (funcionario.getTipoFuncionario() == TipoFuncionario.ATENDENTE) {
 						btnMaisFilial.setVisible(false);
-						btnMaisVeiculo.setVisible(false);						
-					}
-					else
-					{
+						btnMaisVeiculo.setVisible(false);
+					} else {
 						btnMaisFilial.setVisible(true);
 						btnMaisVeiculo.setVisible(true);
 					}
 				}
-			}if (usuario instanceof SuperUsuario) {
+			}
+			if (usuario instanceof SuperUsuario) {
 				btnMaisFilial.setVisible(true);
 				btnMaisVeiculo.setVisible(true);
 			}

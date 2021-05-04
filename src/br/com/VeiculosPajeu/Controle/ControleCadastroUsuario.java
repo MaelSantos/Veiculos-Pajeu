@@ -24,52 +24,56 @@ import javafx.scene.layout.GridPane;
 public class ControleCadastroUsuario extends Controle {
 
 	@FXML
-    private Button btnSalvar;
+	private Button btnSalvar;
 
-    @FXML
-    private Label lblTitulo;
+	@FXML
+	private Label lblTitulo;
 
-    @FXML
-    private TextField tfdNome;
+	@FXML
+	private TextField tfdNome;
 
-    @FXML
-    private TextField tfdLogin;
+	@FXML
+	private TextField tfdLogin;
 
-    @FXML
-    private PasswordField tfdSenha;
+	@FXML
+	private PasswordField tfdSenha;
 
-    @FXML
-    private PasswordField tfdConfirmar;
+	@FXML
+	private PasswordField tfdConfirmar;
 
-    @FXML
-    private ComboBox<TipoUsuario> cbxTipo;
+	@FXML
+	private ComboBox<TipoUsuario> cbxTipo;
 
-    @FXML
-    private GridPane paneFuncionario;
+	@FXML
+	private GridPane paneFuncionario;
 
-    @FXML
-    private TextField tfdCargo;
+	@FXML
+	private TextField tfdCargo;
 
-    @FXML
-    private ComboBox<TipoFuncionario> cbxTipoFuncionario;
+	@FXML
+	private ComboBox<TipoFuncionario> cbxTipoFuncionario;
 
-    @FXML
-    private Label lblTipoFuncionario;
+	@FXML
+	private Label lblTipoFuncionario;
 
-    @FXML
-    private GridPane paneSuperUsuario;
+	@FXML
+	private GridPane paneSuperUsuario;
 
-    @FXML
-    private PasswordField tfdSenhaPadrao;
+	@FXML
+	private PasswordField tfdSenhaPadrao;
 
-    @FXML
-    private PasswordField tfdConfirmarSenhaPadrao;
+	@FXML
+	private PasswordField tfdConfirmarSenhaPadrao;
 
 	private Funcionario funcionario;
 	private SuperUsuario superUsuario;
-	
+
+	private CriptografiaUtil criptografiaUtil;
+
 	@Override
 	protected void init() {
+
+		criptografiaUtil = CriptografiaUtil.getInstance();
 
 		cbxTipo.getItems().setAll(TipoUsuario.values());
 		cbxTipoFuncionario.getItems().setAll(TipoFuncionario.values());
@@ -85,7 +89,7 @@ public class ControleCadastroUsuario extends Controle {
 				}
 			}
 		});
-		
+
 		cbxTipoFuncionario.setButtonCell(new ListCell<TipoFuncionario>() {
 			@Override
 			protected void updateItem(TipoFuncionario item, boolean empty) {
@@ -242,7 +246,7 @@ public class ControleCadastroUsuario extends Controle {
 				cbxTipo.setVisible(false);
 				cbxTipoFuncionario.setVisible(false);
 				lblTipoFuncionario.setVisible(false);
-				
+
 				lblTitulo.setText(tela + "");
 			}
 
@@ -250,41 +254,38 @@ public class ControleCadastroUsuario extends Controle {
 			lblTitulo.setText(tela + "");
 			limparCampos();
 		}
-		if(tela == Tela.MENU)
-		{
+		if (tela == Tela.MENU) {
 			if (entidade instanceof SuperUsuario) {
 				cbxTipo.getSelectionModel().clearSelection();
 				cbxTipo.setVisible(true);
 				paneSuperUsuario.setVisible(false);
 				paneFuncionario.setVisible(false);
 				cbxTipo.getSelectionModel().clearSelection();
-			}
-			else if (entidade instanceof Funcionario) {
+			} else if (entidade instanceof Funcionario) {
 				paneSuperUsuario.setVisible(false);
 				paneFuncionario.setVisible(true);
 				cbxTipo.setValue(TipoUsuario.FUNCIONARIO);
 				cbxTipo.setVisible(false);
 				paneFuncionario.setVisible(true);
-			}			
+			}
 		}
 	}
 
 	private void modificarCampos(Usuario usuario) {
 
-		if (funcionario != null)
-		{
+		if (funcionario != null) {
 			tfdCargo.setText(funcionario.getCargo());
 			cbxTipoFuncionario.setValue(funcionario.getTipoFuncionario());
 		}
 		if (superUsuario != null) {
-			tfdSenhaPadrao.setText(CriptografiaUtil.descriptografar(superUsuario.getSenha_padrao()));
-			tfdConfirmarSenhaPadrao.setText(CriptografiaUtil.descriptografar(superUsuario.getSenha_padrao()));
+			tfdSenhaPadrao.setText(criptografiaUtil.descriptografar(superUsuario.getSenha_padrao()));
+			tfdConfirmarSenhaPadrao.setText(criptografiaUtil.descriptografar(superUsuario.getSenha_padrao()));
 		}
 		tfdLogin.setText(usuario.getLogin());
 		tfdNome.setText(usuario.getNome());
 
-		tfdSenha.setText(CriptografiaUtil.descriptografar(usuario.getSenha()));
-		tfdConfirmar.setText(CriptografiaUtil.descriptografar(usuario.getSenha()));
+		tfdSenha.setText(criptografiaUtil.descriptografar(usuario.getSenha()));
+		tfdConfirmar.setText(criptografiaUtil.descriptografar(usuario.getSenha()));
 
 	}
 

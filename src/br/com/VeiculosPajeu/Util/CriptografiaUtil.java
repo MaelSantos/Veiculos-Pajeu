@@ -4,23 +4,33 @@ import java.util.Base64;
 
 public class CriptografiaUtil {
 
-	public static String criptografar(byte[] bs) {
+	private static CriptografiaUtil instance;
+
+	private CriptografiaUtil() {
+	}
+
+	public static CriptografiaUtil getInstance() {
+		if (instance == null)
+			instance = new CriptografiaUtil();
+		return instance;
+	}
+
+	public String criptografar(byte[] bs) {
 		return Base64.getEncoder().encodeToString(bs);
 	}
 
-	public static String descriptografar(String senha) {
+	public String descriptografar(String senha) {
 		byte[] decodificar = Base64.getDecoder().decode(senha);
 		String decodificado = new String(decodificar);
 		return decodificado;
 	}
 
-	public static boolean isCriptografado(String senha) {
+	public boolean isCriptografado(String senha) {
 		boolean is64 = senha.matches("^([A-Za-z0-9+/]{4})*([A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{2}==)?$");
 		try {
-			if (is64)
-			{
+			if (is64) {
 				senha = descriptografar(senha);
-				is64 = senha.matches("^([A-Za-z0-9+/]{4})*([A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{2}==)?$");				
+				is64 = senha.matches("^([A-Za-z0-9+/]{4})*([A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{2}==)?$");
 			}
 		} catch (Exception e) {
 			is64 = false;
@@ -31,11 +41,13 @@ public class CriptografiaUtil {
 
 	public static void main(String[] args) {
 		
+		CriptografiaUtil criptografiaUtil = getInstance();
+
 		String senha = "mael";
-		
-		System.out.println(isCriptografado(senha));
-		System.out.println(isCriptografado(criptografar(senha.getBytes())));
-		System.out.println(descriptografar(senha));
+
+		System.out.println(criptografiaUtil.isCriptografado(senha));
+		System.out.println(criptografiaUtil.isCriptografado(criptografiaUtil.criptografar(senha.getBytes())));
+		System.out.println(criptografiaUtil.descriptografar(senha));
 	}
 
 }

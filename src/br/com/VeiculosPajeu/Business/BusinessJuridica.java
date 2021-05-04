@@ -9,9 +9,11 @@ import br.com.VeiculosPajeu.Util.CriptografiaUtil;
 public class BusinessJuridica extends Business<Juridica> implements IBusinessJuridica {
 
 	private DaoJuridica daoJuridica;
+	private CriptografiaUtil criptografiaUtil;
 	
 	public BusinessJuridica() {
 		daoJuridica = new DaoJuridica();
+		criptografiaUtil = CriptografiaUtil.getInstance();
 		init(daoJuridica);
 	}
 
@@ -37,8 +39,8 @@ public class BusinessJuridica extends Business<Juridica> implements IBusinessJur
 
 		if (entidade.getSenha().length() < 6 || entidade.getSenha().length() > 11)
 			throw new ValidationException("A SENHA TEM QUE TER NO MINIMO 6 E NO MAXIMO 11 CARACTERES");
-		else if (!CriptografiaUtil.isCriptografado(entidade.getSenha()))
-			entidade.setSenha(CriptografiaUtil.criptografar(entidade.getSenha().getBytes()));
+		else if (!criptografiaUtil.isCriptografado(entidade.getSenha()))
+			entidade.setSenha(criptografiaUtil.criptografar(entidade.getSenha().getBytes()));
 
 		
 	}

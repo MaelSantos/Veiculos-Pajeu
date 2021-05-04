@@ -49,6 +49,8 @@ public class ControleResetarSenha extends Controle {
 
 	private SuperUsuario superUsuario;
 
+	private CriptografiaUtil criptografiaUtil;
+
 	@Override
 	public void update(Tela tela, Entidade entidade) {
 
@@ -63,7 +65,7 @@ public class ControleResetarSenha extends Controle {
 
 	@Override
 	protected void init() {
-
+		criptografiaUtil = CriptografiaUtil.getInstance();
 	}
 
 	@Override
@@ -79,7 +81,7 @@ public class ControleResetarSenha extends Controle {
 								.selecionar(fachada.searchAllFuncionario(tfdUsuario.getText().trim()));
 
 						if (funcionario != null) {
-							funcionario.setSenha(CriptografiaUtil.descriptografar(superUsuario.getSenha_padrao()));
+							funcionario.setSenha(criptografiaUtil.descriptografar(superUsuario.getSenha_padrao()));
 							fachada.createOrUpdateFuncionario(funcionario);
 							flwConcluido.setVisible(true);
 							flwLogin.setVisible(false);

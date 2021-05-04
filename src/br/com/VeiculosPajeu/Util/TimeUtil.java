@@ -5,23 +5,34 @@ import java.time.LocalTime;
 
 public class TimeUtil {
 
-	public static long Horas(LocalTime localTime) {
-		
-		long duration = Duration.between(localTime, LocalTime.now()).toHours(); 
-		
-		if(duration < 0)
-			return duration *= -1;
-		else
-			return duration; 
+	private static TimeUtil instance;
+
+	private TimeUtil() {
 	}
 
-	public static LocalTime Timer(LocalTime localTime) {
+	public static TimeUtil getInstance() {
+		if (instance == null)
+			instance = new TimeUtil();
+		return instance;
+	}
+
+	public long Horas(LocalTime localTime) {
+
+		long duration = Duration.between(localTime, LocalTime.now()).toHours();
+
+		if (duration < 0)
+			return duration *= -1;
+		else
+			return duration;
+	}
+
+	public LocalTime Timer(LocalTime localTime) {
 		Duration duration = Duration.between(localTime, LocalTime.now());
 
 		System.out.println(duration.toHours());
-		
+
 		LocalTime time;
-		if(duration.toHours() < 0)
+		if (duration.toHours() < 0)
 			time = LocalTime.of((int) duration.toHours() * -1, 00);
 		else
 			time = LocalTime.of((int) duration.toHours(), 00);

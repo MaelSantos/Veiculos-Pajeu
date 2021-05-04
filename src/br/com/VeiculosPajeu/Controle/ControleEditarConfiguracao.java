@@ -15,20 +15,22 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
 public class ControleEditarConfiguracao extends Controle {
-	
+
 	@FXML
-    private TextField tfdKmControle;
+	private TextField tfdKmControle;
 
-    @FXML
-    private TextField tfdKmLivre;
+	@FXML
+	private TextField tfdKmLivre;
 
-    @FXML
-    private JFXTimePicker tpcHorasLimpeza;
+	@FXML
+	private JFXTimePicker tpcHorasLimpeza;
 
-    @FXML
-    private Button btnSalvar;
+	@FXML
+	private Button btnSalvar;
 
 	private Configuracao configuracao;
+
+	private MaskFieldUtil maskFieldUtil;
 
 	@Override
 	public void update(Tela tela, Entidade entidade) {
@@ -37,8 +39,7 @@ public class ControleEditarConfiguracao extends Controle {
 			configuracao = (Configuracao) entidade;
 			modificarCampos();
 		}
-		if(tela == Tela.MENU)
-		{
+		if (tela == Tela.MENU) {
 			if (entidade instanceof Usuario) {
 				Usuario usuario = (Usuario) entidade;
 				configuracao.setUsuario(usuario.getNome());
@@ -47,12 +48,13 @@ public class ControleEditarConfiguracao extends Controle {
 				} catch (BusinessException e) {
 					e.printStackTrace();
 				}
-			}			
+			}
 		}
 	}
 
 	@Override
 	protected void init() {
+		maskFieldUtil = MaskFieldUtil.getInstance();
 
 		try {
 			configuracao = fachada.searchConfiguracao(1);
@@ -61,9 +63,9 @@ public class ControleEditarConfiguracao extends Controle {
 			e.printStackTrace();
 		}
 
-		MaskFieldUtil.numericField(tfdKmControle);
-		MaskFieldUtil.numericField(tfdKmLivre);
-		
+		maskFieldUtil.numericField(tfdKmControle);
+		maskFieldUtil.numericField(tfdKmLivre);
+
 	}
 
 	@Override
@@ -92,18 +94,18 @@ public class ControleEditarConfiguracao extends Controle {
 	}
 
 	private void modificarCampos() {
-		
+
 		tpcHorasLimpeza.setValue(configuracao.getHoras_limpeza());
-		tpcHorasLimpeza.getEditor().setText(configuracao.getHoras_limpeza()+"");
+		tpcHorasLimpeza.getEditor().setText(configuracao.getHoras_limpeza() + "");
 		tfdKmControle.setText(configuracao.getValorKmControle() + "");
 		tfdKmLivre.setText(configuracao.getValorKmLivre() + "");
 	}
 
 	private void carregarConfiguracao() {
-		
+
 		configuracao.setHoras_limpeza(tpcHorasLimpeza.getValue());
 		configuracao.setValorKmControle(Float.parseFloat(tfdKmControle.getText().trim()));
 		configuracao.setValorKmLivre(Float.parseFloat(tfdKmLivre.getText().trim()));
-		
+
 	}
 }

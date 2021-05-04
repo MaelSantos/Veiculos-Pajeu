@@ -55,6 +55,10 @@ public class ControlePagamento extends Controle {
 	private static String descricao;
 	private static float valor;
 
+	private TimeUtil timeUtil;
+	private DateUtil dateUtil;
+	private MaskFieldUtil maskFieldUtil;
+
 	@Override
 	public void update(Tela tela, Entidade entidade) {
 
@@ -69,8 +73,11 @@ public class ControlePagamento extends Controle {
 
 	@Override
 	protected void init() {
-		
-		MaskFieldUtil.numericField(tfdRecebido);
+		timeUtil = TimeUtil.getInstance();
+		dateUtil = DateUtil.getInstance();
+		maskFieldUtil = MaskFieldUtil.getInstance();
+
+		maskFieldUtil.numericField(tfdRecebido);
 
 	}
 
@@ -97,24 +104,20 @@ public class ControlePagamento extends Controle {
 							financeiro.setValor_pago(financeiro.getValor_pago() + solicitado + calcularMulta());
 						else
 							throw new ValidationException("Valor Insuficiente");
-					} else if(valor < 0)
-					{	
-						if(pago >= financeiro.getValor_total() - financeiro.getValor_pago())
-						{
+					} else if (valor < 0) {
+						if (pago >= financeiro.getValor_total() - financeiro.getValor_pago()) {
 							financeiro.setEstado(EstadoFinanceiro.PAGO);
 							financeiro.setMulta(financeiro.getMulta() + calcularMulta());
 							financeiro.setValor_pago(financeiro.getValor_total() + financeiro.getMulta());
 							financeiro.setData_paga(LocalDate.now());
-						}
-						else 
+						} else
 							throw new ValidationException("Valor Insuficiente");
-					}
-					else
+					} else
 						financeiro.setValor_pago(financeiro.getValor_pago() + pago);
 
 					financeiro.setHoras_atrasados(calcularHorasAtraso());
 					fachada.createOrUpdateFinanceiro(financeiro);
-					
+
 					App.notificarOuvintes(Tela.FINANCEIRO, financeiro);
 					notificacao.mensagemSucesso("Operação Realizada Com Sucesso");
 					limparCampos();
@@ -127,7 +130,7 @@ public class ControlePagamento extends Controle {
 			}
 
 		} else if (obj == tfdRecebido) {
-			if(!tfdRecebido.getText().trim().isEmpty())
+			if (!tfdRecebido.getText().trim().isEmpty())
 				atualizarTroco();
 		}
 	}
@@ -164,19 +167,14 @@ public class ControlePagamento extends Controle {
 
 		float multa = 0F;
 
-		if(financeiro.getData_vencimento().isBefore(LocalDate.now()))
-		{
-			multa = DateUtil.DiferencaDias(financeiro.getData_vencimento()) * financeiro.getLocacao().getDiaria();
-		}
-		else if(financeiro.getData_vencimento().isEqual(LocalDate.now()))
-		{
-			if(horas_atrasadas.getHour() > 1 && horas_atrasadas.getHour() < 4)
-			{
-				multa = financeiro.getLocacao().getDiaria()/4;
+		if (financeiro.getData_vencimento().isBefore(LocalDate.now())) {
+			multa = dateUtil.DiferencaDias(financeiro.getData_vencimento()) * financeiro.getLocacao().getDiaria();
+		} else if (financeiro.getData_vencimento().isEqual(LocalDate.now())) {
+			if (horas_atrasadas.getHour() > 1 && horas_atrasadas.getHour() < 4) {
+				multa = financeiro.getLocacao().getDiaria() / 4;
 				multa *= horas_atrasadas.getHour();
-			}
-			else if (horas_atrasadas.getHour() >= 4)
-				multa += financeiro.getLocacao().getDiaria();			
+			} else if (horas_atrasadas.getHour() >= 4)
+				multa += financeiro.getLocacao().getDiaria();
 		}
 
 		return multa;
@@ -190,7 +188,7 @@ public class ControlePagamento extends Controle {
 		LocalTime time = null;
 
 		if (vencimento.isEqual(atual) || vencimento.isBefore(atual)) {
-			time = TimeUtil.Timer(devolucao);
+			time = timeUtil.Timer(devolucao);
 		}
 		if (time == null)
 			time = LocalTime.of(0, 0);
@@ -215,7 +213,7 @@ public class ControlePagamento extends Controle {
 
 		if (valor > 0)
 			lblSolicitado.setText(valor + "");
-		else if(valor < 0)
+		else if (valor < 0)
 			lblSolicitado.setText("Todo");
 		else
 			lblSolicitado.setText("Personalizado");

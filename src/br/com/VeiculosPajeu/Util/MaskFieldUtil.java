@@ -13,17 +13,24 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 
-public abstract class MaskFieldUtil {
+public class MaskFieldUtil {
 
-	private static List<KeyCode> ignoreKeyCodes;
+	private static MaskFieldUtil instance;
+	private List<KeyCode> ignoreKeyCodes;
 
-	static {
+	private MaskFieldUtil() {
 		ignoreKeyCodes = new ArrayList<>();
 		Collections.addAll(ignoreKeyCodes, new KeyCode[] { KeyCode.F1, KeyCode.F2, KeyCode.F3, KeyCode.F4, KeyCode.F5,
 				KeyCode.F6, KeyCode.F7, KeyCode.F8, KeyCode.F9, KeyCode.F10, KeyCode.F11, KeyCode.F12 });
 	}
 
-	public static void ignoreKeys(final TextField textField) {
+	public static MaskFieldUtil getInstance() {
+		if (instance == null)
+			instance = new MaskFieldUtil();
+		return instance;
+	}
+
+	public void ignoreKeys(final TextField textField) {
 		textField.addEventFilter(KeyEvent.KEY_PRESSED, new EventHandler<KeyEvent>() {
 			@Override
 			public void handle(KeyEvent keyEvent) {
@@ -39,7 +46,7 @@ public abstract class MaskFieldUtil {
 	 *
 	 * @param textField TextField
 	 */
-	public static void dateField(final TextField textField) {
+	public void dateField(final TextField textField) {
 		maxField(textField, 10);
 
 		textField.lengthProperty().addListener(new ChangeListener<Number>() {
@@ -62,7 +69,7 @@ public abstract class MaskFieldUtil {
 	 *
 	 * @param textField TextField
 	 */
-	public static void numericField(final TextField textField) {
+	public void numericField(final TextField textField) {
 		textField.lengthProperty().addListener(new ChangeListener<Number>() {
 			@Override
 			public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
@@ -81,7 +88,7 @@ public abstract class MaskFieldUtil {
 	 *
 	 * @param textField TextField
 	 */
-	public static void monetaryField(final TextField textField) {
+	public void monetaryField(final TextField textField) {
 		textField.setAlignment(Pos.CENTER_RIGHT);
 		textField.lengthProperty().addListener(new ChangeListener<Number>() {
 			@Override
@@ -127,7 +134,7 @@ public abstract class MaskFieldUtil {
 	 *
 	 * @param textField TextField
 	 */
-	public static void cpfCnpjField(final TextField textField) {
+	public void cpfCnpjField(final TextField textField) {
 
 		textField.focusedProperty().addListener(new ChangeListener<Boolean>() {
 
@@ -158,7 +165,7 @@ public abstract class MaskFieldUtil {
 		maxField(textField, 18);
 	}
 
-	public static void cpfField(final TextField textField) {
+	public void cpfField(final TextField textField) {
 		maxField(textField, 14);
 
 		textField.lengthProperty().addListener(new ChangeListener<Number>() {
@@ -174,13 +181,12 @@ public abstract class MaskFieldUtil {
 
 	}
 
-	
 	/**
 	 * Monta a mascara para os campos CNPJ.
 	 *
 	 * @param textField TextField
 	 */
-	public static void cnpjField(final TextField textField) {
+	public void cnpjField(final TextField textField) {
 		maxField(textField, 18);
 
 		textField.lengthProperty().addListener(new ChangeListener<Number>() {
@@ -205,7 +211,7 @@ public abstract class MaskFieldUtil {
 	 *
 	 * @param textField TextField
 	 */
-	private static void positionCaret(final TextField textField) {
+	private void positionCaret(final TextField textField) {
 		Platform.runLater(new Runnable() {
 			@Override
 			public void run() {
@@ -219,7 +225,7 @@ public abstract class MaskFieldUtil {
 	 * @param textField TextField.
 	 * @param length    Tamanho do campo.
 	 */
-	public static void maxField(final TextField textField, final Integer length) {
+	public void maxField(final TextField textField, final Integer length) {
 		textField.textProperty().addListener(new ChangeListener<String>() {
 			@Override
 			public void changed(ObservableValue<? extends String> observableValue, String oldValue, String newValue) {
@@ -228,25 +234,23 @@ public abstract class MaskFieldUtil {
 			}
 		});
 	}
-	
-	public static void maximoField(final TextField textField, final Integer length) {
+
+	public void maximoField(final TextField textField, final Integer length) {
 		maxField(textField, length);
 		textField.lengthProperty().addListener(new ChangeListener<Number>() {
 			@Override
 			public void changed(ObservableValue<? extends Number> observableValue, Number oldValue, Number newValue) {
-				
+
 				String texto = textField.getText();
-				if (texto.length() > length)
-				{
+				if (texto.length() > length) {
 					texto = texto.substring(0, length);
-					textField.setText(texto);					
+					textField.setText(texto);
 				}
 			}
 		});
 	}
-	
-	public static String removerMascaraCpf(String mascara)
-	{
+
+	public String removerMascaraCpf(String mascara) {
 		return mascara.replaceAll("[.-]", "");
 	}
 }
