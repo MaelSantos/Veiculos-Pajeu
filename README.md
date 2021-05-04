@@ -21,7 +21,7 @@ Para mais informações consultar a pasta `docs` do projeto.
 - [x] [PostgreSQL](https://www.postgresql.org/)
 
 #### 2ª Versão (a implementar)
-- [ ] Singleton
+- [x] Singleton
 - [ ] Abstract Factory
-- [ ] Suporte para [MySQL](https://www.mysql.com/)
+- [ ] ~~Suporte para [MySQL](https://www.mysql.com/)~~ (Incompatibilidade nos SQLs de Trigger, Function e Store Procedure)
 - [ ] Iterator

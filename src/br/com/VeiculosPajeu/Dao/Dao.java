@@ -21,28 +21,29 @@ public class Dao<T extends Entidade> implements IDao<T> {
 		entityManager.flush();
 		entityManager.close();
 	}
+
 	public static void resetConnection() {
-		
-		FactoryConnection.alterarPropriedades(true);
+
+		FactoryConnection.getInstance().alterarPropriedades(true);
 		entityManager.clear();
 		entityManager.close();
-		entityManager = FactoryConnection.getEntityManager();
+		entityManager = FactoryConnection.getInstance().getEntityManager();
 		entityManager.clear();
-		
-	}
 
-	public Dao(Class<T> classe) {
-		this.classe = classe;
 	}
 
 	protected static EntityManager getEntityManager() {
 		if (entityManager == null) {
-			FactoryConnection.alterarPropriedades(false);
-			entityManager = FactoryConnection.getEntityManager();
+			FactoryConnection.getInstance().alterarPropriedades(false);
+			entityManager = FactoryConnection.getInstance().getEntityManager();
 			entityManager.clear();
 		}
 
 		return entityManager;
+	}
+
+	public Dao(Class<T> classe) {
+		this.classe = classe;
 	}
 
 	@Override
@@ -52,7 +53,7 @@ public class Dao<T extends Entidade> implements IDao<T> {
 			entityManager.getTransaction().begin();
 			entityManager.persist(entidade);
 			entityManager.getTransaction().commit();
-		}catch (Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 			entityManager.getTransaction().rollback();
 			throw new DaoException("Erro ao Salvar " + classe.getSimpleName() + " - " + e.getMessage());
@@ -115,7 +116,7 @@ public class Dao<T extends Entidade> implements IDao<T> {
 			throw new DaoException("Erro ao Procurar " + classe.getSimpleName() + " - " + e.getMessage());
 		}
 	}
-	
+
 	@Override
 	public List<T> searchAll(String search) throws DaoException {
 		try {
@@ -132,6 +133,4 @@ public class Dao<T extends Entidade> implements IDao<T> {
 		}
 	}
 
-	
-	
 }
