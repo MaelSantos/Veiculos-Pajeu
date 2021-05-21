@@ -14,46 +14,15 @@ import br.com.VeiculosPajeu.Exception.BusinessException;
 import br.com.VeiculosPajeu.Exception.DaoException;
 import br.com.VeiculosPajeu.Exception.ValidationException;
 
-public class BusinessLocacao extends Business<Locacao> implements IBusinessLocacao{
+public class BusinessLocacao extends Business<Locacao> implements IBusinessLocacao {
 
 	private IDaoLocacao daoLocacao;
-	
+
 	public BusinessLocacao() {
+//		super(Locacao.class);
+//		daoLocacao = (IDaoLocacao) dao;
 		daoLocacao = new DaoLocacao();
 		init(daoLocacao);
-	}
-	
-	@Override
-	public void validation(Locacao entidade) throws ValidationException {
-		
-		if(entidade.getCliente() == null)
-			throw new ValidationException("INFORME UM CLIENTE");
-		if(entidade.getData_devolucao() == null)
-			throw new ValidationException("INFORME UMA DATA DE DEVOLUÇÃO");
-		if(entidade.getData_locacao() == null)
-			throw new ValidationException("INFORME UMA DATA DE LOCAÇÃO");
-		if(entidade.getDiaria() == null)
-			throw new ValidationException("INFORME A DIÁRIA");
-		if(entidade.getFilial_locacao() == null)
-			throw new ValidationException("INFORME EM QUAL SERÁ A FILIAL FEITA A LOCAÇÃO");
-		if(entidade.getTipoLocacao() == null)
-			throw new ValidationException("INFORME O TIPO DE LOCAÇÃO");
-		if(entidade.getValor_total() == null)
-			throw new ValidationException("INFORME O VALOR TOTAL");
-		if(entidade.getVeiculo() == null)
-			throw new ValidationException("INFORME O VEÍCULO");
-		if(entidade.getHora_devolucao() == null)
-			throw new ValidationException("INFORME A HORA DE DEVOLUÇÃO");
-		if(entidade.getData_locacao().isAfter(entidade.getData_devolucao()))
-			throw new ValidationException("DATA DE LOCAÇÃO MAIOR QUE DEVOLUÇÃO");
-		if(entidade.getValor_total() < 0)
-			throw new ValidationException("VALOR NEGATIVO - CONTATAR ADM");
-		if (entidade.getCliente() instanceof Fisica) {
-			Fisica fisica = (Fisica) entidade.getCliente();
-			if (fisica.getVencimento_habilitacao().isBefore(entidade.getData_devolucao())) {
-				throw new ValidationException("Habilitação Vencerá Dentro do Prazo de Locação");
-			}
-		}
 	}
 
 	@Override
@@ -89,6 +58,39 @@ public class BusinessLocacao extends Business<Locacao> implements IBusinessLocac
 			return daoLocacao.searchAllPorCliente(cliente);
 		} catch (DaoException e) {
 			throw new BusinessException(e.getMessage());
+		}
+	}
+
+	@Override
+	public void validation(Locacao entidade) throws ValidationException {
+
+		if (entidade.getCliente() == null)
+			throw new ValidationException("INFORME UM CLIENTE");
+		if (entidade.getData_devolucao() == null)
+			throw new ValidationException("INFORME UMA DATA DE DEVOLUÇÃO");
+		if (entidade.getData_locacao() == null)
+			throw new ValidationException("INFORME UMA DATA DE LOCAÇÃO");
+		if (entidade.getDiaria() == null)
+			throw new ValidationException("INFORME A DIÁRIA");
+		if (entidade.getFilial_locacao() == null)
+			throw new ValidationException("INFORME EM QUAL SERÁ A FILIAL FEITA A LOCAÇÃO");
+		if (entidade.getTipoLocacao() == null)
+			throw new ValidationException("INFORME O TIPO DE LOCAÇÃO");
+		if (entidade.getValor_total() == null)
+			throw new ValidationException("INFORME O VALOR TOTAL");
+		if (entidade.getVeiculo() == null)
+			throw new ValidationException("INFORME O VEÍCULO");
+		if (entidade.getHora_devolucao() == null)
+			throw new ValidationException("INFORME A HORA DE DEVOLUÇÃO");
+		if (entidade.getData_locacao().isAfter(entidade.getData_devolucao()))
+			throw new ValidationException("DATA DE LOCAÇÃO MAIOR QUE DEVOLUÇÃO");
+		if (entidade.getValor_total() < 0)
+			throw new ValidationException("VALOR NEGATIVO - CONTATAR ADM");
+		if (entidade.getCliente() instanceof Fisica) {
+			Fisica fisica = (Fisica) entidade.getCliente();
+			if (fisica.getVencimento_habilitacao().isBefore(entidade.getData_devolucao())) {
+				throw new ValidationException("Habilitação Vencerá Dentro do Prazo de Locação");
+			}
 		}
 	}
 

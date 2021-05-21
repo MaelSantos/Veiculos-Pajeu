@@ -9,7 +9,7 @@ import javax.persistence.TypedQuery;
 import br.com.VeiculosPajeu.Dao.Interface.IDao;
 import br.com.VeiculosPajeu.Entidade.Entidade;
 import br.com.VeiculosPajeu.Exception.DaoException;
-import br.com.VeiculosPajeu.Util.FactoryConnection;
+import br.com.VeiculosPajeu.Util.ConnectionFactory;
 import br.com.VeiculosPajeu.Util.SQLUtil;
 
 public class Dao<T extends Entidade> implements IDao<T> {
@@ -24,18 +24,18 @@ public class Dao<T extends Entidade> implements IDao<T> {
 
 	public static void resetConnection() {
 
-		FactoryConnection.getInstance().alterarPropriedades(true);
+		ConnectionFactory.getInstance().alterarPropriedades(true);
 		entityManager.clear();
 		entityManager.close();
-		entityManager = FactoryConnection.getInstance().getEntityManager();
+		entityManager = ConnectionFactory.getInstance().getEntityManager();
 		entityManager.clear();
 
 	}
 
 	protected static EntityManager getEntityManager() {
 		if (entityManager == null) {
-			FactoryConnection.getInstance().alterarPropriedades(false);
-			entityManager = FactoryConnection.getInstance().getEntityManager();
+			ConnectionFactory.getInstance().alterarPropriedades(false);
+			entityManager = ConnectionFactory.getInstance().getEntityManager();
 			entityManager.clear();
 		}
 

@@ -8,10 +8,16 @@ import br.com.VeiculosPajeu.Entidade.Entidade;
 import br.com.VeiculosPajeu.Exception.BusinessException;
 import br.com.VeiculosPajeu.Exception.DaoException;
 import br.com.VeiculosPajeu.Exception.ValidationException;
+import br.com.VeiculosPajeu.Util.DaoFactory;
 
 public abstract class Business<T extends Entidade> implements IBusiness<T>{
 
 	protected IDao<T> dao;
+	
+//	@SuppressWarnings("unchecked")
+//	public Business(Class<T> classe) {
+//		this.dao = (IDao<T>) DaoFactory.getInstance().getDao(classe);
+//	}
 	
 	@Override
 	public void init(IDao<T> dao) {
