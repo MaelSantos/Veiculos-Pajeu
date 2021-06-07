@@ -108,7 +108,7 @@ public class ControleCadastroCategoria extends Controle {
 		} else if (obj == btnSalvar) {
 			try {
 				carregarCategoria();
-				fachada.createOrUpdateCategoria(categoria);
+				fachada.saveCategoria(categoria);
 				notificacao.mensagemSucesso("Categoria Salva Com Sucesso");
 				App.notificarOuvintes(categoria);
 				limparCampos();

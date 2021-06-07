@@ -4,6 +4,7 @@ import java.time.LocalDate;
 
 import br.com.VeiculosPajeu.Business.Interface.IBusinessFisica;
 import br.com.VeiculosPajeu.Dao.DaoFisica;
+import br.com.VeiculosPajeu.Dao.Interface.IDao;
 import br.com.VeiculosPajeu.Dao.Interface.IDaoFisica;
 import br.com.VeiculosPajeu.Entidade.Fisica;
 import br.com.VeiculosPajeu.Exception.ValidationException;
@@ -17,10 +18,9 @@ public class BusinessFisica extends Business<Fisica> implements IBusinessFisica 
 	private DateUtil dateUtil;
 
 	public BusinessFisica() {
-		daoFisica = new DaoFisica();
+		super();
 		criptografiaUtil = CriptografiaUtil.getInstance();
 		dateUtil = DateUtil.getInstance();
-		init(daoFisica);
 	}
 
 	@Override
@@ -58,6 +58,13 @@ public class BusinessFisica extends Business<Fisica> implements IBusinessFisica 
 		else if (!criptografiaUtil.isCriptografado(entidade.getSenha()))
 			entidade.setSenha(criptografiaUtil.criptografar(entidade.getSenha().getBytes()));
 
+	}
+
+	@Override
+	public IDao<Fisica> createDao() throws ValidationException {
+		if (daoFisica == null)
+			daoFisica = new DaoFisica();
+		return daoFisica;
 	}
 
 }

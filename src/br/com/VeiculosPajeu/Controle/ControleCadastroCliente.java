@@ -188,7 +188,7 @@ public class ControleCadastroCliente extends Controle {
 			if (cbxTipo.getValue() == TipoCliente.FISICA) {
 				try {
 					carregarCliente(fisica);
-					fachada.createOrUpdateFisica(fisica);
+					fachada.saveFisica(fisica);
 					notificacao.mensagemSucesso("Cliente Salvo Com Sucesso");
 					limparCampos();
 				} catch (BusinessException e) {
@@ -198,7 +198,7 @@ public class ControleCadastroCliente extends Controle {
 			} else if (cbxTipo.getValue() == TipoCliente.JURIDICO) {
 				try {
 					carregarCliente(juridica);
-					fachada.createOrUpdateJuridica(juridica);
+					fachada.saveJuridica(juridica);
 					notificacao.mensagemSucesso("Cliente Salvo Com Sucesso");
 					limparCampos();
 				} catch (BusinessException e) {

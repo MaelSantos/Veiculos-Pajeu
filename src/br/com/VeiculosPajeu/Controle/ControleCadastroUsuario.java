@@ -117,11 +117,11 @@ public class ControleCadastroUsuario extends Controle {
 					validarSenhas();
 					switch (cbxTipo.getValue()) {
 					case FUNCIONARIO:
-						fachada.createOrUpdateFuncionario(funcionario);
+						fachada.saveFuncionario(funcionario);
 						App.notificarOuvintes(Tela.CADASTRO_USUARIO, funcionario);
 						break;
 					case SUPER_USUARIO:
-						fachada.createOrUpdateSuperUsuario(superUsuario);
+						fachada.saveSuperUsuario(superUsuario);
 						App.notificarOuvintes(Tela.CADASTRO_USUARIO, superUsuario);
 					default:
 						break;

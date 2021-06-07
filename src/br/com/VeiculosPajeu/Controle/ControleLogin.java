@@ -41,7 +41,7 @@ public class ControleLogin extends Controle {
 			if (cont == 0) {
 				Dao.resetConnection();
 				SuperUsuario usuario = fachada.searchSuperUsuario(1);
-				fachada.createOrUpdateSuperUsuario(usuario);
+				fachada.saveSuperUsuario(usuario);
 			}
 
 		} catch (BusinessException e) {

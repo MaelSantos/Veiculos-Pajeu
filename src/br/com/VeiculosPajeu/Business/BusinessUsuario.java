@@ -2,6 +2,7 @@ package br.com.VeiculosPajeu.Business;
 
 import br.com.VeiculosPajeu.Business.Interface.IBusinessUsuario;
 import br.com.VeiculosPajeu.Dao.DaoUsuario;
+import br.com.VeiculosPajeu.Dao.Interface.IDao;
 import br.com.VeiculosPajeu.Dao.Interface.IDaoUsuario;
 import br.com.VeiculosPajeu.Entidade.SuperUsuario;
 import br.com.VeiculosPajeu.Entidade.Usuario;
@@ -16,10 +17,8 @@ public class BusinessUsuario extends Business<Usuario> implements IBusinessUsuar
 	private CriptografiaUtil criptografiaUtil;
 
 	public BusinessUsuario() {
-
-		daoUsuario = new DaoUsuario();
+		super();
 		criptografiaUtil = CriptografiaUtil.getInstance();
-		init(daoUsuario);
 	}
 
 	@Override
@@ -52,5 +51,12 @@ public class BusinessUsuario extends Business<Usuario> implements IBusinessUsuar
 		} catch (DaoException e) {
 			throw new BusinessException(e.getMessage());
 		}
+	}
+
+	@Override
+	public IDao<Usuario> createDao() throws ValidationException {
+		if (daoUsuario == null)
+			daoUsuario = new DaoUsuario();
+		return daoUsuario;
 	}
 }

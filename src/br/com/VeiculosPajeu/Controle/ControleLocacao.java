@@ -136,14 +136,14 @@ public class ControleLocacao extends Controle {
 
 				if (veiculo != null && filial != null) {
 					carregarLocacao();
-					fachada.createOrUpdateLocacao(locacao);
+					fachada.saveLocacao(locacao);
 
 					if (veiculo instanceof Automovel) {
-						fachada.createOrUpdateAutomovel((Automovel) veiculo);
+						fachada.saveAutomovel((Automovel) veiculo);
 					} else if (veiculo instanceof Carga) {
-						fachada.createOrUpdateCarga((Carga) veiculo);
+						fachada.saveCarga((Carga) veiculo);
 					} else if (veiculo instanceof Passageiro) {
-						fachada.createOrUpdatePassageiro((Passageiro) veiculo);
+						fachada.savePassageiro((Passageiro) veiculo);
 					}
 
 					ControlePagamento.setDescricao("Valor De Entrada da Locação", locacao.getDiaria() / 2);

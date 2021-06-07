@@ -5,6 +5,7 @@ import java.util.List;
 
 import br.com.VeiculosPajeu.Business.Interface.IBusinessLocacao;
 import br.com.VeiculosPajeu.Dao.DaoLocacao;
+import br.com.VeiculosPajeu.Dao.Interface.IDao;
 import br.com.VeiculosPajeu.Dao.Interface.IDaoLocacao;
 import br.com.VeiculosPajeu.Entidade.Cliente;
 import br.com.VeiculosPajeu.Entidade.Fisica;
@@ -17,13 +18,6 @@ import br.com.VeiculosPajeu.Exception.ValidationException;
 public class BusinessLocacao extends Business<Locacao> implements IBusinessLocacao {
 
 	private IDaoLocacao daoLocacao;
-
-	public BusinessLocacao() {
-//		super(Locacao.class);
-//		daoLocacao = (IDaoLocacao) dao;
-		daoLocacao = new DaoLocacao();
-		init(daoLocacao);
-	}
 
 	@Override
 	public List<Locacao> searchAllAtivo(String search) throws BusinessException {
@@ -92,6 +86,13 @@ public class BusinessLocacao extends Business<Locacao> implements IBusinessLocac
 				throw new ValidationException("Habilitação Vencerá Dentro do Prazo de Locação");
 			}
 		}
+	}
+
+	@Override
+	public IDao<Locacao> createDao() throws ValidationException {
+		if(daoLocacao == null)
+			daoLocacao = new DaoLocacao();
+		return daoLocacao;
 	}
 
 }

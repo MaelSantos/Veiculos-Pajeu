@@ -312,13 +312,13 @@ public class ControleCadastroVeiculo extends Controle {
 				carregarVeiculo();
 				switch (cbxTipoVeiculo.getValue()) {
 				case AUTOMOVEL:
-					fachada.createOrUpdateAutomovel(automovel);
+					fachada.saveAutomovel(automovel);
 					break;
 				case CAMIONETE_DE_CARGA:
-					fachada.createOrUpdateCarga(carga);
+					fachada.saveCarga(carga);
 					break;
 				case CAMIONETE_DE_PASSAGEIROS:
-					fachada.createOrUpdatePassageiro(passageiro);
+					fachada.savePassageiro(passageiro);
 					break;
 				default:
 					break;

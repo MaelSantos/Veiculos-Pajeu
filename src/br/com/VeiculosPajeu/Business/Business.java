@@ -8,28 +8,25 @@ import br.com.VeiculosPajeu.Entidade.Entidade;
 import br.com.VeiculosPajeu.Exception.BusinessException;
 import br.com.VeiculosPajeu.Exception.DaoException;
 import br.com.VeiculosPajeu.Exception.ValidationException;
-import br.com.VeiculosPajeu.Util.DaoFactory;
 
-public abstract class Business<T extends Entidade> implements IBusiness<T>{
+public abstract class Business<T extends Entidade> implements IBusiness<T> {
 
 	protected IDao<T> dao;
-	
-//	@SuppressWarnings("unchecked")
-//	public Business(Class<T> classe) {
-//		this.dao = (IDao<T>) DaoFactory.getInstance().getDao(classe);
-//	}
-	
-	@Override
-	public void init(IDao<T> dao) {
-		this.dao = dao;
+
+	public Business() {
+		try {
+			this.dao = createDao();
+		} catch (ValidationException e) {
+			e.printStackTrace();
+		}
 	}
-	
+
 	@Override
-	public void createOrUpdate(T entidade) throws BusinessException {
-		
+	public void save(T entidade) throws BusinessException {
+
 		try {
 			validation(entidade);
-			if(entidade.getId() == null)
+			if (entidade.getId() == null)
 				dao.create(entidade);
 			else
 				dao.update(entidade);
@@ -37,7 +34,7 @@ public abstract class Business<T extends Entidade> implements IBusiness<T>{
 			e.printStackTrace();
 			throw new BusinessException(e.getMessage());
 		}
-		
+
 	}
 
 	@Override
@@ -60,7 +57,7 @@ public abstract class Business<T extends Entidade> implements IBusiness<T>{
 
 	@Override
 	public List<T> searchAll() throws BusinessException {
-		
+
 		try {
 			return dao.searchAll();
 		} catch (DaoException e) {
@@ -76,5 +73,5 @@ public abstract class Business<T extends Entidade> implements IBusiness<T>{
 			throw new BusinessException(e.getMessage());
 		}
 	}
-	
+
 }

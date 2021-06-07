@@ -2,6 +2,7 @@ package br.com.VeiculosPajeu.Business;
 
 import br.com.VeiculosPajeu.Business.Interface.IBusinessFuncionario;
 import br.com.VeiculosPajeu.Dao.DaoFuncionario;
+import br.com.VeiculosPajeu.Dao.Interface.IDao;
 import br.com.VeiculosPajeu.Dao.Interface.IDaoFuncionario;
 import br.com.VeiculosPajeu.Entidade.Funcionario;
 import br.com.VeiculosPajeu.Exception.ValidationException;
@@ -13,9 +14,8 @@ public class BusinessFuncionario extends Business<Funcionario> implements IBusin
 	private CriptografiaUtil criptografiaUtil;
 
 	public BusinessFuncionario() {
-		daoFuncionario = new DaoFuncionario();
+		super();
 		criptografiaUtil = CriptografiaUtil.getInstance();
-		init(daoFuncionario);
 	}
 
 	@Override
@@ -37,5 +37,12 @@ public class BusinessFuncionario extends Business<Funcionario> implements IBusin
 		else if (!criptografiaUtil.isCriptografado(entidade.getSenha()))
 			entidade.setSenha(criptografiaUtil.criptografar(entidade.getSenha().getBytes()));
 
+	}
+
+	@Override
+	public IDao<Funcionario> createDao() throws ValidationException {
+		if (daoFuncionario == null)
+			daoFuncionario = new DaoFuncionario();
+		return daoFuncionario;
 	}
 }

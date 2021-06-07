@@ -116,7 +116,7 @@ public class ControlePagamento extends Controle {
 						financeiro.setValor_pago(financeiro.getValor_pago() + pago);
 
 					financeiro.setHoras_atrasados(calcularHorasAtraso());
-					fachada.createOrUpdateFinanceiro(financeiro);
+					fachada.saveFinanceiro(financeiro);
 
 					App.notificarOuvintes(Tela.FINANCEIRO, financeiro);
 					notificacao.mensagemSucesso("Operação Realizada Com Sucesso");

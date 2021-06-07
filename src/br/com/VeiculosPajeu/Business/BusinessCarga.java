@@ -2,6 +2,7 @@ package br.com.VeiculosPajeu.Business;
 
 import br.com.VeiculosPajeu.Business.Interface.IBusinessCarga;
 import br.com.VeiculosPajeu.Dao.DaoCarga;
+import br.com.VeiculosPajeu.Dao.Interface.IDao;
 import br.com.VeiculosPajeu.Dao.Interface.IDaoCarga;
 import br.com.VeiculosPajeu.Entidade.Carga;
 import br.com.VeiculosPajeu.Exception.ValidationException;
@@ -9,11 +10,6 @@ import br.com.VeiculosPajeu.Exception.ValidationException;
 public class BusinessCarga extends Business<Carga> implements IBusinessCarga {
 
 	private IDaoCarga daoCarga;
-
-	public BusinessCarga() {
-		daoCarga = new DaoCarga();
-		init(daoCarga);
-	}
 
 	@Override
 	public void validation(Carga entidade) throws ValidationException {
@@ -56,8 +52,15 @@ public class BusinessCarga extends Business<Carga> implements IBusinessCarga {
 			throw new ValidationException("INFORME O TORQUE DO MOTOR");
 		if (entidade.getVolume_combustivel().trim().isEmpty())
 			throw new ValidationException("INFORME O VOLUME DO COMBUSTÍVEL");
-		if(entidade.getFilial() == null)
+		if (entidade.getFilial() == null)
 			throw new ValidationException("INFORME UMA FILIAL");
+	}
+
+	@Override
+	public IDao<Carga> createDao() throws ValidationException {
+		if (daoCarga == null)
+			daoCarga = new DaoCarga();
+		return daoCarga;
 	}
 
 }

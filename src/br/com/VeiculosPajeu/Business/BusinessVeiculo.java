@@ -6,6 +6,7 @@ import java.util.List;
 
 import br.com.VeiculosPajeu.Business.Interface.IBusinessVeiculo;
 import br.com.VeiculosPajeu.Dao.DaoVeiculo;
+import br.com.VeiculosPajeu.Dao.Interface.IDao;
 import br.com.VeiculosPajeu.Dao.Interface.IDaoVeiculo;
 import br.com.VeiculosPajeu.Entidade.Categoria;
 import br.com.VeiculosPajeu.Entidade.Filial;
@@ -18,16 +19,6 @@ import br.com.VeiculosPajeu.Exception.ValidationException;
 public class BusinessVeiculo extends Business<Veiculo> implements IBusinessVeiculo {
 
 	private IDaoVeiculo daoVeiculo;
-
-	public BusinessVeiculo() {
-
-		daoVeiculo = new DaoVeiculo();
-		init(daoVeiculo);
-	}
-
-	@Override
-	public void validation(Veiculo entidade) throws ValidationException {
-	}
 
 	@Override
 	public List<Veiculo> searchAllPorCategoria(Categoria categoria) throws BusinessException {
@@ -81,5 +72,16 @@ public class BusinessVeiculo extends Business<Veiculo> implements IBusinessVeicu
 		} catch (DaoException e) {
 			throw new BusinessException(e.getMessage());
 		}
+	}
+
+	@Override
+	public void validation(Veiculo entidade) throws ValidationException {
+	}
+
+	@Override
+	public IDao<Veiculo> createDao() throws ValidationException {
+		if (daoVeiculo == null)
+			daoVeiculo = new DaoVeiculo();
+		return daoVeiculo;
 	}
 }

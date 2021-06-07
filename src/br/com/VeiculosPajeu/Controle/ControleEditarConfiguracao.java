@@ -44,7 +44,7 @@ public class ControleEditarConfiguracao extends Controle {
 				Usuario usuario = (Usuario) entidade;
 				configuracao.setUsuario(usuario.getNome());
 				try {
-					fachada.createOrUpdateConfiguracao(configuracao);
+					fachada.saveConfiguracao(configuracao);
 				} catch (BusinessException e) {
 					e.printStackTrace();
 				}
@@ -76,7 +76,7 @@ public class ControleEditarConfiguracao extends Controle {
 		if (obj == btnSalvar) {
 			try {
 				carregarConfiguracao();
-				fachada.createOrUpdateConfiguracao(configuracao);
+				fachada.saveConfiguracao(configuracao);
 				notificacao.mensagemSucesso("Configurações Editadas com Sucesso");
 				App.notificarOuvintes(Tela.EDITAR_CONFIGURACAO, configuracao);
 			} catch (BusinessException e) {

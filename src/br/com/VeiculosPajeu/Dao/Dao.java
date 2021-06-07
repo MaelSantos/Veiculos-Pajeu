@@ -61,6 +61,20 @@ public class Dao<T extends Entidade> implements IDao<T> {
 	}
 
 	@Override
+	public void update(T entidade) throws DaoException {
+
+		try {
+			entityManager.getTransaction().begin();
+			entityManager.merge(entidade);
+			entityManager.getTransaction().commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			entityManager.getTransaction().rollback();
+			throw new DaoException("Erro ao Atualizar " + classe.getSimpleName() + " - " + e.getMessage());
+		}
+	}
+
+	@Override
 	public T search(int id) throws DaoException {
 		try {
 			return entityManager.find(classe, id);
@@ -87,20 +101,6 @@ public class Dao<T extends Entidade> implements IDao<T> {
 			throw new DaoException("Erro ao Remover " + classe.getSimpleName() + " - " + e.getMessage());
 		}
 
-	}
-
-	@Override
-	public void update(T entidade) throws DaoException {
-
-		try {
-			entityManager.getTransaction().begin();
-			entityManager.merge(entidade);
-			entityManager.getTransaction().commit();
-		} catch (Exception e) {
-			e.printStackTrace();
-			entityManager.getTransaction().rollback();
-			throw new DaoException("Erro ao Atualizar " + classe.getSimpleName() + " - " + e.getMessage());
-		}
 	}
 
 	@SuppressWarnings("unchecked")

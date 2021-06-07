@@ -77,7 +77,7 @@ public class ControleCadastroFilial extends Controle {
 		if (obj == btnSalvar) {
 			try {
 				carregarFilial();
-				fachada.createOrUpdateFilial(filial);
+				fachada.saveFilial(filial);
 				notificacao.mensagemSucesso("Filial Salva Com Sucesso");
 				limparCampos();
 			} catch (BusinessException e) {

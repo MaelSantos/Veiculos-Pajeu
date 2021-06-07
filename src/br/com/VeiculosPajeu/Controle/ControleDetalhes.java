@@ -215,18 +215,18 @@ public class ControleDetalhes extends Controle {
 								Financeiro financeiro = fachada.searchFinanceiro(locacao.getId());
 								float valor = financeiro.getValor_pago();
 								financeiro.setEstado(EstadoFinanceiro.CANCELADO);
-								fachada.createOrUpdateLocacao(locacao);
-								fachada.createOrUpdateFinanceiro(financeiro);
+								fachada.saveLocacao(locacao);
+								fachada.saveFinanceiro(financeiro);
 								
 								Veiculo veiculo = locacao.getVeiculo();
 								veiculo.setAlugado(false);
 								
 								if (veiculo instanceof Automovel) {
-									fachada.createOrUpdateAutomovel((Automovel) veiculo);
+									fachada.saveAutomovel((Automovel) veiculo);
 								} else if (veiculo instanceof Carga) {
-									fachada.createOrUpdateCarga((Carga) veiculo);
+									fachada.saveCarga((Carga) veiculo);
 								} else if (veiculo instanceof Passageiro) {
-									fachada.createOrUpdatePassageiro((Passageiro) veiculo);
+									fachada.savePassageiro((Passageiro) veiculo);
 								}
 								
 								notificacao.mensagemSucesso("Locação Desativa - É Nescessário Reembolsar "+valor+"R$ Ao Cliente");
@@ -241,7 +241,7 @@ public class ControleDetalhes extends Controle {
 							if (notificacao.showConfirmacao("Deseja Continuar?", "Cancelar Reserva?", "Tem certeza Que Quer Continuar?")) {
 								
 								reserva.setAtivo(false);
-								fachada.createOrUpdateReserva(reserva);
+								fachada.saveReserva(reserva);
 								notificacao.mensagemSucesso("Reserva Desativa Com Sucesso");
 							}							
 						}

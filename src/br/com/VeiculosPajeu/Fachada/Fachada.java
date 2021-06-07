@@ -107,7 +107,7 @@ public class Fachada implements IFachada {
 		businessReserva = new BusinessReserva();
 		businessSuperUsuario = new BusinessSuperUsuario();
 		businessFinanceiro = new BusinessFinanceiro();
-		
+
 		businessUsuario = new BusinessUsuario();
 		businessVeiculo = new BusinessVeiculo();
 		businessCliente = new BusinessCliente();
@@ -122,8 +122,8 @@ public class Fachada implements IFachada {
 	}
 
 	@Override
-	public void createOrUpdateAutomovel(Automovel entidade) throws BusinessException {
-		businessAutomovel.createOrUpdate(entidade);
+	public void saveAutomovel(Automovel entidade) throws BusinessException {
+		businessAutomovel.save(entidade);
 	}
 
 	@Override
@@ -148,8 +148,8 @@ public class Fachada implements IFachada {
 	}
 
 	@Override
-	public void createOrUpdateCarga(Carga entidade) throws BusinessException {
-		businessCarga.createOrUpdate(entidade);
+	public void saveCarga(Carga entidade) throws BusinessException {
+		businessCarga.save(entidade);
 	}
 
 	@Override
@@ -173,8 +173,8 @@ public class Fachada implements IFachada {
 	}
 
 	@Override
-	public void createOrUpdateCategoria(Categoria entidade) throws BusinessException {
-		businessCategoria.createOrUpdate(entidade);
+	public void saveCategoria(Categoria entidade) throws BusinessException {
+		businessCategoria.save(entidade);
 	}
 
 	@Override
@@ -203,8 +203,8 @@ public class Fachada implements IFachada {
 	}
 
 	@Override
-	public void createOrUpdateConfiguracao(Configuracao entidade) throws BusinessException {
-		businessConfiguracao.createOrUpdate(entidade);
+	public void saveConfiguracao(Configuracao entidade) throws BusinessException {
+		businessConfiguracao.save(entidade);
 	}
 
 	@Override
@@ -228,8 +228,8 @@ public class Fachada implements IFachada {
 	}
 
 	@Override
-	public void createOrUpdateEndereco(Endereco entidade) throws BusinessException {
-		businessEndereco.createOrUpdate(entidade);
+	public void saveEndereco(Endereco entidade) throws BusinessException {
+		businessEndereco.save(entidade);
 	}
 
 	@Override
@@ -253,8 +253,8 @@ public class Fachada implements IFachada {
 	}
 
 	@Override
-	public void createOrUpdateFilial(Filial entidade) throws BusinessException {
-		businessFilial.createOrUpdate(entidade);
+	public void saveFilial(Filial entidade) throws BusinessException {
+		businessFilial.save(entidade);
 	}
 
 	@Override
@@ -278,8 +278,8 @@ public class Fachada implements IFachada {
 	}
 
 	@Override
-	public void createOrUpdateFisica(Fisica entidade) throws BusinessException {
-		businessFisica.createOrUpdate(entidade);
+	public void saveFisica(Fisica entidade) throws BusinessException {
+		businessFisica.save(entidade);
 	}
 
 	@Override
@@ -303,8 +303,8 @@ public class Fachada implements IFachada {
 	}
 
 	@Override
-	public void createOrUpdateFuncionario(Funcionario entidade) throws BusinessException {
-		businessFuncionario.createOrUpdate(entidade);
+	public void saveFuncionario(Funcionario entidade) throws BusinessException {
+		businessFuncionario.save(entidade);
 	}
 
 	@Override
@@ -328,8 +328,8 @@ public class Fachada implements IFachada {
 	}
 
 	@Override
-	public void createOrUpdateJuridica(Juridica entidade) throws BusinessException {
-		businessJuridica.createOrUpdate(entidade);
+	public void saveJuridica(Juridica entidade) throws BusinessException {
+		businessJuridica.save(entidade);
 	}
 
 	@Override
@@ -353,8 +353,8 @@ public class Fachada implements IFachada {
 	}
 
 	@Override
-	public void createOrUpdateLocacao(Locacao entidade) throws BusinessException {
-		businessLocacao.createOrUpdate(entidade);
+	public void saveLocacao(Locacao entidade) throws BusinessException {
+		businessLocacao.save(entidade);
 	}
 
 	@Override
@@ -398,8 +398,8 @@ public class Fachada implements IFachada {
 	}
 
 	@Override
-	public void createOrUpdatePassageiro(Passageiro entidade) throws BusinessException {
-		businessPassageiro.createOrUpdate(entidade);
+	public void savePassageiro(Passageiro entidade) throws BusinessException {
+		businessPassageiro.save(entidade);
 	}
 
 	@Override
@@ -423,8 +423,8 @@ public class Fachada implements IFachada {
 	}
 
 	@Override
-	public void createOrUpdateReserva(Reserva entidade) throws BusinessException {
-		businessReserva.createOrUpdate(entidade);
+	public void saveReserva(Reserva entidade) throws BusinessException {
+		businessReserva.save(entidade);
 	}
 
 	@Override
@@ -463,8 +463,8 @@ public class Fachada implements IFachada {
 	}
 
 	@Override
-	public void createOrUpdateSuperUsuario(SuperUsuario entidade) throws BusinessException {
-		businessSuperUsuario.createOrUpdate(entidade);
+	public void saveSuperUsuario(SuperUsuario entidade) throws BusinessException {
+		businessSuperUsuario.save(entidade);
 	}
 
 	@Override
@@ -528,8 +528,8 @@ public class Fachada implements IFachada {
 	}
 
 	@Override
-	public void createOrUpdateFinanceiro(Financeiro entidade) throws BusinessException {
-		businessFinanceiro.createOrUpdate(entidade);
+	public void saveFinanceiro(Financeiro entidade) throws BusinessException {
+		businessFinanceiro.save(entidade);
 	}
 
 	@Override
@@ -551,9 +551,10 @@ public class Fachada implements IFachada {
 	public List<Financeiro> searchAllFinanceiro(String search) throws BusinessException {
 		return businessFinanceiro.searchAll(search);
 	}
-	
+
 	@Override
-	public List<Financeiro> searchAllFinanceiroEstado(LocalDate de, LocalDate ate, EstadoFinanceiro estado) throws BusinessException {
+	public List<Financeiro> searchAllFinanceiroEstado(LocalDate de, LocalDate ate, EstadoFinanceiro estado)
+			throws BusinessException {
 		return businessFinanceiro.searchAllEstado(de, ate, estado);
 	}
 
@@ -573,7 +574,7 @@ public class Fachada implements IFachada {
 	}
 
 	@Override
-	public BigInteger verificarAtrasadosFinanceiro() throws BusinessException{
+	public BigInteger verificarAtrasadosFinanceiro() throws BusinessException {
 		return businessFinanceiro.verificarAtrasados();
 	}
 

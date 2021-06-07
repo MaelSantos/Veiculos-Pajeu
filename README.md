@@ -20,8 +20,11 @@ Para mais informações consultar a pasta `docs` do projeto.
 - [x] [JavaFX](https://openjfx.io/)
 - [x] [PostgreSQL](https://www.postgresql.org/)
 
-#### 2ª Versão (a implementar)
+#### 2ª Versão (implementação de padrões de projeto)
+- [x] Observer
+- [x] Facade
 - [x] Singleton
+- [x] Template Method
+- [x] Factory Method
 - [ ] Abstract Factory
-- [ ] ~~Suporte para [MySQL](https://www.mysql.com/)~~ (Incompatibilidade nos SQLs de Trigger, Function e Store Procedure)
 - [ ] Iterator

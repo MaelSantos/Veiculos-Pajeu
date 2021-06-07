@@ -14,13 +14,12 @@ import br.com.VeiculosPajeu.Exception.DaoException;
 
 public class BusinessUtil implements IBusinessUtil {
 
-	
 	private IDaoUtil daoUtil;
-	
+
 	public BusinessUtil() {
 		daoUtil = new DaoUtil();
 	}
-	
+
 	@Override
 	public Long searchCont(Class<? extends Entidade> classe) throws BusinessException {
 		try {
@@ -31,7 +30,7 @@ public class BusinessUtil implements IBusinessUtil {
 	}
 
 	@Override
-	public List<Log> searchLog(LocalDate date, TipoHistorico tipoHistorico) throws BusinessException {		
+	public List<Log> searchLog(LocalDate date, TipoHistorico tipoHistorico) throws BusinessException {
 		try {
 			return daoUtil.searchLog(date, tipoHistorico);
 		} catch (DaoException e) {
@@ -45,5 +44,6 @@ public class BusinessUtil implements IBusinessUtil {
 			return daoUtil.searchContSelect(classe, sql);
 		} catch (DaoException e) {
 			throw new BusinessException(e.getMessage());
-		}	}
+		}
+	}
 }

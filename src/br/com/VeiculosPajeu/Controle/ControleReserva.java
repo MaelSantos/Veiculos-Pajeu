@@ -176,7 +176,7 @@ public class ControleReserva extends Controle {
 			try {
 				
 				carregarReserva();
-				fachada.createOrUpdateReserva(reserva);
+				fachada.saveReserva(reserva);
 				notificacao.mensagemSucesso("Reserva Feita Com Sucesso");
 				cliente = null;
 				limparCampos();					

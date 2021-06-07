@@ -82,7 +82,7 @@ public class ControleResetarSenha extends Controle {
 
 						if (funcionario != null) {
 							funcionario.setSenha(criptografiaUtil.descriptografar(superUsuario.getSenha_padrao()));
-							fachada.createOrUpdateFuncionario(funcionario);
+							fachada.saveFuncionario(funcionario);
 							flwConcluido.setVisible(true);
 							flwLogin.setVisible(false);
 							flwUsuario.setVisible(false);

@@ -115,16 +115,16 @@ public class ControleRetirarReserva extends Controle {
 
 			try {
 				carregarLocacao();
-				fachada.createOrUpdateLocacao(locacao);
+				fachada.saveLocacao(locacao);
 
-				fachada.createOrUpdateReserva(reserva);
+				fachada.saveReserva(reserva);
 
 				if (veiculo instanceof Automovel) {
-					fachada.createOrUpdateAutomovel((Automovel) veiculo);
+					fachada.saveAutomovel((Automovel) veiculo);
 				} else if (veiculo instanceof Carga) {
-					fachada.createOrUpdateCarga((Carga) veiculo);
+					fachada.saveCarga((Carga) veiculo);
 				} else if (veiculo instanceof Passageiro) {
-					fachada.createOrUpdatePassageiro((Passageiro) veiculo);
+					fachada.savePassageiro((Passageiro) veiculo);
 				}
 
 				notificacao.mensagemSucesso("Locação Salva Com Sucesso");

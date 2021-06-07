@@ -2,6 +2,7 @@ package br.com.VeiculosPajeu.Business;
 
 import br.com.VeiculosPajeu.Business.Interface.IBusinessSuperUsuario;
 import br.com.VeiculosPajeu.Dao.DaoSuperUsuario;
+import br.com.VeiculosPajeu.Dao.Interface.IDao;
 import br.com.VeiculosPajeu.Dao.Interface.IDaoSuperUsuario;
 import br.com.VeiculosPajeu.Entidade.SuperUsuario;
 import br.com.VeiculosPajeu.Exception.ValidationException;
@@ -13,9 +14,8 @@ public class BusinessSuperUsuario extends Business<SuperUsuario> implements IBus
 	private CriptografiaUtil criptografiaUtil;
 
 	public BusinessSuperUsuario() {
-		daoSuperUsuario = new DaoSuperUsuario();
+		super();
 		criptografiaUtil = CriptografiaUtil.getInstance();
-		init(daoSuperUsuario);
 	}
 
 	@Override
@@ -34,10 +34,17 @@ public class BusinessSuperUsuario extends Business<SuperUsuario> implements IBus
 			throw new ValidationException("A SENHA TEM QUE TER NO MINIMO 6 E NO MAXIMO 11 CARACTERES");
 		else if (!criptografiaUtil.isCriptografado(entidade.getSenha()))
 			entidade.setSenha(criptografiaUtil.criptografar(entidade.getSenha().getBytes()));
-		
+
 		if (entidade.getSenha_padrao().length() < 6 || entidade.getSenha_padrao().length() > 11)
 			throw new ValidationException("A SENHA PADRÃO TEM QUE TER NO MINIMO 6 E NO MAXIMO 11 CARACTERES");
 		else if (!criptografiaUtil.isCriptografado(entidade.getSenha_padrao()))
 			entidade.setSenha_padrao(criptografiaUtil.criptografar(entidade.getSenha_padrao().getBytes()));
+	}
+
+	@Override
+	public IDao<SuperUsuario> createDao() throws ValidationException {
+		if (daoSuperUsuario == null)
+			daoSuperUsuario = new DaoSuperUsuario();
+		return daoSuperUsuario;
 	}
 }

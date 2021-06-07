@@ -85,14 +85,14 @@ public class ControleDevolucao extends Controle {
 					devolucao();
 
 					if (veiculo instanceof Automovel) {
-						fachada.createOrUpdateAutomovel((Automovel) veiculo);
+						fachada.saveAutomovel((Automovel) veiculo);
 					} else if (veiculo instanceof Carga) {
-						fachada.createOrUpdateCarga((Carga) veiculo);
+						fachada.saveCarga((Carga) veiculo);
 					} else if (veiculo instanceof Passageiro) {
-						fachada.createOrUpdatePassageiro((Passageiro) veiculo);
+						fachada.savePassageiro((Passageiro) veiculo);
 					}
 
-					fachada.createOrUpdateLocacao(locacao);
+					fachada.saveLocacao(locacao);
 
 					ControlePagamento.setDescricao("Devolução do Veículo", -1F);
 

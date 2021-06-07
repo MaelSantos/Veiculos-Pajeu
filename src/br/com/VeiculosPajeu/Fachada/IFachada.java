@@ -33,14 +33,14 @@ import br.com.VeiculosPajeu.Exception.BusinessException;
 public interface IFachada {
 
 //	Automovel	businessAutomovel = new BusinessAutomovel();
-	public void createOrUpdateAutomovel(Automovel entidade) throws BusinessException;
+	public void saveAutomovel(Automovel entidade) throws BusinessException;
     public Automovel searchAutomovel(int id) throws BusinessException;
     public void removeAutomovel(int id) throws BusinessException;
     public List<Automovel> searchAllAutomovel() throws BusinessException;
     public List<Automovel> searchAllAutomovel(String search) throws BusinessException;
 
 //	Carga	businessCarga = new BusinessCarga();
-	public void createOrUpdateCarga(Carga entidade) throws BusinessException;
+	public void saveCarga(Carga entidade) throws BusinessException;
     public Carga searchCarga(int id) throws BusinessException;
     public void removeCarga(int id) throws BusinessException;
     public List<Carga> searchAllCarga() throws BusinessException;
@@ -48,56 +48,56 @@ public interface IFachada {
     public Categoria nextCategoria(Categoria categoria) throws BusinessException;
 
 //	Categoria	businessCategoria = new BusinessCategoria();
-	public void createOrUpdateCategoria(Categoria entidade) throws BusinessException;
+	public void saveCategoria(Categoria entidade) throws BusinessException;
     public Categoria searchCategoria(int id) throws BusinessException;
     public void removeCategoria(int id) throws BusinessException;
     public List<Categoria> searchAllCategoria() throws BusinessException;    
     public List<Categoria> searchAllCategoria(String search) throws BusinessException;
 
 //	Configuracao	businessConfiguracao = new BusinessConfiguracao();
-	public void createOrUpdateConfiguracao(Configuracao entidade) throws BusinessException;
+	public void saveConfiguracao(Configuracao entidade) throws BusinessException;
     public Configuracao searchConfiguracao(int id) throws BusinessException;
     public void removeConfiguracao(int id) throws BusinessException;
     public List<Configuracao> searchAllConfiguracao() throws BusinessException;
     public List<Configuracao> searchAllConfiguracao(String search) throws BusinessException;
 
 //    Endereco	businessEndereco = new BusinessEndereco();
-	public void createOrUpdateEndereco(Endereco entidade) throws BusinessException;
+	public void saveEndereco(Endereco entidade) throws BusinessException;
     public Endereco searchEndereco(int id) throws BusinessException;
     public void removeEndereco(int id) throws BusinessException;
     public List<Endereco> searchAllEndereco() throws BusinessException;
     public List<Endereco> searchAllEndereco(String search) throws BusinessException;
 
     //Filial 	businessFilial = new BusinessFilial();
-    public void createOrUpdateFilial(Filial entidade) throws BusinessException;
+    public void saveFilial(Filial entidade) throws BusinessException;
     public Filial searchFilial(int id) throws BusinessException;
     public void removeFilial(int id) throws BusinessException;
     public List<Filial> searchAllFilial() throws BusinessException;
     public List<Filial> searchAllFilial(String search) throws BusinessException;
 
 	//Pessoa Fisica 	businessFisica = new BusinessFisica();
-	public void createOrUpdateFisica(Fisica entidade) throws BusinessException;
+	public void saveFisica(Fisica entidade) throws BusinessException;
     public Fisica searchFisica(int id) throws BusinessException;
     public void removeFisica(int id) throws BusinessException;
     public List<Fisica> searchAllFisica() throws BusinessException;
     public List<Fisica> searchAllFisica(String search) throws BusinessException;
 
 //    Funcionario	businessFuncionario = new BusinessFuncionario();
-	public void createOrUpdateFuncionario(Funcionario entidade) throws BusinessException;
+	public void saveFuncionario(Funcionario entidade) throws BusinessException;
     public Funcionario searchFuncionario(int id) throws BusinessException;
     public void removeFuncionario(int id) throws BusinessException;
     public List<Funcionario> searchAllFuncionario() throws BusinessException;    
     public List<Funcionario> searchAllFuncionario(String search) throws BusinessException;
 
     //Pessoa Juridica	businessJuridica = new BusinessJuridica();
-    public void createOrUpdateJuridica(Juridica entidade) throws BusinessException;
+    public void saveJuridica(Juridica entidade) throws BusinessException;
     public Juridica searchJuridica(int id) throws BusinessException;
     public void removeJuridica(int id) throws BusinessException;
     public List<Juridica> searchAllJuridica() throws BusinessException;
     public List<Juridica> searchAllJuridica(String search) throws BusinessException;
 
 //    Locacao	businessLocacao = new BusinessLocacao();
-	public void createOrUpdateLocacao(Locacao entidade) throws BusinessException;
+	public void saveLocacao(Locacao entidade) throws BusinessException;
     public Locacao searchLocacao(int id) throws BusinessException;
     public void removeLocacao(int id) throws BusinessException;
     public List<Locacao> searchAllLocacao() throws BusinessException;
@@ -108,14 +108,14 @@ public interface IFachada {
 	public List<Locacao> searchAllLocacaoPorCliente(Cliente cliente) throws BusinessException;
 
 //    Passageiro	businessPassageiro = new BusinessPassageiro();
-	public void createOrUpdatePassageiro(Passageiro entidade) throws BusinessException;
+	public void savePassageiro(Passageiro entidade) throws BusinessException;
     public Passageiro searchPassageiro(int id) throws BusinessException;
     public void removePassageiro(int id) throws BusinessException;
     public List<Passageiro> searchAllPassageiro() throws BusinessException;
     public List<Passageiro> searchAllPassageiro(String search) throws BusinessException;
 
 //	Reserva	businessReserva = new BusinessReserva();
-	public void createOrUpdateReserva(Reserva entidade) throws BusinessException;
+	public void saveReserva(Reserva entidade) throws BusinessException;
     public Reserva searchReserva(int id) throws BusinessException;
     public void removeReserva(int id) throws BusinessException;
     public List<Reserva> searchAllReserva() throws BusinessException;
@@ -125,7 +125,7 @@ public interface IFachada {
     public List<Reserva> searchAllReservaPeriodo(LocalDate inicio, LocalDate fim) throws BusinessException;
     
 //    SuperUsuario	businessSuperUsuario = new BusinessSuperUsuario();
-	public void createOrUpdateSuperUsuario(SuperUsuario entidade) throws BusinessException;
+	public void saveSuperUsuario(SuperUsuario entidade) throws BusinessException;
     public SuperUsuario searchSuperUsuario(int id) throws BusinessException;
     public void removeSuperUsuario(int id) throws BusinessException;
     public List<SuperUsuario> searchAllSuperUsuario() throws BusinessException;    
@@ -146,7 +146,7 @@ public interface IFachada {
 	public List<Veiculo> searchAllVeiculoDiponivel(Filial filial) throws BusinessException;
     
 	//Financeiro
-	public void createOrUpdateFinanceiro(Financeiro entidade) throws BusinessException;
+	public void saveFinanceiro(Financeiro entidade) throws BusinessException;
     public Financeiro searchFinanceiro(int id) throws BusinessException;
     public void remove(int id) throws BusinessException;
     public List<Financeiro> searchAllFinanceiro() throws BusinessException;

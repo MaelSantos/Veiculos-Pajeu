@@ -8,10 +8,8 @@ import br.com.VeiculosPajeu.Exception.BusinessException;
 import br.com.VeiculosPajeu.Exception.ValidationException;
 
 public interface IBusiness<T extends Entidade> {
-
-	public void init(IDao<T> dao);
 	
-	public void createOrUpdate(T entidade) throws BusinessException;
+	public void save(T entidade) throws BusinessException;
 	  
     public T search(int id) throws BusinessException;
 
@@ -22,4 +20,6 @@ public interface IBusiness<T extends Entidade> {
     public List<T> searchAll(String search) throws BusinessException;
 
 	public void validation(T entidade) throws ValidationException;
+	
+	public IDao<T> createDao() throws ValidationException;
 }
