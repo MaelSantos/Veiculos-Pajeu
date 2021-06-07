@@ -32,34 +32,34 @@ import javafx.scene.text.Text;
 public class ControleDetalhes extends Controle {
 
 	@FXML
-    private Label lblTitulo;
+	private Label lblTitulo;
 
-    @FXML
-    private HBox hbxDescricao;
+	@FXML
+	private HBox hbxDescricao;
 
-    @FXML
-    private Text txtDescricao;
+	@FXML
+	private Text txtDescricao;
 
-    @FXML
-    private Text txtDecricao2;
+	@FXML
+	private Text txtDecricao2;
 
-    @FXML
-    private Text txtDecricao3;
+	@FXML
+	private Text txtDecricao3;
 
-    @FXML
-    private HBox hbxBotoes;
+	@FXML
+	private HBox hbxBotoes;
 
-    @FXML
-    private Button btnEditar;
+	@FXML
+	private Button btnEditar;
 
-    @FXML
-    private Button btnDeletar;
+	@FXML
+	private Button btnDeletar;
 
-    @FXML
-    private Button btnVoltar;
+	@FXML
+	private Button btnVoltar;
 
 	private Entidade entidade;
-	
+
 	private Usuario usuario;
 
 	@Override
@@ -71,48 +71,38 @@ public class ControleDetalhes extends Controle {
 
 			lblTitulo.setText("Detalhes " + entidade.getClass().getSimpleName());
 			format(entidade.detalhesEntidade());
-			
+
 			if (usuario instanceof Funcionario) {
 				Funcionario funcionario = (Funcionario) usuario;
-				
-				if(funcionario.getTipoFuncionario() == TipoFuncionario.ATENDENTE)
-				{
-					//atendente só phbxode modificar dados de cliente, reserva e locação
+
+				if (funcionario.getTipoFuncionario() == TipoFuncionario.ATENDENTE) {
+					// atendente só phbxode modificar dados de cliente, reserva e locação
 					if (entidade instanceof Cliente) {
 						btnDeletar.setVisible(true);
 						btnEditar.setVisible(true);
-					}
-					else if (entidade instanceof Reserva) {
-						btnDeletar.setVisible(true);
-						btnEditar.setVisible(true);	
-					}
-					else if (entidade instanceof Locacao) {
+					} else if (entidade instanceof Reserva) {
 						btnDeletar.setVisible(true);
 						btnEditar.setVisible(true);
-					}
-					else
-					{
+					} else if (entidade instanceof Locacao) {
+						btnDeletar.setVisible(true);
+						btnEditar.setVisible(true);
+					} else {
 						btnDeletar.setVisible(false);
-						btnEditar.setVisible(false);						
+						btnEditar.setVisible(false);
 					}
-				}
-				else
-				{
+				} else {
 					btnDeletar.setVisible(true);
 					btnEditar.setVisible(true);
 				}
-			}else if (usuario  instanceof SuperUsuario) {
+			} else if (usuario instanceof SuperUsuario) {
 				btnDeletar.setVisible(true);
 				btnEditar.setVisible(true);
-			}
-			else
-			{
+			} else {
 				btnDeletar.setVisible(false);
-				btnEditar.setVisible(false);	
+				btnEditar.setVisible(false);
 			}
 		}
-		if(tela == Tela.MENU)
-		{
+		if (tela == Tela.MENU) {
 			if (entidade instanceof Usuario) {
 				usuario = (Usuario) entidade;
 			}
@@ -128,7 +118,7 @@ public class ControleDetalhes extends Controle {
 		String primeiro = "";
 		String segundo = "";
 		String terceiro = "";
-		
+
 		int index;
 		if (novo.contains("*")) {
 			index = novo.indexOf("*");
@@ -139,20 +129,17 @@ public class ControleDetalhes extends Controle {
 			txtDecricao2.setText(segundo);
 			txtDecricao3.setText("");
 
-		} 
-		else
-		{
+		} else {
 			txtDescricao.setText(novo);
 			txtDecricao2.setText("");
 			txtDecricao3.setText("");
 		}
-		if(segundo.contains("*")) 
-		{
+		if (segundo.contains("*")) {
 			index = segundo.indexOf("*");
 			novo = segundo;
 			segundo = novo.substring(0, index - 1);
 			terceiro = novo.substring(index + 1, novo.length());
-			
+
 			txtDescricao.setText(primeiro);
 			txtDecricao2.setText(segundo);
 			txtDecricao3.setText(terceiro);
@@ -180,47 +167,38 @@ public class ControleDetalhes extends Controle {
 
 					if (entidade instanceof Filial) {
 						fachada.removeFilial(entidade.getId());
-					}
-					else if (entidade instanceof Fisica) {
+					} else if (entidade instanceof Fisica) {
 						fachada.removeFisica(entidade.getId());
-					}
-					else if (entidade instanceof Juridica) {
+					} else if (entidade instanceof Juridica) {
 						fachada.removeJuridica(entidade.getId());
-					}
-					else if (entidade instanceof Carga) {
+					} else if (entidade instanceof Carga) {
 						fachada.removeCarga(entidade.getId());
-					}
-					else if (entidade instanceof Passageiro) {
+					} else if (entidade instanceof Passageiro) {
 						fachada.removePassageiro(entidade.getId());
-					}
-					else if (entidade instanceof Automovel) {
+					} else if (entidade instanceof Automovel) {
 						fachada.removeAutomovel(entidade.getId());
-					}
-					else if (entidade instanceof Categoria) {
+					} else if (entidade instanceof Categoria) {
 						fachada.removeCategoria(entidade.getId());
-					}
-					else if (entidade instanceof Funcionario) {
+					} else if (entidade instanceof Funcionario) {
 						fachada.removeFuncionario(entidade.getId());
-					}
-					else if (entidade instanceof SuperUsuario) {
+					} else if (entidade instanceof SuperUsuario) {
 						fachada.removeSuperUsuario(entidade.getId());
-					}
-					else if (entidade instanceof Locacao) {
+					} else if (entidade instanceof Locacao) {
 						Locacao locacao = (Locacao) entidade;
-						if(locacao.getAtivo())
-						{
-							if (notificacao.showConfirmacao("Deseja Continuar?", "Cancelar Locação?", "Tem certeza Que Quer Continuar?")) {
-								
+						if (locacao.getAtivo()) {
+							if (notificacao.showConfirmacao("Deseja Continuar?", "Cancelar Locação?",
+									"Tem certeza Que Quer Continuar?")) {
+
 								locacao.setAtivo(false);
 								Financeiro financeiro = fachada.searchFinanceiro(locacao.getId());
 								float valor = financeiro.getValor_pago();
 								financeiro.setEstado(EstadoFinanceiro.CANCELADO);
 								fachada.saveLocacao(locacao);
 								fachada.saveFinanceiro(financeiro);
-								
+
 								Veiculo veiculo = locacao.getVeiculo();
 								veiculo.setAlugado(false);
-								
+
 								if (veiculo instanceof Automovel) {
 									fachada.saveAutomovel((Automovel) veiculo);
 								} else if (veiculo instanceof Carga) {
@@ -228,26 +206,25 @@ public class ControleDetalhes extends Controle {
 								} else if (veiculo instanceof Passageiro) {
 									fachada.savePassageiro((Passageiro) veiculo);
 								}
-								
-								notificacao.mensagemSucesso("Locação Desativa - É Nescessário Reembolsar "+valor+"R$ Ao Cliente");
-							}							
-						}else
+
+								notificacao.mensagemSucesso(
+										"Locação Desativa - É Nescessário Reembolsar " + valor + "R$ Ao Cliente");
+							}
+						} else
 							notificacao.mensagemErro("Cancelar Locação", "Locação Já Desativada");
-					}
-					else if (entidade instanceof Reserva) {
+					} else if (entidade instanceof Reserva) {
 						Reserva reserva = (Reserva) entidade;
-						if(reserva.getAtivo())
-						{
-							if (notificacao.showConfirmacao("Deseja Continuar?", "Cancelar Reserva?", "Tem certeza Que Quer Continuar?")) {
-								
+						if (reserva.getAtivo()) {
+							if (notificacao.showConfirmacao("Deseja Continuar?", "Cancelar Reserva?",
+									"Tem certeza Que Quer Continuar?")) {
+
 								reserva.setAtivo(false);
 								fachada.saveReserva(reserva);
 								notificacao.mensagemSucesso("Reserva Desativa Com Sucesso");
-							}							
-						}
-						else 
+							}
+						} else
 							notificacao.mensagemErro("Cancelar Reserva", "Reserva Já Desativada");
-						
+
 					}
 
 					App.notificarOuvintes(Tela.BUSCAR);
@@ -290,7 +267,7 @@ public class ControleDetalhes extends Controle {
 		hbxBotoes.setStyle("-fx-background-color:" + color + ";");
 		super.setColor(color);
 	}
-	
+
 	@Override
 	protected void setColor(AnchorPane pane, String color) {
 		hbxDescricao.setStyle("-fx-background-color:" + color + ";");

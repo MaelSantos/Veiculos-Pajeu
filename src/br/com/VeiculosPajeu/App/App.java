@@ -1,14 +1,13 @@
 package br.com.VeiculosPajeu.App;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import br.com.VeiculosPajeu.Entidade.Entidade;
 import br.com.VeiculosPajeu.Entidade.Enum.Tela;
 import br.com.VeiculosPajeu.Util.Ouvinte;
+import br.com.VeiculosPajeu.Util.Sujeito;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -23,16 +22,17 @@ public class App extends Application {
 	private Pane carregar;
 	public static Pane login, menu, atrasados, disponiveis, configuracao, perfil, ajuda;
 	public static Pane cadastroCliente, cadastroFilial, cadastroVeiculo, cadastroUsuario;
-	public static Pane busca, detalhes, resetarSenha, gerenciarFinanceiro,financeiro, pagamento;
+	public static Pane busca, detalhes, resetarSenha, gerenciarFinanceiro, financeiro, pagamento;
 	public static Pane locacao, reserva, retirarReserva, devolucao, cadastroCategoria, editarConfiguracao;
 	public static Pane informacoes, aparencia, relatorio, estatistica, historico, manutencao;
 
-	private static List<Ouvinte> ouvintes = new ArrayList<>();
+	public static Sujeito sujeito;
+
 	private static Map<Tela, Pane> telas = new HashMap<>();
 
 	@Override
 	public void start(Stage stage) {
-
+		sujeito = new Sujeito();
 		App.stage = stage;
 
 		try {
@@ -41,7 +41,7 @@ public class App extends Application {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+
 		stage.setTitle("VP - Veículos Pajeú");
 		stage.setScene(new Scene(carregar));
 		stage.getIcons().add(new Image(getClass().getClassLoader().getResourceAsStream("Icon.png")));
@@ -102,28 +102,24 @@ public class App extends Application {
 	}
 
 	public static void addOuvinte(Ouvinte ouvinte) {
-		ouvintes.add(ouvinte);
+		sujeito.addOuvinte(ouvinte);
 	}
 
 	public static void notificarOuvintes(Tela tela, Entidade entidade) {
-		for (Ouvinte ouvinte : ouvintes)
-			ouvinte.update(tela, entidade);
+		sujeito.notificarOuvintes(tela, entidade);
 	}
-	
+
+	public static void updateColor(String color) {
+		sujeito.updateColor(color);
+	}
+
 	public static void notificarOuvintes(Tela tela) {
 		notificarOuvintes(tela, null);
 	}
 
 	public static void notificarOuvintes(Entidade entidade) {
-		for (Ouvinte ouvinte : ouvintes)
-			ouvinte.update(null, entidade);
+		notificarOuvintes(null, entidade);
 	}
-	
-	public static void updateColor(String color) {
-		for (Ouvinte ouvinte : ouvintes)
-			ouvinte.setColor(color);
-	}
-
 
 	public static void main(String[] args) {
 		launch(args);

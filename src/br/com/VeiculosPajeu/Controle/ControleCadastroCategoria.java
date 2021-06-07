@@ -110,7 +110,7 @@ public class ControleCadastroCategoria extends Controle {
 				carregarCategoria();
 				fachada.saveCategoria(categoria);
 				notificacao.mensagemSucesso("Categoria Salva Com Sucesso");
-				App.notificarOuvintes(categoria);
+				App.notificarOuvintes(null, categoria);
 				limparCampos();
 			} catch (BusinessException e) {
 				notificacao.mensagemErro("Salva Categoria", e.getMessage());
