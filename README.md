@@ -28,4 +28,4 @@ Para mais informações consultar a pasta `docs` do projeto.
 - [x] Factory Method
 - [ ] Abstract Factory
 - [ ] Iterator
-- [ ] Lazy Loading
+- [x] Lazy Loading
