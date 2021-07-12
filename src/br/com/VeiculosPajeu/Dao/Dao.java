@@ -15,6 +15,7 @@ import br.com.VeiculosPajeu.Util.SQLUtil;
 public class Dao<T extends Entidade> implements IDao<T> {
 
 	protected static EntityManager entityManager = getEntityManager();
+	private static ConnectionFactory connectionFactory = ConnectionFactory.getInstance();
 	protected Class<T> classe;
 
 	public static void closeConnection() {
@@ -24,18 +25,18 @@ public class Dao<T extends Entidade> implements IDao<T> {
 
 	public static void resetConnection() {
 
-		ConnectionFactory.getInstance().alterarPropriedades(true);
+		connectionFactory.alterarPropriedades(true);
 		entityManager.clear();
 		entityManager.close();
-		entityManager = ConnectionFactory.getInstance().getEntityManager();
+		entityManager = connectionFactory.getEntityManager();
 		entityManager.clear();
 
 	}
 
 	protected static EntityManager getEntityManager() {
 		if (entityManager == null) {
-			ConnectionFactory.getInstance().alterarPropriedades(false);
-			entityManager = ConnectionFactory.getInstance().getEntityManager();
+			connectionFactory.alterarPropriedades(false);
+			entityManager = connectionFactory.getEntityManager();
 			entityManager.clear();
 		}
 

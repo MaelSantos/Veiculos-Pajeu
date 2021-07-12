@@ -63,9 +63,9 @@ public enum SQLUtil {
 		String sql = "SELECT a FROM " + classe.getName() + " a WHERE ";
 
 		List<Field> fields = new ArrayList<>();
-		Iterator<Field> iteratorSuperClass = Arrays.asList(classe.getSuperclass().getDeclaredFields()).iterator();
 
 		if (classe.getSuperclass() != Entidade.class) {
+			Iterator<Field> iteratorSuperClass = Arrays.asList(classe.getSuperclass().getDeclaredFields()).iterator();
 			while (iteratorSuperClass.hasNext()) {
 				Field t = iteratorSuperClass.next();
 				if (!t.getName().equalsIgnoreCase("serialVersionUID") && !t.getName().equalsIgnoreCase("sequence"))
