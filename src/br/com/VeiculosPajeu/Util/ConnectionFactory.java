@@ -16,7 +16,7 @@ public class ConnectionFactory {
 		propriedades = new HashMap<>();
 	}
 
-	public static ConnectionFactory getInstance() {
+	public static synchronized ConnectionFactory getInstance() {
 		if (instance == null)
 			instance = new ConnectionFactory();
 		return instance;

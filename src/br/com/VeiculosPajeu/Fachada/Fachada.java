@@ -94,7 +94,7 @@ public class Fachada implements IFachada {
 	private Fachada() {
 	}
 
-	public static Fachada getInstance() {
+	public static synchronized Fachada getInstance() {
 		if (instance == null)
 			instance = new Fachada();
 		return instance;

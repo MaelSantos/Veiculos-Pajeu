@@ -10,7 +10,7 @@ public class DateUtil {
 	private DateUtil() {
 	}
 
-	public static DateUtil getInstance() {
+	public static synchronized DateUtil getInstance() {
 		if (instance == null)
 			instance = new DateUtil();
 		return instance;

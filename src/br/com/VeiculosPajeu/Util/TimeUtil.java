@@ -10,7 +10,7 @@ public class TimeUtil {
 	private TimeUtil() {
 	}
 
-	public static TimeUtil getInstance() {
+	public static synchronized TimeUtil getInstance() {
 		if (instance == null)
 			instance = new TimeUtil();
 		return instance;

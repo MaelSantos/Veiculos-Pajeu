@@ -9,7 +9,7 @@ public class CriptografiaUtil {
 	private CriptografiaUtil() {
 	}
 
-	public static CriptografiaUtil getInstance() {
+	public static synchronized CriptografiaUtil getInstance() {
 		if (instance == null)
 			instance = new CriptografiaUtil();
 		return instance;

@@ -35,7 +35,7 @@ public class DaoXml implements IDaoXml {
 		aparencia = buscarAparencia();
 	}
 
-	public static DaoXml getInstance() {
+	public static synchronized DaoXml getInstance() {
 		if (instance == null)
 			instance = new DaoXml();
 		return instance;

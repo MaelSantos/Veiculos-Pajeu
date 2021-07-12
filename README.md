@@ -14,18 +14,23 @@ Para mais informações consultar a pasta `docs` do projeto.
 
 ## Tecnologias usadas em cada versão
 
-#### 1ª Versão
+#### Tecnologias utilizadas
+- [x] [Java 8](https://www.java.com/)
 - [x] [JPA](https://www.oracle.com/java/technologies/persistence-jsp.html)
 - [x] [Hibernate](https://hibernate.org/)
 - [x] [JavaFX](https://openjfx.io/)
-- [x] [PostgreSQL](https://www.postgresql.org/)
+- [x] [PostgreSQL 9.4](https://www.postgresql.org/)
 
-#### 2ª Versão (implementação de padrões de projeto)
-- [x] Observer (correção)
-- [x] Facade (melhoramento)
+#### Padrões de projeto implementados
+- [x] Observer
+- [x] Facade
 - [x] Singleton
 - [x] Template Method
 - [x] Factory Method
 - [ ] Abstract Factory
 - [ ] Iterator
 - [x] Lazy Loading
+- [x] Business Object (BO)
+- [x] Value Object (VO)
+- [x] Data Transfer Object (DAO)
+- [x] MVC

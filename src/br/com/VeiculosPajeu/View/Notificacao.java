@@ -32,7 +32,7 @@ public class Notificacao {
 	private Notificacao() {
 	}
 
-	public static Notificacao getInstance() {
+	public static synchronized Notificacao getInstance() {
 		if (instance == null)
 			instance = new Notificacao();
 		return instance;

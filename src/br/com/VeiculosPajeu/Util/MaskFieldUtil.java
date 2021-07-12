@@ -24,7 +24,7 @@ public class MaskFieldUtil {
 				KeyCode.F6, KeyCode.F7, KeyCode.F8, KeyCode.F9, KeyCode.F10, KeyCode.F11, KeyCode.F12 });
 	}
 
-	public static MaskFieldUtil getInstance() {
+	public static synchronized MaskFieldUtil getInstance() {
 		if (instance == null)
 			instance = new MaskFieldUtil();
 		return instance;

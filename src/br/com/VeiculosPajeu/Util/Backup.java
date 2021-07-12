@@ -12,7 +12,7 @@ public class Backup {
 	private Backup() {
 	}
 
-	public static Backup getInstance() {
+	public static synchronized Backup getInstance() {
 		if (instance == null)
 			instance = new Backup();
 		return instance;
