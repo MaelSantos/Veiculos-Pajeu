@@ -1,7 +1,9 @@
 package br.com.VeiculosPajeu.Controle;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import br.com.VeiculosPajeu.Entidade.Entidade;
 import br.com.VeiculosPajeu.Entidade.Locacao;
@@ -90,15 +92,14 @@ public class ControleEstatistica extends Controle {
 		if (obj == btnBusca) {
 
 			try {
-				
-				if(!gfcBarra.getData().isEmpty())
-				{
+
+				if (!gfcBarra.getData().isEmpty()) {
 					gfcBarra.getData().clear();
 					gfcLinha.getData().clear();
 					gfcPizza.getData().clear();
 				}
 				gerarGrarfico();
-				
+
 			} catch (Exception e) {
 				notificacao.mensagemErro("Gerar Gráficos", e.getMessage());
 				e.printStackTrace();
@@ -139,54 +140,57 @@ public class ControleEstatistica extends Controle {
 	private void gerarGrarfico() throws BusinessException {
 
 		if (cbxTipoPesquisa.getValue() != null) {
-			
+
 			Map<String, Long> valores = new HashMap<>();
-			
+
 			switch (cbxTipoPesquisa.getValue()) {
 			case LOCACAO_ATIVA:
-				
+
 				valores.put("Ativa", fachada.searchContSelect(Locacao.class, "a.ativo = true"));
 				valores.put("Vencida", fachada.searchContSelect(Locacao.class, "a.data_devolucao < CURRENT_DATE"));
-				
+
 				break;
 			case LOCACAO_RESERVA:
-				
+
 				valores.put("Locação", fachada.searchCont(Locacao.class));
 				valores.put("Reserva", fachada.searchCont(Reserva.class));
-				
+
 				break;
 			case RESERVA_ATIVA:
-				
+
 				valores.put("Ativa", fachada.searchContSelect(Reserva.class, "a.ativo = true"));
 				valores.put("Vencida", fachada.searchContSelect(Reserva.class, "a.data_locacao < CURRENT_DATE"));
-				
+
 				break;
-				
+
 			default:
 				break;
 			}
-			
-			if(!valores.isEmpty())
-			{
+
+			if (!valores.isEmpty()) {
 				XYChart.Series<String, Double> series = new XYChart.Series<>();
-				
-				for (String tipo : valores.keySet()) {
-					
-					series.getData().add(new Data<String, Double>(tipo, valores.get(tipo).doubleValue()));
-					series.setName(cbxTipoPesquisa.getValue()+"");
-					gfcPizza.getData().add(new PieChart.Data(tipo, valores.get(tipo).doubleValue()));
+
+				Iterator<Entry<String, Long>> iterator = valores.entrySet().iterator();
+				while (iterator.hasNext()) {
+					Entry<String, Long> e = iterator.next();
+					Long valor = e.getValue();
+					String tipo = e.getKey();
+
+					series.getData().add(new Data<String, Double>(tipo, valor.doubleValue()));
+					series.setName(cbxTipoPesquisa.getValue() + "");
+					gfcPizza.getData().add(new PieChart.Data(tipo, valor.doubleValue()));
 				}
-				
+
 				System.out.println(valores);
 				System.out.println(series.getData());
-				
+
 				gfcBarra.getData().add(series);
-				gfcLinha.getData().add(series);					
-							
-				gfcPizza.setTitle(cbxTipoPesquisa.getValue()+"");
-				gfcBarra.setTitle(cbxTipoPesquisa.getValue()+"");
-				gfcLinha.setTitle(cbxTipoPesquisa.getValue()+"");
-				
+				gfcLinha.getData().add(series);
+
+				gfcPizza.setTitle(cbxTipoPesquisa.getValue() + "");
+				gfcBarra.setTitle(cbxTipoPesquisa.getValue() + "");
+				gfcLinha.setTitle(cbxTipoPesquisa.getValue() + "");
+
 			}
 		}
 	}
@@ -199,7 +203,7 @@ public class ControleEstatistica extends Controle {
 		gfcPizza.setVisible(false);
 
 		cbxTipoGrafico.getSelectionModel().clearSelection();
-		cbxTipoPesquisa.getSelectionModel().clearSelection();		
+		cbxTipoPesquisa.getSelectionModel().clearSelection();
 	}
 
 }

@@ -1,6 +1,7 @@
 package br.com.VeiculosPajeu.Util;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import br.com.VeiculosPajeu.Entidade.Entidade;
@@ -19,13 +20,19 @@ public class Sujeito {
 	}
 
 	public void notificarOuvintes(Tela tela, Entidade entidade) {
-		for (Ouvinte ouvinte : ouvintes)
+		Iterator<Ouvinte> iterator = ouvintes.iterator();
+		while(iterator.hasNext()) {
+			Ouvinte ouvinte = iterator.next();
 			ouvinte.update(tela, entidade);
+		}
 	}
 
 	public void updateColor(String color) {
-		for (Ouvinte ouvinte : ouvintes)
+		Iterator<Ouvinte> iterator = ouvintes.iterator();
+		while(iterator.hasNext()) {
+			Ouvinte ouvinte = iterator.next();
 			ouvinte.setColor(color);
+		}
 	}
 
 }

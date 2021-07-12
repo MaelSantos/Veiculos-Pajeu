@@ -1,5 +1,8 @@
 package br.com.VeiculosPajeu.Entidade.Enum;
 
+import java.util.Arrays;
+import java.util.Iterator;
+
 public enum Estado {
 
 	ACRE("Acre", "AC"), ALAGOAS("Alagoas", "AL"), AMAPA("Amapá", "AP"), AMAZONAS("Amazonas", "AM"),
@@ -20,9 +23,13 @@ public enum Estado {
 	}
 
 	public static Estado getEstado(String estado) {
-		for (Estado e : values())
+
+		Iterator<Estado> iterator = Arrays.asList(values()).iterator();
+		while (iterator.hasNext()) {
+			Estado e = iterator.next();
 			if (e.toString().equalsIgnoreCase(estado))
 				return e;
+		}
 		return null;
 	}
 
