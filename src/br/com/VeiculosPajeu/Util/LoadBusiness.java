@@ -40,7 +40,7 @@ import br.com.VeiculosPajeu.Business.Interface.IBusinessVeiculo;
 public class LoadBusiness {
 
 	private static LoadBusiness instance;
-	
+
 	private IBusinessAutomovel businessAutomovel;
 	private IBusinessCarga businessCarga;
 	private IBusinessCategoria businessCategoria;
@@ -61,17 +61,17 @@ public class LoadBusiness {
 	private IBusinessCliente businessCliente;
 
 	private IBusinessUtil businessUtil;
-	
+
 	private LoadBusiness() {
-		
+
 	}
-	
+
 	public static synchronized LoadBusiness getInstance() {
 		if (instance == null)
 			instance = new LoadBusiness();
 		return instance;
 	}
-	
+
 	public IBusinessAutomovel loadAutomovel() {
 		if (businessAutomovel == null)
 			businessAutomovel = new BusinessAutomovel();

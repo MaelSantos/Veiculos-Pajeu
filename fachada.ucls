@@ -1,0 +1,1604 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="br.com.VeiculosPajeu.Dao.DaoUsuario" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/DaoUsuario.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2037" y="623"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="2" language="java" name="br.com.VeiculosPajeu.Dao.Interface" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/Interface" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2173" y="253"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <interface id="3" language="java" name="br.com.VeiculosPajeu.Dao.Interface.IDaoPassageiro" 
+    project="VP - Veiculos Pajeu" file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/Interface/IDaoPassageiro.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1481" y="1121"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="4" language="java" name="br.com.VeiculosPajeu.Dao.DaoPassageiro" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/DaoPassageiro.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1616" y="614"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="5" language="java" name="br.com.VeiculosPajeu.Dao.Interface.IDaoCliente" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/Interface/IDaoCliente.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3970" y="1121"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="6" language="java" name="br.com.VeiculosPajeu.Dao.DaoFuncionario" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/DaoFuncionario.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2264" y="614"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="br.com.VeiculosPajeu.Dao.DaoReserva" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/DaoReserva.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3324" y="650"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="8" language="java" name="br.com.VeiculosPajeu.Dao" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2949" y="253"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <interface id="9" language="java" name="br.com.VeiculosPajeu.Dao.Interface.IDaoSuperUsuario" 
+    project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/Interface/IDaoSuperUsuario.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4953" y="1121"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="10" language="java" name="br.com.VeiculosPajeu.Dao.DaoVeiculo" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/DaoVeiculo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2942" y="668"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="11" language="java" name="br.com.VeiculosPajeu.Dao.Interface.IDaoEndereco" 
+    project="VP - Veiculos Pajeu" file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/Interface/IDaoEndereco.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5823" y="1121"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="12" language="java" name="br.com.VeiculosPajeu.Dao.DaoXml" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/DaoXml.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1046" y="342"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="13" language="java" name="br.com.VeiculosPajeu.Dao.Interface.IDaoConfiguracao" 
+    project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/Interface/IDaoConfiguracao.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="6067" y="1121"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="14" language="java" name="br.com.VeiculosPajeu.Dao.Interface.IDaoXml" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/Interface/IDaoXml.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1050" y="641"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="15" language="java" name="br.com.VeiculosPajeu.Dao.Interface.IDaoFinanceiro" 
+    project="VP - Veiculos Pajeu" file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/Interface/IDaoFinanceiro.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4583" y="1139"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="16" language="java" name="br.com.VeiculosPajeu.Dao.DaoUtil" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/DaoUtil.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1348" y="315"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="17" language="java" name="br.com.VeiculosPajeu.Dao.Interface.IDaoFuncionario" 
+    project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/Interface/IDaoFuncionario.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2229" y="1121"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="18" language="java" name="br.com.VeiculosPajeu.Dao.DaoFisica" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/DaoFisica.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2458" y="614"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="19" language="java" name="br.com.VeiculosPajeu.Dao.Interface.IDaoFisica" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/Interface/IDaoFisica.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2473" y="1121"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="20" language="java" name="br.com.VeiculosPajeu.Dao.DaoAutomovel" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/DaoAutomovel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1810" y="614"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="21" language="java" name="br.com.VeiculosPajeu.Dao.Interface.IDaoReserva" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/Interface/IDaoReserva.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3414" y="1157"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="22" language="java" name="br.com.VeiculosPajeu.Dao.DaoJuridica" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/DaoJuridica.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3611" y="614"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="23" language="java" name="br.com.VeiculosPajeu.Dao.Interface.IDaoFilial" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/Interface/IDaoFilial.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5197" y="1121"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="24" language="java" name="br.com.VeiculosPajeu.Dao.DaoCarga" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/DaoCarga.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2652" y="614"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="25" language="java" name="br.com.VeiculosPajeu.Dao.DaoCategoria" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/DaoCategoria.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4243" y="614"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="26" language="java" name="br.com.VeiculosPajeu.Dao.Interface.IDao" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/Interface/IDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3854" y="811"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="27" language="java" name="br.com.VeiculosPajeu.Dao.Interface.IDaoAutomovel" 
+    project="VP - Veiculos Pajeu" file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/Interface/IDaoAutomovel.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1725" y="1121"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="28" language="java" name="br.com.VeiculosPajeu.Dao.DaoSuperUsuario" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/DaoSuperUsuario.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4932" y="614"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="29" language="java" name="br.com.VeiculosPajeu.Dao.Interface.IDaoCategoria" 
+    project="VP - Veiculos Pajeu" file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/Interface/IDaoCategoria.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4214" y="1121"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="30" language="java" name="br.com.VeiculosPajeu.Dao.DaoCliente" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/DaoCliente.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4049" y="614"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="31" language="java" name="br.com.VeiculosPajeu.Dao.DaoFinanceiro" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/DaoFinanceiro.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4587" y="632"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="32" language="java" name="br.com.VeiculosPajeu.Dao.Interface.IDaoJuridica" 
+    project="VP - Veiculos Pajeu" file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/Interface/IDaoJuridica.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3726" y="1121"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="33" language="java" name="br.com.VeiculosPajeu.Dao.Interface.IDaoUsuario" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/Interface/IDaoUsuario.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1977" y="1130"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="34" language="java" name="br.com.VeiculosPajeu.Dao.Dao" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/Dao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3706" y="290"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="35" language="java" name="br.com.VeiculosPajeu.Dao.DaoConfiguracao" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/DaoConfiguracao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5896" y="614"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="36" language="java" name="br.com.VeiculosPajeu.Dao.DaoFilial" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/DaoFilial.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5126" y="614"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="37" language="java" name="br.com.VeiculosPajeu.Dao.DaoLocacao" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/DaoLocacao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5414" y="650"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="38" language="java" name="br.com.VeiculosPajeu.Dao.Interface.IDaoUtil" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/Interface/IDaoUtil.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1345" y="632"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="39" language="java" name="br.com.VeiculosPajeu.Dao.Interface.IDaoVeiculo" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/Interface/IDaoVeiculo.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3032" y="1175"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="40" language="java" name="br.com.VeiculosPajeu.Dao.Interface.IDaoLocacao" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/Interface/IDaoLocacao.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5510" y="1157"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="41" language="java" name="br.com.VeiculosPajeu.Dao.DaoEndereco" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/DaoEndereco.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5702" y="614"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="42" language="java" name="br.com.VeiculosPajeu.Dao.Interface.IDaoCarga" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Dao/Interface/IDaoCarga.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2717" y="1121"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="43" language="java" name="br.com.VeiculosPajeu.Business.BusinessUtil" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/BusinessUtil.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1158" y="2004"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="44" language="java" name="br.com.VeiculosPajeu.Business.Interface.IBusinessPassageiro" 
+    project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/Interface/IBusinessPassageiro.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2255" y="2705"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="45" language="java" name="br.com.VeiculosPajeu.Business.BusinessJuridica" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/BusinessJuridica.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1937" y="2221"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="46" language="java" name="br.com.VeiculosPajeu.Business.Interface.IBusinessAutomovel" 
+    project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/Interface/IBusinessAutomovel.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1707" y="2705"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="47" language="java" name="br.com.VeiculosPajeu.Business.BusinessCategoria" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/BusinessCategoria.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2814" y="2221"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="48" language="java" name="br.com.VeiculosPajeu.Business.Interface.IBusinessCategoria" 
+    project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/Interface/IBusinessCategoria.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2908" y="2714"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="49" language="java" name="br.com.VeiculosPajeu.Business.Interface.IBusinessUtil" 
+    project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/Interface/IBusinessUtil.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1158" y="2212"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="50" language="java" name="br.com.VeiculosPajeu.Business.BusinessUsuario" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/BusinessUsuario.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3318" y="2230"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="51" language="java" name="br.com.VeiculosPajeu.Business.Interface.IBusinessCliente" 
+    project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/Interface/IBusinessCliente.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5815" y="2705"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="52" language="java" name="br.com.VeiculosPajeu.Business.BusinessReserva" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/BusinessReserva.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2490" y="2248"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="53" language="java" name="br.com.VeiculosPajeu.Business.Interface.IBusinessConfiguracao" 
+    project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/Interface/IBusinessConfiguracao.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4772" y="2705"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="54" language="java" name="br.com.VeiculosPajeu.Business.BusinessPassageiro" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/BusinessPassageiro.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2179" y="2212"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="55" language="java" name="br.com.VeiculosPajeu.Business.Interface.IBusinessLocacao" 
+    project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/Interface/IBusinessLocacao.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3784" y="2741"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="56" language="java" name="br.com.VeiculosPajeu.Business.Interface.IBusinessSuperUsuario" 
+    project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/Interface/IBusinessSuperUsuario.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5541" y="2705"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="57" language="java" name="br.com.VeiculosPajeu.Business.Interface.IBusinessEndereco" 
+    project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/Interface/IBusinessEndereco.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="6363" y="2705"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="58" language="java" name="br.com.VeiculosPajeu.Business.Interface.IBusinessUsuario" 
+    project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/Interface/IBusinessUsuario.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3456" y="2714"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="59" language="java" name="br.com.VeiculosPajeu.Business.BusinessAutomovel" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/BusinessAutomovel.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1697" y="2212"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="60" language="java" name="br.com.VeiculosPajeu.Business.Interface.IBusiness" 
+    project="VP - Veiculos Pajeu" file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/Interface/IBusiness.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3569" y="2444"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="61" language="java" name="br.com.VeiculosPajeu.Business.Interface.IBusinessVeiculo" 
+    project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/Interface/IBusinessVeiculo.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4442" y="2759"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="62" language="java" name="br.com.VeiculosPajeu.Business.BusinessFisica" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/BusinessFisica.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3068" y="2230"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="63" language="java" name="br.com.VeiculosPajeu.Business.BusinessFuncionario" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/BusinessFuncionario.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1455" y="2221"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="64" language="java" name="br.com.VeiculosPajeu.Business.BusinessLocacao" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/BusinessLocacao.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3913" y="2248"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="65" language="java" name="br.com.VeiculosPajeu.Business.BusinessEndereco" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/BusinessEndereco.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="6285" y="2212"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="66" language="java" name="br.com.VeiculosPajeu.Business.BusinessFilial" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/BusinessFilial.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4216" y="2212"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="67" language="java" name="br.com.VeiculosPajeu.Business.BusinessVeiculo" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/BusinessVeiculo.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4521" y="2266"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="68" language="java" name="br.com.VeiculosPajeu.Business.BusinessCliente" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/BusinessCliente.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5832" y="2212"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="69" language="java" name="br.com.VeiculosPajeu.Business.Business" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/Business.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3805" y="1925"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="70" language="java" name="br.com.VeiculosPajeu.Business.BusinessCarga" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/BusinessCarga.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="6056" y="2212"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="71" language="java" name="br.com.VeiculosPajeu.Business.Interface.IBusinessJuridica" 
+    project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/Interface/IBusinessJuridica.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1981" y="2705"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="72" language="java" name="br.com.VeiculosPajeu.Business.Interface.IBusinessFinanceiro" 
+    project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/Interface/IBusinessFinanceiro.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5156" y="2723"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <package id="73" language="java" name="br.com.VeiculosPajeu.Business.Interface" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/Interface" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2082" y="1960"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <interface id="74" language="java" name="br.com.VeiculosPajeu.Business.Interface.IBusinessFuncionario" 
+    project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/Interface/IBusinessFuncionario.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1433" y="2705"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="75" language="java" name="br.com.VeiculosPajeu.Business.BusinessConfiguracao" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/BusinessConfiguracao.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4841" y="2212"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="76" language="java" name="br.com.VeiculosPajeu.Business.Interface.IBusinessFilial" 
+    project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/Interface/IBusinessFilial.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4112" y="2705"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="77" language="java" name="br.com.VeiculosPajeu.Business.Interface.IBusinessFisica" 
+    project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/Interface/IBusinessFisica.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3182" y="2705"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <package id="78" language="java" name="br.com.VeiculosPajeu.Business" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2975" y="1960"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="79" language="java" name="br.com.VeiculosPajeu.Business.BusinessFinanceiro" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/BusinessFinanceiro.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5215" y="2230"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="80" language="java" name="br.com.VeiculosPajeu.Business.BusinessSuperUsuario" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/BusinessSuperUsuario.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="5591" y="2221"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="81" language="java" name="br.com.VeiculosPajeu.Business.Interface.IBusinessCarga" 
+    project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/Interface/IBusinessCarga.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="6089" y="2705"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="82" language="java" name="br.com.VeiculosPajeu.Business.Interface.IBusinessReserva" 
+    project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Business/Interface/IBusinessReserva.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2581" y="2741"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="83" language="java" name="br.com.VeiculosPajeu.Fachada.Fachada" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Fachada/Fachada.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3843" y="4858"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="84" language="java" name="br.com.VeiculosPajeu.Fachada" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Fachada" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3227" y="4001"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="85" language="java" name="br.com.VeiculosPajeu.Util.LoadBusiness" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Util/LoadBusiness.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3837" y="3625"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="86" language="java" name="br.com.VeiculosPajeu.Fachada.IFachada" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Fachada/IFachada.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="4520" y="4840"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <package id="87" language="java" name="br.com.VeiculosPajeu.Util" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Util" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3212" y="3422"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <association id="88">    
+    <end type="SOURCE" refId="66" navigable="false">      
+      <attribute id="89" name="daoFilial"/>      
+      <multiplicity id="90" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="91">    
+    <end type="SOURCE" refId="52"/>    
+    <end type="TARGET" refId="69"/>  
+  </generalization>  
+  <generalization id="92">    
+    <end type="SOURCE" refId="55"/>    
+    <end type="TARGET" refId="60"/>  
+  </generalization>  
+  <realization id="93">    
+    <end type="SOURCE" refId="80"/>    
+    <end type="TARGET" refId="56"/>  
+  </realization>  
+  <realization id="94">    
+    <end type="SOURCE" refId="79"/>    
+    <end type="TARGET" refId="72"/>  
+  </realization>  
+  <realization id="95">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="38"/>  
+  </realization>  
+  <generalization id="96">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="34"/>  
+  </generalization>  
+  <association id="97">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="98" name="instance"/>      
+      <multiplicity id="99" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="100">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="3"/>  
+  </realization>  
+  <realization id="101">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="21"/>  
+  </realization>  
+  <association id="102">    
+    <end type="SOURCE" refId="85" navigable="false">      
+      <attribute id="103" name="businessConfiguracao"/>      
+      <multiplicity id="104" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="53" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="105">    
+    <end type="SOURCE" refId="50"/>    
+    <end type="TARGET" refId="58"/>  
+  </realization>  
+  <generalization id="106">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="26"/>  
+  </generalization>  
+  <generalization id="107">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="26"/>  
+  </generalization>  
+  <generalization id="108">    
+    <end type="SOURCE" refId="77"/>    
+    <end type="TARGET" refId="60"/>  
+  </generalization>  
+  <association id="109">    
+    <end type="SOURCE" refId="68" navigable="false">      
+      <attribute id="110" name="daoCliente"/>      
+      <multiplicity id="111" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="112">    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="26"/>  
+  </generalization>  
+  <realization id="113">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="19"/>  
+  </realization>  
+  <generalization id="114">    
+    <end type="SOURCE" refId="57"/>    
+    <end type="TARGET" refId="60"/>  
+  </generalization>  
+  <association id="115">    
+    <end type="SOURCE" refId="47" navigable="false">      
+      <attribute id="116" name="daoCategoria"/>      
+      <multiplicity id="117" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="118">    
+    <end type="SOURCE" refId="61"/>    
+    <end type="TARGET" refId="60"/>  
+  </generalization>  
+  <generalization id="119">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="34"/>  
+  </generalization>  
+  <realization id="120">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="29"/>  
+  </realization>  
+  <association id="121">    
+    <end type="SOURCE" refId="69" navigable="false">      
+      <attribute id="122" name="dao"/>      
+      <multiplicity id="123" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="26" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="124">    
+    <end type="SOURCE" refId="52" navigable="false">      
+      <attribute id="125" name="daoReserva"/>      
+      <multiplicity id="126" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="127">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="34"/>  
+  </generalization>  
+  <generalization id="128">    
+    <end type="SOURCE" refId="71"/>    
+    <end type="TARGET" refId="60"/>  
+  </generalization>  
+  <realization id="129">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="39"/>  
+  </realization>  
+  <generalization id="130">    
+    <end type="SOURCE" refId="74"/>    
+    <end type="TARGET" refId="60"/>  
+  </generalization>  
+  <generalization id="131">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="26"/>  
+  </generalization>  
+  <realization id="132">    
+    <end type="SOURCE" refId="54"/>    
+    <end type="TARGET" refId="44"/>  
+  </realization>  
+  <association id="133">    
+    <end type="SOURCE" refId="83" navigable="false">      
+      <attribute id="134" name="loadBusiness"/>      
+      <multiplicity id="135" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="85" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="136">    
+    <end type="SOURCE" refId="37"/>    
+    <end type="TARGET" refId="34"/>  
+  </generalization>  
+  <association id="137">    
+    <end type="SOURCE" refId="85" navigable="false">      
+      <attribute id="138" name="businessUsuario"/>      
+      <multiplicity id="139" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="58" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="140">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="26"/>  
+  </generalization>  
+  <association id="141">    
+    <end type="SOURCE" refId="43" navigable="false">      
+      <attribute id="142" name="daoUtil"/>      
+      <multiplicity id="143" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="38" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="144">    
+    <end type="SOURCE" refId="72"/>    
+    <end type="TARGET" refId="60"/>  
+  </generalization>  
+  <association id="145">    
+    <end type="SOURCE" refId="59" navigable="false">      
+      <attribute id="146" name="daoAutomovel"/>      
+      <multiplicity id="147" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="27" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="148">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="34"/>  
+  </generalization>  
+  <generalization id="149">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="26"/>  
+  </generalization>  
+  <generalization id="150">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="26"/>  
+  </generalization>  
+  <realization id="151">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="27"/>  
+  </realization>  
+  <generalization id="152">    
+    <end type="SOURCE" refId="59"/>    
+    <end type="TARGET" refId="69"/>  
+  </generalization>  
+  <association id="153">    
+    <end type="SOURCE" refId="83" navigable="false">      
+      <attribute id="154" name="instance"/>      
+      <multiplicity id="155" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="83" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="156">    
+    <end type="SOURCE" refId="32"/>    
+    <end type="TARGET" refId="26"/>  
+  </generalization>  
+  <association id="157">    
+    <end type="SOURCE" refId="54" navigable="false">      
+      <attribute id="158" name="daoPassageiro"/>      
+      <multiplicity id="159" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="160">    
+    <end type="SOURCE" refId="47"/>    
+    <end type="TARGET" refId="48"/>  
+  </realization>  
+  <generalization id="161">    
+    <end type="SOURCE" refId="66"/>    
+    <end type="TARGET" refId="69"/>  
+  </generalization>  
+  <association id="162">    
+    <end type="SOURCE" refId="64" navigable="false">      
+      <attribute id="163" name="daoLocacao"/>      
+      <multiplicity id="164" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="40" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="165">    
+    <end type="SOURCE" refId="41"/>    
+    <end type="TARGET" refId="11"/>  
+  </realization>  
+  <generalization id="166">    
+    <end type="SOURCE" refId="70"/>    
+    <end type="TARGET" refId="69"/>  
+  </generalization>  
+  <association id="167">    
+    <end type="SOURCE" refId="85" navigable="false">      
+      <attribute id="168" name="businessAutomovel"/>      
+      <multiplicity id="169" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="46" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="170">    
+    <end type="SOURCE" refId="54"/>    
+    <end type="TARGET" refId="69"/>  
+  </generalization>  
+  <association id="171">    
+    <end type="SOURCE" refId="85" navigable="false">      
+      <attribute id="172" name="businessCarga"/>      
+      <multiplicity id="173" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="81" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="174">    
+    <end type="SOURCE" refId="68"/>    
+    <end type="TARGET" refId="51"/>  
+  </realization>  
+  <generalization id="175">    
+    <end type="SOURCE" refId="62"/>    
+    <end type="TARGET" refId="69"/>  
+  </generalization>  
+  <generalization id="176">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="26"/>  
+  </generalization>  
+  <generalization id="177">    
+    <end type="SOURCE" refId="33"/>    
+    <end type="TARGET" refId="26"/>  
+  </generalization>  
+  <association id="178">    
+    <end type="SOURCE" refId="65" navigable="false">      
+      <attribute id="179" name="daoEndereco"/>      
+      <multiplicity id="180" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="181">    
+    <end type="SOURCE" refId="36"/>    
+    <end type="TARGET" refId="34"/>  
+  </generalization>  
+  <generalization id="182">    
+    <end type="SOURCE" refId="40"/>    
+    <end type="TARGET" refId="26"/>  
+  </generalization>  
+  <realization id="183">    
+    <end type="SOURCE" refId="83"/>    
+    <end type="TARGET" refId="86"/>  
+  </realization>  
+  <generalization id="184">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="26"/>  
+  </generalization>  
+  <generalization id="185">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="34"/>  
+  </generalization>  
+  <generalization id="186">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="34"/>  
+  </generalization>  
+  <generalization id="187">    
+    <end type="SOURCE" refId="47"/>    
+    <end type="TARGET" refId="69"/>  
+  </generalization>  
+  <generalization id="188">    
+    <end type="SOURCE" refId="44"/>    
+    <end type="TARGET" refId="60"/>  
+  </generalization>  
+  <generalization id="189">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="34"/>  
+  </generalization>  
+  <realization id="190">    
+    <end type="SOURCE" refId="30"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <realization id="191">    
+    <end type="SOURCE" refId="28"/>    
+    <end type="TARGET" refId="9"/>  
+  </realization>  
+  <association id="192">    
+    <end type="SOURCE" refId="79" navigable="false">      
+      <attribute id="193" name="daoFinanceiro"/>      
+      <multiplicity id="194" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="195">    
+    <end type="SOURCE" refId="85" navigable="false">      
+      <attribute id="196" name="businessPassageiro"/>      
+      <multiplicity id="197" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="44" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="198">    
+    <end type="SOURCE" refId="56"/>    
+    <end type="TARGET" refId="60"/>  
+  </generalization>  
+  <association id="199">    
+    <end type="SOURCE" refId="85" navigable="false">      
+      <attribute id="200" name="businessFinanceiro"/>      
+      <multiplicity id="201" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="72" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="202">    
+    <end type="SOURCE" refId="35"/>    
+    <end type="TARGET" refId="13"/>  
+  </realization>  
+  <generalization id="203">    
+    <end type="SOURCE" refId="31"/>    
+    <end type="TARGET" refId="34"/>  
+  </generalization>  
+  <realization id="204">    
+    <end type="SOURCE" refId="64"/>    
+    <end type="TARGET" refId="55"/>  
+  </realization>  
+  <association id="205">    
+    <end type="SOURCE" refId="85" navigable="false">      
+      <attribute id="206" name="businessReserva"/>      
+      <multiplicity id="207" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="82" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="208">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="17"/>  
+  </realization>  
+  <realization id="209">    
+    <end type="SOURCE" refId="37"/>    
+    <end type="TARGET" refId="40"/>  
+  </realization>  
+  <generalization id="210">    
+    <end type="SOURCE" refId="81"/>    
+    <end type="TARGET" refId="60"/>  
+  </generalization>  
+  <generalization id="211">    
+    <end type="SOURCE" refId="42"/>    
+    <end type="TARGET" refId="26"/>  
+  </generalization>  
+  <realization id="212">    
+    <end type="SOURCE" refId="66"/>    
+    <end type="TARGET" refId="76"/>  
+  </realization>  
+  <association id="213">    
+    <end type="SOURCE" refId="85" navigable="false">      
+      <attribute id="214" name="businessLocacao"/>      
+      <multiplicity id="215" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="55" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="216">    
+    <end type="SOURCE" refId="67"/>    
+    <end type="TARGET" refId="61"/>  
+  </realization>  
+  <generalization id="217">    
+    <end type="SOURCE" refId="50"/>    
+    <end type="TARGET" refId="69"/>  
+  </generalization>  
+  <generalization id="218">    
+    <end type="SOURCE" refId="48"/>    
+    <end type="TARGET" refId="60"/>  
+  </generalization>  
+  <association id="219">    
+    <end type="SOURCE" refId="80" navigable="false">      
+      <attribute id="220" name="daoSuperUsuario"/>      
+      <multiplicity id="221" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="222">    
+    <end type="SOURCE" refId="85" navigable="false">      
+      <attribute id="223" name="businessSuperUsuario"/>      
+      <multiplicity id="224" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="56" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="225">    
+    <end type="SOURCE" refId="85" navigable="false">      
+      <attribute id="226" name="businessCliente"/>      
+      <multiplicity id="227" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="51" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="228">    
+    <end type="SOURCE" refId="63"/>    
+    <end type="TARGET" refId="69"/>  
+  </generalization>  
+  <association id="229">    
+    <end type="SOURCE" refId="50" navigable="false">      
+      <attribute id="230" name="daoUsuario"/>      
+      <multiplicity id="231" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="33" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="232">    
+    <end type="SOURCE" refId="75"/>    
+    <end type="TARGET" refId="53"/>  
+  </realization>  
+  <realization id="233">    
+    <end type="SOURCE" refId="69"/>    
+    <end type="TARGET" refId="60"/>  
+  </realization>  
+  <association id="234">    
+    <end type="SOURCE" refId="85" navigable="false">      
+      <attribute id="235" name="businessCategoria"/>      
+      <multiplicity id="236" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="48" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="237">    
+    <end type="SOURCE" refId="51"/>    
+    <end type="TARGET" refId="60"/>  
+  </generalization>  
+  <association id="238">    
+    <end type="SOURCE" refId="85" navigable="false">      
+      <attribute id="239" name="businessEndereco"/>      
+      <multiplicity id="240" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="57" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="241">    
+    <end type="SOURCE" refId="85" navigable="false">      
+      <attribute id="242" name="businessFuncionario"/>      
+      <multiplicity id="243" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="74" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="244">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="34"/>  
+  </generalization>  
+  <generalization id="245">    
+    <end type="SOURCE" refId="45"/>    
+    <end type="TARGET" refId="69"/>  
+  </generalization>  
+  <association id="246">    
+    <end type="SOURCE" refId="85" navigable="false">      
+      <attribute id="247" name="businessJuridica"/>      
+      <multiplicity id="248" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="71" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="249">    
+    <end type="SOURCE" refId="65"/>    
+    <end type="TARGET" refId="69"/>  
+  </generalization>  
+  <generalization id="250">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="26"/>  
+  </generalization>  
+  <association id="251">    
+    <end type="SOURCE" refId="85" navigable="false">      
+      <attribute id="252" name="instance"/>      
+      <multiplicity id="253" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="85" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="254">    
+    <end type="SOURCE" refId="63" navigable="false">      
+      <attribute id="255" name="daoFuncionario"/>      
+      <multiplicity id="256" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="257">    
+    <end type="SOURCE" refId="76"/>    
+    <end type="TARGET" refId="60"/>  
+  </generalization>  
+  <realization id="258">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="14"/>  
+  </realization>  
+  <association id="259">    
+    <end type="SOURCE" refId="85" navigable="false">      
+      <attribute id="260" name="businessUtil"/>      
+      <multiplicity id="261" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="49" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="262">    
+    <end type="SOURCE" refId="85" navigable="false">      
+      <attribute id="263" name="businessFilial"/>      
+      <multiplicity id="264" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="76" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="265">    
+    <end type="SOURCE" refId="45"/>    
+    <end type="TARGET" refId="71"/>  
+  </realization>  
+  <realization id="266">    
+    <end type="SOURCE" refId="65"/>    
+    <end type="TARGET" refId="57"/>  
+  </realization>  
+  <realization id="267">    
+    <end type="SOURCE" refId="63"/>    
+    <end type="TARGET" refId="74"/>  
+  </realization>  
+  <association id="268">    
+    <end type="SOURCE" refId="85" navigable="false">      
+      <attribute id="269" name="businessFisica"/>      
+      <multiplicity id="270" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="77" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="271">    
+    <end type="SOURCE" refId="53"/>    
+    <end type="TARGET" refId="60"/>  
+  </generalization>  
+  <realization id="272">    
+    <end type="SOURCE" refId="36"/>    
+    <end type="TARGET" refId="23"/>  
+  </realization>  
+  <generalization id="273">    
+    <end type="SOURCE" refId="75"/>    
+    <end type="TARGET" refId="69"/>  
+  </generalization>  
+  <realization id="274">    
+    <end type="SOURCE" refId="70"/>    
+    <end type="TARGET" refId="81"/>  
+  </realization>  
+  <generalization id="275">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="34"/>  
+  </generalization>  
+  <realization id="276">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="42"/>  
+  </realization>  
+  <generalization id="277">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="26"/>  
+  </generalization>  
+  <association id="278">    
+    <end type="SOURCE" refId="85" navigable="false">      
+      <attribute id="279" name="businessVeiculo"/>      
+      <multiplicity id="280" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="61" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="281">    
+    <end type="SOURCE" refId="62"/>    
+    <end type="TARGET" refId="77"/>  
+  </realization>  
+  <realization id="282">    
+    <end type="SOURCE" refId="34"/>    
+    <end type="TARGET" refId="26"/>  
+  </realization>  
+  <generalization id="283">    
+    <end type="SOURCE" refId="80"/>    
+    <end type="TARGET" refId="69"/>  
+  </generalization>  
+  <realization id="284">    
+    <end type="SOURCE" refId="31"/>    
+    <end type="TARGET" refId="15"/>  
+  </realization>  
+  <association id="285">    
+    <end type="SOURCE" refId="45" navigable="false">      
+      <attribute id="286" name="daoJuridica"/>      
+      <multiplicity id="287" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="22" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="288">    
+    <end type="SOURCE" refId="79"/>    
+    <end type="TARGET" refId="69"/>  
+  </generalization>  
+  <association id="289">    
+    <end type="SOURCE" refId="75" navigable="false">      
+      <attribute id="290" name="daoConfiguracao"/>      
+      <multiplicity id="291" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="292">    
+    <end type="SOURCE" refId="62" navigable="false">      
+      <attribute id="293" name="daoFisica"/>      
+      <multiplicity id="294" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="295">    
+    <end type="SOURCE" refId="67" navigable="false">      
+      <attribute id="296" name="daoVeiculo"/>      
+      <multiplicity id="297" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="39" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="298">    
+    <end type="SOURCE" refId="82"/>    
+    <end type="TARGET" refId="60"/>  
+  </generalization>  
+  <generalization id="299">    
+    <end type="SOURCE" refId="64"/>    
+    <end type="TARGET" refId="69"/>  
+  </generalization>  
+  <realization id="300">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="32"/>  
+  </realization>  
+  <generalization id="301">    
+    <end type="SOURCE" refId="30"/>    
+    <end type="TARGET" refId="34"/>  
+  </generalization>  
+  <generalization id="302">    
+    <end type="SOURCE" refId="41"/>    
+    <end type="TARGET" refId="34"/>  
+  </generalization>  
+  <realization id="303">    
+    <end type="SOURCE" refId="43"/>    
+    <end type="TARGET" refId="49"/>  
+  </realization>  
+  <generalization id="304">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="34"/>  
+  </generalization>  
+  <generalization id="305">    
+    <end type="SOURCE" refId="39"/>    
+    <end type="TARGET" refId="26"/>  
+  </generalization>  
+  <generalization id="306">    
+    <end type="SOURCE" refId="58"/>    
+    <end type="TARGET" refId="60"/>  
+  </generalization>  
+  <realization id="307">    
+    <end type="SOURCE" refId="52"/>    
+    <end type="TARGET" refId="82"/>  
+  </realization>  
+  <generalization id="308">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="26"/>  
+  </generalization>  
+  <generalization id="309">    
+    <end type="SOURCE" refId="28"/>    
+    <end type="TARGET" refId="34"/>  
+  </generalization>  
+  <generalization id="310">    
+    <end type="SOURCE" refId="67"/>    
+    <end type="TARGET" refId="69"/>  
+  </generalization>  
+  <generalization id="311">    
+    <end type="SOURCE" refId="46"/>    
+    <end type="TARGET" refId="60"/>  
+  </generalization>  
+  <generalization id="312">    
+    <end type="SOURCE" refId="35"/>    
+    <end type="TARGET" refId="34"/>  
+  </generalization>  
+  <realization id="313">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="33"/>  
+  </realization>  
+  <realization id="314">    
+    <end type="SOURCE" refId="59"/>    
+    <end type="TARGET" refId="46"/>  
+  </realization>  
+  <association id="315">    
+    <end type="SOURCE" refId="70" navigable="false">      
+      <attribute id="316" name="daoCarga"/>      
+      <multiplicity id="317" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="42" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="318">    
+    <end type="SOURCE" refId="68"/>    
+    <end type="TARGET" refId="69"/>  
+  </generalization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

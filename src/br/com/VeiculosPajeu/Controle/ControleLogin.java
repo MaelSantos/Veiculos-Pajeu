@@ -34,7 +34,6 @@ public class ControleLogin extends Controle {
 
 	@Override
 	protected void init() {
-
 		try {
 			Long cont = fachada.searchCont(Usuario.class);
 

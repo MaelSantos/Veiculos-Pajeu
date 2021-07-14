@@ -14,7 +14,7 @@ import br.com.VeiculosPajeu.Util.SQLUtil;
 
 public class Dao<T extends Entidade> implements IDao<T> {
 
-	protected static EntityManager entityManager = getEntityManager();
+	protected static EntityManager entityManager;
 	private static ConnectionFactory connectionFactory = ConnectionFactory.getInstance();
 	protected Class<T> classe;
 

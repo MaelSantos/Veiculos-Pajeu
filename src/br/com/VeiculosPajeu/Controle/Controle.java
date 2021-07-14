@@ -7,6 +7,7 @@ import java.util.ResourceBundle;
 
 import br.com.VeiculosPajeu.App.App;
 import br.com.VeiculosPajeu.Fachada.Fachada;
+import br.com.VeiculosPajeu.Fachada.IFachada;
 import br.com.VeiculosPajeu.Util.Ouvinte;
 import br.com.VeiculosPajeu.View.Notificacao;
 import javafx.event.ActionEvent;
@@ -20,7 +21,7 @@ public abstract class Controle implements Initializable, Ouvinte {
 	protected AnchorPane pane;
 	
 	protected Notificacao notificacao;
-	protected Fachada fachada;
+	protected IFachada fachada;
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {

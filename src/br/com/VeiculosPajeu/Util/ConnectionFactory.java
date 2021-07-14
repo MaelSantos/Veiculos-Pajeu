@@ -31,11 +31,11 @@ public class ConnectionFactory {
 		if (init) {
 			propriedades.put("hibernate.hbm2ddl.import_files", "/META-INF/sql/init.sql");
 			propriedades.put("hibernate.hbm2ddl.auto", "create");
-			System.out.println(propriedades);
+//			System.out.println(propriedades);
 		} else {
 			propriedades.remove("hibernate.hbm2ddl.import_files");
 			propriedades.put("hibernate.hbm2ddl.auto", "update");
-			System.out.println(propriedades);
+//			System.out.println(propriedades);
 		}
 
 	}

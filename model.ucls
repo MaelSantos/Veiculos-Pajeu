@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="br.com.VeiculosPajeu.Entidade.Veiculo" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Entidade/Veiculo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="1095" width="271" x="861" y="1995"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="br.com.VeiculosPajeu.Entidade.Categoria" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Entidade/Categoria.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="448" width="182" x="371" y="3130"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="br.com.VeiculosPajeu.Entidade.Locacao" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Entidade/Locacao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="754" width="228" x="861" y="1201"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="br.com.VeiculosPajeu.Entidade.Passageiro" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Entidade/Passageiro.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="376" width="228" x="593" y="3130"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="br.com.VeiculosPajeu.Entidade.Juridica" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Entidade/Juridica.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="250" width="220" x="1707" y="3744"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="br.com.VeiculosPajeu.Entidade.Carga" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Entidade/Carga.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="466" width="230" x="861" y="3130"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="br.com.VeiculosPajeu.Entidade.Automovel" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Entidade/Automovel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="574" width="231" x="1131" y="3130"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="br.com.VeiculosPajeu.Entidade.Log" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Entidade/Log.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="430" width="180" x="403" y="63"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="br.com.VeiculosPajeu.Entidade.Fisica" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Entidade/Fisica.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="412" width="273" x="1967" y="3744"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="br.com.VeiculosPajeu.Entidade.Funcionario" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Entidade/Funcionario.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="250" width="260" x="1940" y="3130"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="br.com.VeiculosPajeu.Entidade.Configuracao" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Entidade/Configuracao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="358" width="223" x="1423" y="3744"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="br.com.VeiculosPajeu.Entidade.Endereco" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Entidade/Endereco.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="592" width="192" x="1383" y="4196"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="br.com.VeiculosPajeu.Entidade.Reserva" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Entidade/Reserva.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="592" width="227" x="1444" y="1201"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="br.com.VeiculosPajeu.Entidade.SuperUsuario" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Entidade/SuperUsuario.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="214" width="228" x="1444" y="3130"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="15" language="java" name="br.com.VeiculosPajeu.Entidade" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Entidade" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="55" width="241" x="740" y="63"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="16" language="java" name="br.com.VeiculosPajeu.Entidade.Entidade" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Entidade/Entidade.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="249" width="180" x="1138" y="63"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="br.com.VeiculosPajeu.Entidade.Financeiro" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Entidade/Financeiro.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="628" width="235" x="861" y="533"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="br.com.VeiculosPajeu.Entidade.Usuario" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Entidade/Usuario.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="303" width="180" x="1511" y="1995"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="br.com.VeiculosPajeu.Entidade.Cliente" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Entidade/Cliente.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="303" width="188" x="1712" y="3130"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="20" language="java" name="br.com.VeiculosPajeu.Entidade.Filial" project="VP - Veiculos Pajeu" 
+    file="/VP - Veiculos Pajeu/src/br/com/VeiculosPajeu/Entidade/Filial.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="250" width="188" x="310" y="3744"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <generalization id="21">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="18"/>  
+  </generalization>  
+  <generalization id="22">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="19"/>  
+  </generalization>  
+  <association id="23">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="24" name="categoria"/>      
+      <multiplicity id="25" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="26">    
+    <bendpoint x="340" y="3130"/>    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="27" name="filial"/>      
+      <multiplicity id="28" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="29">    
+    <bendpoint x="1676" y="3744"/>    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="30" name="endereco"/>      
+      <multiplicity id="31" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="32">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="33" name="veiculo"/>      
+      <multiplicity id="34" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="35">    
+    <bendpoint x="1392" y="1995"/>    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="36" name="cliente"/>      
+      <multiplicity id="37" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="38">    
+    <bendpoint x="1721" y="1995"/>    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="39" name="cliente"/>      
+      <multiplicity id="40" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="41">    
+    <bendpoint x="916" y="1995"/>    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="42" name="categoria"/>      
+      <multiplicity id="43" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="44">    
+    <bendpoint x="1413" y="3130"/>    
+    <bendpoint x="1413" y="1995"/>    
+    <bendpoint x="1413" y="1201"/>    
+    <bendpoint x="1413" y="533"/>    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <association id="45">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="46" name="configuracao"/>      
+      <multiplicity id="47" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="48">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <association id="49">    
+    <bendpoint x="298" y="1995"/>    
+    <bendpoint x="298" y="3130"/>    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="50" name="filial_locacao"/>      
+      <multiplicity id="51" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="52">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="53" name="locacao"/>      
+      <multiplicity id="54" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="55">    
+    <bendpoint x="1147" y="1201"/>    
+    <bendpoint x="1147" y="533"/>    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <association id="56">    
+    <bendpoint x="319" y="1995"/>    
+    <bendpoint x="319" y="3130"/>    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="57" name="filial_devolucao"/>      
+      <multiplicity id="58" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="59">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="60" name="usuario"/>      
+      <multiplicity id="61" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="62">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="63" name="usuario"/>      
+      <multiplicity id="64" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="65">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <association id="66">    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="67" name="endereco"/>      
+      <multiplicity id="68" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="69">    
+    <bendpoint x="1300" y="533"/>    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <association id="70">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="71" name="financeiro"/>      
+      <multiplicity id="72" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="73">    
+    <bendpoint x="1126" y="533"/>    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <generalization id="74">    
+    <bendpoint x="1701" y="1201"/>    
+    <bendpoint x="1701" y="533"/>    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <generalization id="75">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <association id="76">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="77" name="filial"/>      
+      <multiplicity id="78" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="79">    
+    <bendpoint x="763" y="1995"/>    
+    <bendpoint x="763" y="1201"/>    
+    <bendpoint x="763" y="533"/>    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <generalization id="80">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="18"/>  
+  </generalization>  
+  <generalization id="81">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="19"/>  
+  </generalization>  
+  <generalization id="82">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="83">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="18"/>  
+  </generalization>  
+  <generalization id="84">    
+    <bendpoint x="1392" y="3744"/>    
+    <bendpoint x="1392" y="3130"/>    
+    <bendpoint x="1371" y="1995"/>    
+    <bendpoint x="1371" y="1201"/>    
+    <bendpoint x="1371" y="533"/>    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <generalization id="85">    
+    <bendpoint x="277" y="3130"/>    
+    <bendpoint x="277" y="1995"/>    
+    <bendpoint x="277" y="1201"/>    
+    <bendpoint x="277" y="533"/>    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="16"/>  
+  </generalization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
