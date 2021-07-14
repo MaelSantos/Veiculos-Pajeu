@@ -5,10 +5,8 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import br.com.VeiculosPajeu.Entidade.Entidade;
 import br.com.VeiculosPajeu.Entidade.Locacao;
 import br.com.VeiculosPajeu.Entidade.Reserva;
-import br.com.VeiculosPajeu.Entidade.Enum.Tela;
 import br.com.VeiculosPajeu.Entidade.Enum.TipoEstatistica;
 import br.com.VeiculosPajeu.Entidade.Enum.TipoGrafico;
 import br.com.VeiculosPajeu.Exception.BusinessException;
@@ -24,7 +22,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.TextField;
 
-public class ControleEstatistica extends Controle {
+public class ControleEstatistica extends ControleAdapter {
 
 	@FXML
 	private TextField tfdBusca;
@@ -46,12 +44,6 @@ public class ControleEstatistica extends Controle {
 
 	@FXML
 	private PieChart gfcPizza;
-
-	@Override
-	public void update(Tela tela, Entidade entidade) {
-		// TODO Auto-generated method stub
-
-	}
 
 	@Override
 	protected void init() {

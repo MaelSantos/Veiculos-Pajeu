@@ -7,7 +7,6 @@ import java.util.Map;
 
 import br.com.VeiculosPajeu.Entidade.Cliente;
 import br.com.VeiculosPajeu.Entidade.Entidade;
-import br.com.VeiculosPajeu.Entidade.Enum.Tela;
 import br.com.VeiculosPajeu.Entidade.Enum.TipoRelatorio;
 import br.com.VeiculosPajeu.Exception.BusinessException;
 import javafx.concurrent.Service;
@@ -33,7 +32,7 @@ import net.sf.jasperreports.engine.design.JasperDesign;
 import net.sf.jasperreports.engine.xml.JRXmlLoader;
 import net.sf.jasperreports.view.JasperViewer;
 
-public class ControleRelatorio extends Controle {
+public class ControleRelatorio extends ControleAdapter {
 
 	@FXML
 	private AnchorPane pane;
@@ -68,12 +67,6 @@ public class ControleRelatorio extends Controle {
 	private double porcentagem = 0;
 	private Service<?> service;
 	private List<? extends Entidade> list;
-
-	@Override
-	public void update(Tela tela, Entidade entidade) {
-		// TODO Auto-generated method stub
-
-	}
 
 	@Override
 	protected void init() {

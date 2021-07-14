@@ -4,7 +4,6 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 import br.com.VeiculosPajeu.App.App;
-import br.com.VeiculosPajeu.Entidade.Entidade;
 import br.com.VeiculosPajeu.Entidade.Financeiro;
 import br.com.VeiculosPajeu.Entidade.Locacao;
 import br.com.VeiculosPajeu.Entidade.Enum.EstadoFinanceiro;
@@ -20,14 +19,14 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-public class ControleGerenciarFinanceiro extends Controle {
+public class ControleGerenciarFinanceiro extends ControleAdapter {
 
 	@FXML
-    private DatePicker dtpDe;
+	private DatePicker dtpDe;
 
-    @FXML
-    private DatePicker dtpAte;
-	
+	@FXML
+	private DatePicker dtpAte;
+
 	@FXML
 	private ComboBox<EstadoFinanceiro> cbxEstado;
 
@@ -53,16 +52,10 @@ public class ControleGerenciarFinanceiro extends Controle {
 	private TableColumn<Financeiro, Float> colValorTotal;
 
 	@Override
-	public void update(Tela tela, Entidade entidade) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
 	protected void init() {
-		
+
 		cbxEstado.getItems().setAll(EstadoFinanceiro.values());
-		
+
 		colDataAberta.setCellValueFactory(new PropertyValueFactory<>("data_aberta"));
 		colEstado.setCellValueFactory(new PropertyValueFactory<>("estado"));
 		colLocacao.setCellValueFactory(new PropertyValueFactory<>("locacao"));
@@ -111,7 +104,8 @@ public class ControleGerenciarFinanceiro extends Controle {
 		if (obj == btnBuscar) {
 			try {
 				if (dtpDe.getValue() != null && dtpAte.getValue() != null) {
-					tblFinaceiro.getItems().setAll(fachada.searchAllFinanceiroEstado(dtpDe.getValue(), dtpAte.getValue(), cbxEstado.getValue()));
+					tblFinaceiro.getItems().setAll(fachada.searchAllFinanceiroEstado(dtpDe.getValue(),
+							dtpAte.getValue(), cbxEstado.getValue()));
 				} else
 					notificacao.mensagemAtencao();
 			} catch (BusinessException e) {
@@ -125,16 +119,16 @@ public class ControleGerenciarFinanceiro extends Controle {
 				if (tblFinaceiro.getSelectionModel().getSelectedItem() != null)
 					App.notificarOuvintes(Tela.FINANCEIRO, tblFinaceiro.getSelectionModel().getSelectedItem());
 		});
-		
+
 	}
 
 	@Override
 	protected void limparCampos() {
-		
+
 		dtpDe.setValue(null);
 		dtpAte.setValue(null);
 		cbxEstado.getSelectionModel().clearSelection();
-		
+
 	}
 
 }

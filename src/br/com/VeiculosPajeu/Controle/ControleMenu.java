@@ -18,7 +18,7 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
-public class ControleMenu extends Controle {
+public class ControleMenu extends ControleAdapter {
 
 	@FXML
     private Menu mnuHome;
@@ -124,10 +124,6 @@ public class ControleMenu extends Controle {
 
     @FXML
     private AnchorPane paneEdit;
-    
-	@Override
-	protected void init() {
-	}
 
 	@Override
 	public void action(ActionEvent event) {
@@ -213,12 +209,6 @@ public class ControleMenu extends Controle {
 		paneEdit.setLeftAnchor(paneNovo, 0.0);
 		paneEdit.setRightAnchor(paneNovo, 0.0);
 		paneEdit.getChildren().setAll(paneNovo);
-	}
-
-	@Override
-	protected void limparCampos() {
-		// TODO Stub de m�todo gerado automaticamente
-
 	}
 
 	@Override

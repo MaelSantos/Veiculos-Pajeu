@@ -19,7 +19,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-public class ControleHistorico extends Controle {
+public class ControleHistorico extends ControleAdapter {
 
 	@FXML
 	private Label lblTitulo;
@@ -46,11 +46,11 @@ public class ControleHistorico extends Controle {
 	private TableColumn<Log, String> colAutor;
 
 	@FXML
-    private TableColumn<Log, String> colEntidade;
-	
+	private TableColumn<Log, String> colEntidade;
+
 	@FXML
-    private TableColumn<Log, String> colAnterior;
-	
+	private TableColumn<Log, String> colAnterior;
+
 	@Override
 	public void update(Tela tela, Entidade entidade) {
 	}
@@ -64,7 +64,7 @@ public class ControleHistorico extends Controle {
 		colData.setCellValueFactory(new PropertyValueFactory<>("data"));
 		colEntidade.setCellValueFactory(new PropertyValueFactory<>("tabela"));
 		colAnterior.setCellValueFactory(new PropertyValueFactory<>("anterior"));
-		
+
 		colData.setCellFactory(coluna -> {
 
 			return new TableCell<Log, LocalDate>() {
@@ -92,8 +92,7 @@ public class ControleHistorico extends Controle {
 			try {
 
 				if (cbxTipo.getValue() != null && dtpData.getValue() != null)
-					tblLog.getItems().setAll(
-							fachada.searchLog(dtpData.getValue(), cbxTipo.getValue()));
+					tblLog.getItems().setAll(fachada.searchLog(dtpData.getValue(), cbxTipo.getValue()));
 				else
 					notificacao.mensagemAtencao();
 			} catch (BusinessException e) {
@@ -101,12 +100,6 @@ public class ControleHistorico extends Controle {
 				e.printStackTrace();
 			}
 		}
-
-	}
-
-	@Override
-	protected void limparCampos() {
-		// TODO Auto-generated method stub
 
 	}
 

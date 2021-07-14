@@ -23,7 +23,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-public class ControleAtrasados extends Controle {
+public class ControleAtrasados extends ControleAdapter {
 
 	@FXML
 	private TableView<ReservaView> tblReserva;
@@ -61,9 +61,9 @@ public class ControleAtrasados extends Controle {
 	@FXML
 	private TableColumn<LocacaoView, TipoLocacao> colTipo;
 
-    @FXML
-    private Button btnAtualizar;
-	
+	@FXML
+	private Button btnAtualizar;
+
 	@Override
 	public void update(Tela tela, Entidade entidade) {
 		// TODO Stub de m�todo gerado automaticamente
@@ -84,7 +84,7 @@ public class ControleAtrasados extends Controle {
 		colDataDevolucao.setCellValueFactory(new PropertyValueFactory<>("data_devolucao"));
 		colTipo.setCellValueFactory(new PropertyValueFactory<>("tipoLocacao"));
 		colValor.setCellValueFactory(new PropertyValueFactory<>("valor_total"));
-		
+
 		colDataLocacao.setCellFactory(coluna -> {
 
 			return new TableCell<ReservaView, LocalDate>() {
@@ -100,7 +100,7 @@ public class ControleAtrasados extends Controle {
 				}
 			};
 		});
-		
+
 		colDataLocacao1.setCellFactory(coluna -> {
 
 			return new TableCell<LocacaoView, LocalDate>() {
@@ -149,7 +149,6 @@ public class ControleAtrasados extends Controle {
 			};
 		});
 
-		
 		try {
 			tblReserva.getItems().setAll(fachada.searchAllReservaVencidos());
 			tblLocacao.getItems().setAll(fachada.searchAllLocacaoVencidos());
@@ -170,7 +169,7 @@ public class ControleAtrasados extends Controle {
 					}
 				}
 		});
-		
+
 		tblLocacao.setOnMouseClicked(e -> {
 			if (e.getClickCount() > 1)
 				if (tblLocacao.getSelectionModel().getSelectedItem() != null) {
@@ -200,12 +199,6 @@ public class ControleAtrasados extends Controle {
 				notificacao.mensagemErro("Buscar Reservas Atrasadas", e.getMessage());
 			}
 		}
-
-	}
-
-	@Override
-	protected void limparCampos() {
-		// TODO Stub de m�todo gerado automaticamente
 
 	}
 

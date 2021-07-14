@@ -17,7 +17,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.stage.DirectoryChooser;
 
-public class ControleConfiguracoes extends Controle {
+public class ControleConfiguracoes extends ControleAdapter {
 
 	@FXML
 	private Button btnAlterarConf;
@@ -108,12 +108,6 @@ public class ControleConfiguracoes extends Controle {
 		} else if (obj == btnAparencia) {
 			App.notificarOuvintes(Tela.APARENCIA);
 		}
-	}
-
-	@Override
-	protected void limparCampos() {
-		// TODO Stub de m�todo gerado automaticamente
-
 	}
 
 }

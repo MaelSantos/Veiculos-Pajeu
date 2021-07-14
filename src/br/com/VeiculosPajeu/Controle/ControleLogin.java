@@ -2,7 +2,6 @@ package br.com.VeiculosPajeu.Controle;
 
 import br.com.VeiculosPajeu.App.App;
 import br.com.VeiculosPajeu.Dao.Dao;
-import br.com.VeiculosPajeu.Entidade.Entidade;
 import br.com.VeiculosPajeu.Entidade.SuperUsuario;
 import br.com.VeiculosPajeu.Entidade.Usuario;
 import br.com.VeiculosPajeu.Entidade.Enum.Tela;
@@ -13,7 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
-public class ControleLogin extends Controle {
+public class ControleLogin extends ControleAdapter {
 
 	@FXML
 	private TextField tfdLogin;
@@ -72,7 +71,7 @@ public class ControleLogin extends Controle {
 
 			notificacao.showDialogo(Tela.RESETAR_SENHA);
 			App.notificarOuvintes(Tela.RESETAR_SENHA);
-			
+
 		} else if (obj == btnSair) {
 			if (notificacao.showConfirmacao("Sair?", "", "Deseja Realmente Sair?"))
 				System.exit(0);
@@ -84,12 +83,6 @@ public class ControleLogin extends Controle {
 	protected void limparCampos() {
 		tfdLogin.setText("");
 		tfdSenha.setText("");
-	}
-
-	@Override
-	public void update(Tela tela, Entidade entidade) {
-		// TODO Stub de m�todo gerado automaticamente
-
 	}
 
 }

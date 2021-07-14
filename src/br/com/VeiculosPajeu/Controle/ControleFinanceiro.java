@@ -16,121 +16,105 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Paint;
 
-public class ControleFinanceiro extends Controle{
+public class ControleFinanceiro extends ControleAdapter {
 
-    @FXML
-    private FlowPane flwBusca;
+	@FXML
+	private FlowPane flwBusca;
 
-    @FXML
-    private TextField tfdBusca;
+	@FXML
+	private TextField tfdBusca;
 
-    @FXML
-    private Button btnBuscar;
+	@FXML
+	private Button btnBuscar;
 
-    @FXML
-    private GridPane grdFinanceiro;
+	@FXML
+	private GridPane grdFinanceiro;
 
-    @FXML
-    private Label lblValorTotal;
+	@FXML
+	private Label lblValorTotal;
 
-    @FXML
-    private Label lblMulta;
+	@FXML
+	private Label lblMulta;
 
-    @FXML
-    private Label lblValorPago;
+	@FXML
+	private Label lblValorPago;
 
-    @FXML
-    private Label lblDataAberta;
+	@FXML
+	private Label lblDataAberta;
 
-    @FXML
-    private Label lblDataVencimento;
+	@FXML
+	private Label lblDataVencimento;
 
-    @FXML
-    private Label lblDataPaga;
+	@FXML
+	private Label lblDataPaga;
 
-    @FXML
-    private Label lblEstado;
+	@FXML
+	private Label lblEstado;
 
-    @FXML
-    private Button btnPagar;
+	@FXML
+	private Button btnPagar;
 
-    private Financeiro financeiro;
-    
+	private Financeiro financeiro;
+
 	@Override
 	public void update(Tela tela, Entidade entidade) {
-		
-		if(tela == Tela.FINANCEIRO)
-		{
+
+		if (tela == Tela.FINANCEIRO) {
 			if (entidade instanceof Financeiro) {
 				financeiro = (Financeiro) entidade;
 				carregarCampos();
-			}
-			else if(financeiro == null)
+			} else if (financeiro == null)
 				limparCampos();
 		}
-		
-	}
 
-	@Override
-	protected void init() {
-		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
 	public void action(ActionEvent event) {
-		
+
 		Object obj = event.getSource();
-		
-		if(obj == btnBuscar)
-		{
+
+		if (obj == btnBuscar) {
 			try {
-				
-				if(!tfdBusca.getText().trim().isEmpty())
-				{
-					Financeiro financeiro = notificacao.selecionar(fachada.searchAllFinanceiro(tfdBusca.getText().trim()));
-					
-					if(financeiro != null)
-					{
+
+				if (!tfdBusca.getText().trim().isEmpty()) {
+					Financeiro financeiro = notificacao
+							.selecionar(fachada.searchAllFinanceiro(tfdBusca.getText().trim()));
+
+					if (financeiro != null) {
 						this.financeiro = financeiro;
-						tfdBusca.setText(financeiro+"");
+						tfdBusca.setText(financeiro + "");
 						carregarCampos();
 					}
-				}
-				else
+				} else
 					notificacao.mensagemAtencao();
-				
+
 			} catch (BusinessException e) {
 				notificacao.mensagemErro("Buscar Financeiro", e.getMessage());
 				e.printStackTrace();
 			}
 		}
-		if(obj == btnPagar)
-		{
-			if(financeiro != null)
-			{
-				if(financeiro.getEstado() != EstadoFinanceiro.PAGO && financeiro.getEstado() != EstadoFinanceiro.CANCELADO)
-				{
+		if (obj == btnPagar) {
+			if (financeiro != null) {
+				if (financeiro.getEstado() != EstadoFinanceiro.PAGO
+						&& financeiro.getEstado() != EstadoFinanceiro.CANCELADO) {
 					ControlePagamento.setDescricao("Pagamento", 0F);
 					App.notificarOuvintes(financeiro);
-					notificacao.showDialogo(Tela.PAGAMENTO);				
-				}
-				else
-					notificacao.mensagemPersonalisado(AlertType.WARNING, "Já Pago", "Conta Já Encerrada", "");				
-			}
-			else
+					notificacao.showDialogo(Tela.PAGAMENTO);
+				} else
+					notificacao.mensagemPersonalisado(AlertType.WARNING, "Já Pago", "Conta Já Encerrada", "");
+			} else
 				notificacao.mensagemAtencao();
 		}
-		
+
 	}
 
-	private void carregarCampos()
-	{
+	private void carregarCampos() {
 		lblDataAberta.setText(getDate(financeiro.getData_aberta()));
 		lblDataVencimento.setText(getDate(financeiro.getData_vencimento()));
 		lblEstado.setText(financeiro.getEstado() + "");
 		lblEstado.setTextFill(Paint.valueOf(financeiro.getEstado().getCor()));
-		lblMulta.setText(financeiro.getMulta()+"");
+		lblMulta.setText(financeiro.getMulta() + "");
 		lblValorPago.setText(financeiro.getValor_pago() + "");
 		lblValorTotal.setText(financeiro.getValor_total() + "");
 		if (financeiro.getData_paga() != null)
@@ -138,10 +122,10 @@ public class ControleFinanceiro extends Controle{
 		else
 			lblDataPaga.setText("-");
 	}
-	
+
 	@Override
 	protected void limparCampos() {
-		
+
 		lblDataAberta.setText("-");
 		lblDataVencimento.setText("-");
 		lblEstado.setText("-");
@@ -151,9 +135,9 @@ public class ControleFinanceiro extends Controle{
 		lblValorTotal.setText("-");
 		lblDataPaga.setText("-");
 		tfdBusca.setText("");
-		
+
 		financeiro = null;
-		
+
 	}
 
 }

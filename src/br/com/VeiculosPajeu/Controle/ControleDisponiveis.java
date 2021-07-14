@@ -5,7 +5,6 @@ import java.util.List;
 
 import br.com.VeiculosPajeu.App.App;
 import br.com.VeiculosPajeu.Entidade.Categoria;
-import br.com.VeiculosPajeu.Entidade.Entidade;
 import br.com.VeiculosPajeu.Entidade.Filial;
 import br.com.VeiculosPajeu.Entidade.Veiculo;
 import br.com.VeiculosPajeu.Entidade.Enum.Tela;
@@ -19,7 +18,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-public class ControleDisponiveis extends Controle {
+public class ControleDisponiveis extends ControleAdapter {
 
     @FXML
     private TextField tfdFilial;
@@ -52,12 +51,6 @@ public class ControleDisponiveis extends Controle {
 	private TableColumn<Veiculo, String> colPlaca;
 	
 	private Filial filial;
-
-	@Override
-	public void update(Tela tela, Entidade entidade) {
-		// TODO Auto-generated method stub
-
-	}
 
 	@Override
 	protected void init() {
@@ -127,12 +120,6 @@ public class ControleDisponiveis extends Controle {
 				e.printStackTrace();
 			}
 		}
-
-	}
-
-	@Override
-	protected void limparCampos() {
-		// TODO Auto-generated method stub
 
 	}
 

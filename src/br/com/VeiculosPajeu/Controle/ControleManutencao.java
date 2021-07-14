@@ -2,7 +2,6 @@ package br.com.VeiculosPajeu.Controle;
 
 import br.com.VeiculosPajeu.App.App;
 import br.com.VeiculosPajeu.Entidade.Categoria;
-import br.com.VeiculosPajeu.Entidade.Entidade;
 import br.com.VeiculosPajeu.Entidade.Locacao;
 import br.com.VeiculosPajeu.Entidade.Enum.Tela;
 import br.com.VeiculosPajeu.Entidade.View.VeiculoView;
@@ -14,50 +13,44 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
-public class ControleManutencao extends Controle{
+public class ControleManutencao extends ControleAdapter {
 
 	@FXML
-    private TableView<VeiculoView> tblVeiculos;
+	private TableView<VeiculoView> tblVeiculos;
 
-    @FXML
-    private TableColumn<VeiculoView, String> colFabricante;
+	@FXML
+	private TableColumn<VeiculoView, String> colFabricante;
 
-    @FXML
-    private TableColumn<VeiculoView, String> colModelo;
+	@FXML
+	private TableColumn<VeiculoView, String> colModelo;
 
-    @FXML
-    private TableColumn<VeiculoView, Categoria> colCategoria;
+	@FXML
+	private TableColumn<VeiculoView, Categoria> colCategoria;
 
-    @FXML
-    private TableColumn<VeiculoView, Integer> colAnoModelo;
+	@FXML
+	private TableColumn<VeiculoView, Integer> colAnoModelo;
 
-    @FXML
-    private TableColumn<VeiculoView, String> colPlaca;
+	@FXML
+	private TableColumn<VeiculoView, String> colPlaca;
 
-    @FXML
-    private Button btnAtualizar;
-    
-	@Override
-	public void update(Tela tela, Entidade entidade) {
-		// TODO Auto-generated method stub
-		
-	}
+	@FXML
+	private Button btnAtualizar;
 
 	@Override
 	protected void init() {
-		
+
 		colAnoModelo.setCellValueFactory(new PropertyValueFactory<>("ano_modelo"));
 		colCategoria.setCellValueFactory(new PropertyValueFactory<>("categoria"));
 		colFabricante.setCellValueFactory(new PropertyValueFactory<>("fabricante"));
 		colModelo.setCellValueFactory(new PropertyValueFactory<>("modelo"));
 		colPlaca.setCellValueFactory(new PropertyValueFactory<>("placa"));
-				
+
 		try {
 			tblVeiculos.getItems().setAll(fachada.searchAllManutencao());
 		} catch (BusinessException e) {
 			e.printStackTrace();
 		}
-		
+
 		tblVeiculos.setOnMouseClicked(e -> {
 			if (e.getClickCount() > 1)
 				if (tblVeiculos.getSelectionModel().getSelectedItem() != null) {
@@ -72,12 +65,11 @@ public class ControleManutencao extends Controle{
 				}
 		});
 
-		
 	}
 
 	@Override
 	public void action(ActionEvent event) {
-		
+
 		Object obj = event.getSource();
 
 		if (obj == btnAtualizar) {
@@ -89,13 +81,6 @@ public class ControleManutencao extends Controle{
 			}
 		}
 
-		
-	}
-
-	@Override
-	protected void limparCampos() {
-		// TODO Auto-generated method stub
-		
 	}
 
 }

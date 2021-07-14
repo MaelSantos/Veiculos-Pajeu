@@ -12,54 +12,52 @@ import javafx.concurrent.Service;
 import javafx.concurrent.Task;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 
-public class ControleCarregar implements Initializable{
+public class ControleCarregar extends ControleAdapter {
 
 	@FXML
 	private AnchorPane pane;
-	
+
 	@FXML
 	private ProgressBar pgbCarregar;
 
 	@FXML
 	private Label lblInformacao;
-	
+
 	private Service<Object> servico;
 	private String texto;
 	double porcentagem = 0.0;
 
-	public Pane carregarArquivo(Tela caminho) throws IOException
-	{
-		Pane pane = FXMLLoader.load(getClass().getClassLoader().getResource("br/com/VeiculosPajeu/View/"+caminho.getCaminho()+".fxml"));
-		this.texto = "Tela - "+caminho;
-		
+	public Pane carregarArquivo(Tela caminho) throws IOException {
+		Pane pane = FXMLLoader.load(
+				getClass().getClassLoader().getResource("br/com/VeiculosPajeu/View/" + caminho.getCaminho() + ".fxml"));
+		this.texto = "Tela - " + caminho;
+
 		App.addTela(pane, caminho);
-		
+
 		return pane;
 	}
-	
+
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 
 		pane.setStyle("-fx-background-color:" + DaoXml.getInstance().buscarAparencia() + ";");
-		
-		servico = new Service<Object>() {			
+
+		servico = new Service<Object>() {
 			@Override
 			protected Task<Object> createTask() {
 				return new Task<Object>() {
 
 					int contador = 0;
 
-					public void updateData()
-					{
+					public void updateData() {
 						updateMessage(texto);
-						porcentagem += 100/28; //porcentagem total dividido por quantidade de telas
+						porcentagem += 100 / 28; // porcentagem total dividido por quantidade de telas
 						updateProgress(porcentagem, 100);
 						System.out.println(contador++);
 						System.out.println(texto);
@@ -67,12 +65,12 @@ public class ControleCarregar implements Initializable{
 
 					@Override
 					protected Void call() throws Exception {
-						// peso por tela - Double sumPerView =  1.0/ Tela.values().length;
+						// peso por tela - Double sumPerView = 1.0/ Tela.values().length;
 						try {
 
-							App.aparencia  = carregarArquivo(Tela.APARENCIA);
+							App.aparencia = carregarArquivo(Tela.APARENCIA);
 							updateData();
-							
+
 							App.login = carregarArquivo(Tela.LOGIN);
 							updateData();
 							App.menu = carregarArquivo(Tela.MENU);
@@ -81,49 +79,49 @@ public class ControleCarregar implements Initializable{
 							updateData();
 							App.disponiveis = carregarArquivo(Tela.DISPONIVEIS);
 							updateData();
-							
+
 							App.configuracao = carregarArquivo(Tela.CONFIGURACAO);
 							updateData();
 							App.cadastroCliente = carregarArquivo(Tela.CADASTRO_CLIENTE);
 							updateData();
-							App.cadastroFilial  = carregarArquivo(Tela.CADASTRO_FILIAL);
+							App.cadastroFilial = carregarArquivo(Tela.CADASTRO_FILIAL);
 							updateData();
-							App.cadastroVeiculo  = carregarArquivo(Tela.CADASTRO_VEICULO);
+							App.cadastroVeiculo = carregarArquivo(Tela.CADASTRO_VEICULO);
 							updateData();
-							App.cadastroUsuario  = carregarArquivo(Tela.CADASTRO_USUARIO);
+							App.cadastroUsuario = carregarArquivo(Tela.CADASTRO_USUARIO);
 							updateData();
-							
-							App.busca  = carregarArquivo(Tela.BUSCAR);
+
+							App.busca = carregarArquivo(Tela.BUSCAR);
 							updateData();
 							App.detalhes = carregarArquivo(Tela.DETALHES);
 							updateData();
 							App.perfil = carregarArquivo(Tela.PERFIL);
 							updateData();
-							
+
 							App.resetarSenha = carregarArquivo(Tela.RESETAR_SENHA);
 							updateData();
-							
-							App.locacao  = carregarArquivo(Tela.LOCACAO);
+
+							App.locacao = carregarArquivo(Tela.LOCACAO);
 							updateData();
-							App.reserva  = carregarArquivo(Tela.RESERVA);
+							App.reserva = carregarArquivo(Tela.RESERVA);
 							updateData();
-							App.retirarReserva  = carregarArquivo(Tela.RETIRAR_RESERVA);
+							App.retirarReserva = carregarArquivo(Tela.RETIRAR_RESERVA);
 							updateData();
-							App.devolucao  = carregarArquivo(Tela.DEVOLUCAO);
+							App.devolucao = carregarArquivo(Tela.DEVOLUCAO);
 							updateData();
-							App.manutencao  = carregarArquivo(Tela.MANUTENCAO);
+							App.manutencao = carregarArquivo(Tela.MANUTENCAO);
 							updateData();
-							
-							App.cadastroCategoria  = carregarArquivo(Tela.CADASTRO_CATEGORIA);
+
+							App.cadastroCategoria = carregarArquivo(Tela.CADASTRO_CATEGORIA);
 							updateData();
-							App.editarConfiguracao  = carregarArquivo(Tela.EDITAR_CONFIGURACAO);
+							App.editarConfiguracao = carregarArquivo(Tela.EDITAR_CONFIGURACAO);
 							updateData();
-							
-							App.informacoes  = carregarArquivo(Tela.INFORMACOES);
+
+							App.informacoes = carregarArquivo(Tela.INFORMACOES);
 							updateData();
-							App.ajuda  = carregarArquivo(Tela.AJUDA);
+							App.ajuda = carregarArquivo(Tela.AJUDA);
 							updateData();
-							App.relatorio  = carregarArquivo(Tela.RELATORIO);
+							App.relatorio = carregarArquivo(Tela.RELATORIO);
 							updateData();
 							App.estatistica = carregarArquivo(Tela.ESTATISTICA);
 							updateData();
@@ -135,24 +133,25 @@ public class ControleCarregar implements Initializable{
 							updateData();
 							App.pagamento = carregarArquivo(Tela.PAGAMENTO);
 							updateData();
-							
+
 							App.loginScene = new Scene(App.login);
 							App.menuScene = new Scene(App.menu);
-							
+
 							return null;
-						}catch (Exception e) {
+						} catch (Exception e) {
 							e.printStackTrace();
-							Notificacao.getInstance().mensagemErro("","Erro ao carregar tela!!!, Contate o ADM");
+							Notificacao.getInstance().mensagemErro("", "Erro ao carregar tela!!!, Contate o ADM");
 							throw new Exception();
 						}
 					}
+
 					@Override
 					protected void succeeded() {
 						super.succeeded();
 						App.changeStage(Tela.LOGIN);
 						ControleAtualizacao.getInstace();
 					}
-					
+
 					@Override
 					protected void scheduled() {
 						updateMessage("Informações do Banco de Dados...");
@@ -163,10 +162,10 @@ public class ControleCarregar implements Initializable{
 			}
 		};
 
-		//fazendo o bind (ligando) nas proprety
+		// fazendo o bind (ligando) nas proprety
 		lblInformacao.textProperty().bind(servico.messageProperty());
 		pgbCarregar.progressProperty().bind(servico.progressProperty());
-		//precisa inicializar o Service
+		// precisa inicializar o Service
 		servico.start();
 	}
 

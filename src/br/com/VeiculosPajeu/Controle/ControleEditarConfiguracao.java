@@ -14,7 +14,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
-public class ControleEditarConfiguracao extends Controle {
+public class ControleEditarConfiguracao extends ControleAdapter {
 
 	@FXML
 	private TextField tfdKmControle;
@@ -84,12 +84,6 @@ public class ControleEditarConfiguracao extends Controle {
 				notificacao.mensagemErro("Editar Configurações", e.getMessage());
 			}
 		}
-
-	}
-
-	@Override
-	protected void limparCampos() {
-		// TODO Stub de m�todo gerado automaticamente
 
 	}
 

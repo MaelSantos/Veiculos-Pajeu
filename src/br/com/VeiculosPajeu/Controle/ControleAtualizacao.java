@@ -9,7 +9,7 @@ import javafx.concurrent.Service;
 import javafx.concurrent.Task;
 import javafx.scene.text.Text;
 
-public class ControleAtualizacao {
+public class ControleAtualizacao extends ControleAdapter{
 
 	private static ControleAtualizacao instance;
 	

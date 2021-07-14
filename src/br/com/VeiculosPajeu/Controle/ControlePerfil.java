@@ -14,7 +14,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Text;
 
-public class ControlePerfil extends Controle {
+public class ControlePerfil extends ControleAdapter {
 
 	@FXML
     private Button btnEditarPerfil;
@@ -40,11 +40,6 @@ public class ControlePerfil extends Controle {
 	private Funcionario funcionario;
 	private SuperUsuario superUsuario;
 	private Cliente cliente;
-
-	@Override
-	protected void init() {
-
-	}
 
 	@Override
 	public void action(ActionEvent event) {

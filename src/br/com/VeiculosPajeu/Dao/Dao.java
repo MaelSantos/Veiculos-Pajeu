@@ -6,16 +6,17 @@ import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.TypedQuery;
 
+import br.com.VeiculosPajeu.Connection.Connection;
 import br.com.VeiculosPajeu.Dao.Interface.IDao;
 import br.com.VeiculosPajeu.Entidade.Entidade;
+import br.com.VeiculosPajeu.Entidade.Enum.TipoBanco;
 import br.com.VeiculosPajeu.Exception.DaoException;
-import br.com.VeiculosPajeu.Util.ConnectionFactory;
 import br.com.VeiculosPajeu.Util.SQLUtil;
 
 public class Dao<T extends Entidade> implements IDao<T> {
 
 	protected static EntityManager entityManager;
-	private static ConnectionFactory connectionFactory = ConnectionFactory.getInstance();
+	private static Connection connectionFactory = Connection.getInstance(TipoBanco.POSTGRESQL);
 	protected Class<T> classe;
 
 	public static void closeConnection() {

@@ -6,7 +6,6 @@ import java.util.List;
 import br.com.VeiculosPajeu.App.App;
 import br.com.VeiculosPajeu.Entidade.Automovel;
 import br.com.VeiculosPajeu.Entidade.Carga;
-import br.com.VeiculosPajeu.Entidade.Entidade;
 import br.com.VeiculosPajeu.Entidade.Filial;
 import br.com.VeiculosPajeu.Entidade.Financeiro;
 import br.com.VeiculosPajeu.Entidade.Locacao;
@@ -24,7 +23,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-public class ControleDevolucao extends Controle {
+public class ControleDevolucao extends ControleAdapter {
 
 	@FXML
 	private Button btnDevolver;
@@ -58,10 +57,6 @@ public class ControleDevolucao extends Controle {
 	private Locacao locacao;
 
 	private MaskFieldUtil maskFieldUtil;
-
-	@Override
-	public void update(Tela tela, Entidade entidade) {
-	}
 
 	@Override
 	protected void init() {

@@ -29,7 +29,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 
-public class ControleDetalhes extends Controle {
+public class ControleDetalhes extends ControleAdapter {
 
 	@FXML
 	private Label lblTitulo;
@@ -148,11 +148,6 @@ public class ControleDetalhes extends Controle {
 	}
 
 	@Override
-	protected void init() {
-
-	}
-
-	@Override
 	public void action(ActionEvent event) {
 
 		Object obj = event.getSource();
@@ -253,11 +248,6 @@ public class ControleDetalhes extends Controle {
 				App.notificarOuvintes(Tela.EDITAR_RESERVA, entidade);
 			}
 		}
-
-	}
-
-	@Override
-	protected void limparCampos() {
 
 	}
 
