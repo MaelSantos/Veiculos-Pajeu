@@ -6,6 +6,7 @@ import br.com.VeiculosPajeu.Entidade.SuperUsuario;
 import br.com.VeiculosPajeu.Entidade.Usuario;
 import br.com.VeiculosPajeu.Entidade.Enum.Tela;
 import br.com.VeiculosPajeu.Exception.BusinessException;
+import br.com.VeiculosPajeu.Util.SynchronizedToken;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -31,8 +32,15 @@ public class ControleLogin extends ControleAdapter {
 
 	private Usuario usuario;
 
+	private SynchronizedToken synchronizedToken;
+	private String chave;
+
 	@Override
 	protected void init() {
+
+		synchronizedToken = SynchronizedToken.getInstance();
+		chave = synchronizedToken.gerarToken();
+
 		try {
 			Long cont = fachada.searchCont(Usuario.class);
 
@@ -55,18 +63,28 @@ public class ControleLogin extends ControleAdapter {
 		Object obj = event.getSource();
 
 		if (obj == btnEntrar) {
-			try {
-				usuario = fachada.searchUser(tfdLogin.getText().trim(), tfdSenha.getText().trim());
-				if (usuario != null) {
-					App.notificarOuvintes(Tela.MENU, usuario);
-					App.changeStage(Tela.MENU);
-					limparCampos();
-				} else
-					notificacao.mensagemErro("Fazer Login", "Login ou Senha Errados!!!");
-			} catch (BusinessException e) {
-				notificacao.mensagemErro("Login ou Senha Errados!!!", e.getMessage());
-				e.printStackTrace();
+
+			String login = tfdLogin.getText().trim();
+			String senha = tfdSenha.getText().trim();
+
+			if (synchronizedToken.addToken(chave, login + senha)) {
+
+				try {
+					usuario = fachada.searchUser(login, senha);
+					if (usuario != null) {
+						App.notificarOuvintes(Tela.MENU, usuario);
+						App.changeStage(Tela.MENU);
+						limparCampos();
+					} else
+						notificacao.mensagemErro("Fazer Login", "Login ou Senha Errados!!!");
+				} catch (BusinessException e) {
+					notificacao.mensagemErro("Login ou Senha Errados!!!", e.getMessage());
+					e.printStackTrace();
+				}
+
+				synchronizedToken.removerToken(chave);
 			}
+
 		} else if (obj == btnResetarSenha) {
 
 			notificacao.showDialogo(Tela.RESETAR_SENHA);

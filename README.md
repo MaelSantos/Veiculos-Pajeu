@@ -35,5 +35,5 @@ Para mais informações consultar a pasta `docs` do projeto.
 - [ ] Memento
 - [ ] Decorator
 - [x] Adapter
-- [ ] Synchronized Token
+- [x] Synchronized Token
 - [x] Proxy
