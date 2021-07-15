@@ -25,13 +25,15 @@ Para mais informações consultar a pasta `docs` do projeto.
 - [x] Singleton
 - [x] Template Method
 - [x] Factory Method
-- [ ] Abstract Factory
+- [x] Abstract Factory
 - [x] Iterator
-- [x] Lazy Loading (Lazy Initialization)
+- [x] Lazy Initialization
 - [x] Business Object (BO)
 - [x] Value Object (VO)
 - [x] Data Transfer Object (DAO)
 - [x] MVC
 - [ ] Memento
 - [ ] Decorator
-- [ ] Adapter
+- [x] Adapter
+- [ ] Synchronized Token
+- [ ] Proxy
