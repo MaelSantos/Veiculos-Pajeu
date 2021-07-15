@@ -20,7 +20,7 @@ public class Connection {
 			connectionFactory = new ConnectionMySql();
 			break;
 		case POSTGRESQL:
-			connectionFactory = new ConnectionPostgree();
+			connectionFactory = new ConnectionPostgre();
 			break;
 		}
 

@@ -1,0 +1,64 @@
+ Observer
+	Util > Ouvinte
+	Util > Sujeito
+	App > App
+	Controle > ControleCarregar
+	
+ Facade
+	Fachada > Fachada
+	
+ Singleton
+	Util > Backup
+	Util > CriptografiaUtil
+	Util > DateUtil
+	Util > LoadBusiness
+	Util > MaskFieldUtil
+	Util > SynchronizedToken
+	Util > TimeUtil
+	View > Notificacao
+	Fachada > Fachada
+	Connection > Connection
+ 
+ Template Method
+	Business > Business > validation(entidade);
+ 
+ Factory Method
+	Business > Business > createDao()
+ 
+ Abstract Factory
+	Connection > Connection
+	Connection > IConnectionFactory
+	Connection > ConnectionPostgre
+	Connection > ConnectionMySql
+ 
+ Iterator
+	Enum > Estado
+	Util > Sujeito
+	Controle > ControleEstatistica
+	Util > SQLUtil
+ 
+ Lazy Initialization
+	Util > LoadBusiness
+	Fachada > Fachada
+ 
+ Business Object (BO)
+	Business
+ Value Object (VO)
+	Entidade
+ Data Transfer Object (DAO)
+	Dao
+ MVC
+	View, Entidade, Controle
+	
+ Adapter
+	Controle > ControleAdapter
+	
+ Synchronized Token
+	Util > SynchronizedToken
+	Controle > ControleLogin
+	Controle > ControleBusca
+ 
+ Proxy
+	Util > BusinessUtilProxy
+	
+	

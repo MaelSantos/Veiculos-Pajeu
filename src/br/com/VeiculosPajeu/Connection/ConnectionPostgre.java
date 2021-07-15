@@ -6,7 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-public class ConnectionPostgree implements IConnectionFactory {
+public class ConnectionPostgre implements IConnectionFactory {
 
 	@Override
 	public EntityManager createEntityManager(Map<String, String> propriedades) {

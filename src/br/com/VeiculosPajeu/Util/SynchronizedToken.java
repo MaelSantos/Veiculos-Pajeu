@@ -13,7 +13,7 @@ public class SynchronizedToken {
 		tokens = new HashMap<>();
 	}
 
-	public static SynchronizedToken getInstance() {
+	public synchronized static SynchronizedToken getInstance() {
 		if (instance == null)
 			instance = new SynchronizedToken();
 		return instance;
