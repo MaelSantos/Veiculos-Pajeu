@@ -40,64 +40,64 @@ Para mais informações consultar a pasta `docs` do projeto.
 
 ## Localização dos Padrões
 - Observer
-	`Util > Ouvinte`
-	`Util > Sujeito`
-	`App > App`
-	`Controle > ControleCarregar`
+	- `Util > Ouvinte`
+	- `Util > Sujeito`
+	- `App > App`
+	- `Controle > ControleCarregar`
 	
 - Facade
-	`Fachada > Fachada`
+	- `Fachada > Fachada`
 	
 - Singleton
-	`Util > Backup`
-	`Util > CriptografiaUtil`
-	`Util > DateUtil`
-	`Util > LoadBusiness`
-	`Util > MaskFieldUtil`
-	`Util > SynchronizedToken`
-	`Util > TimeUtil`
-	`View > Notificacao`
-	`Fachada > Fachada`
-	`Connection > Connection`
+	- `Util > Backup`
+	- `Util > CriptografiaUtil`
+	- `Util > DateUtil`
+	- `Util > LoadBusiness`
+	- `Util > MaskFieldUtil`
+	- `Util > SynchronizedToken`
+	- `Util > TimeUtil`
+	- `View > Notificacao`
+	- `Fachada > Fachada`
+	- `Connection > Connection`
  
 - Template Method
-	`Business > Business > validation(entidade);`
+	- `Business > Business > validation(entidade);`
  
 - Factory Method
-	`Business > Business > createDao()`
+	- `Business > Business > createDao()`
  
 - Abstract Factory
-	`Connection > Connection`
-	`Connection > IConnectionFactory`
-	`Connection > ConnectionPostgre`
-	`Connection > ConnectionMySql`
+	- `Connection > Connection`
+	- `Connection > IConnectionFactory`
+	- `Connection > ConnectionPostgre`
+	- `Connection > ConnectionMySql`
  
 - Iterator
-	`Enum > Estado`
-	`Util > Sujeito`
-	`Controle > ControleEstatistica`
-	`Util > SQLUtil`
+	- `Enum > Estado`
+	- `Util > Sujeito`
+	- `Controle > ControleEstatistica`
+	- `Util > SQLUtil`
  
 - Lazy Initialization
-	`Util > LoadBusiness`
-	`Fachada > Fachada`
+	- `Util > LoadBusiness`
+	- `Fachada > Fachada`
  
 - Business Object (BO)
-	`Business`
+	- `Business`
 - Value Object (VO)
-	`Entidade`
+	- `Entidade`
 - Data Transfer Object (DAO)
-	`Dao`
+	- `Dao`
 - MVC
-	`View`, `Entidade`, `Controle`
+	- `View`, `Entidade`, `Controle`
 	
 - Adapter
-	`Controle > ControleAdapter`
+	- `Controle > ControleAdapter`
 	
 - Synchronized Token
-	`Util > SynchronizedToken`
-	`Controle > ControleLogin`
-	`Controle > ControleBusca`
+	- `Util > SynchronizedToken`
+	- `Controle > ControleLogin`
+	- `Controle > ControleBusca`
  
 - Proxy
-	`Util > BusinessUtilProxy`
+	- `Util > BusinessUtilProxy`
