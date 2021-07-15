@@ -36,4 +36,4 @@ Para mais informações consultar a pasta `docs` do projeto.
 - [ ] Decorator
 - [x] Adapter
 - [ ] Synchronized Token
-- [ ] Proxy
+- [x] Proxy

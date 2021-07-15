@@ -443,16 +443,6 @@ public class Fachada implements IFachada {
 	}
 
 	@Override
-	public List<Log> searchLog(LocalDate date, TipoHistorico tipoHistorico) throws BusinessException {
-		return loadBusiness.loadUtil().searchLog(date, tipoHistorico);
-	}
-
-	@Override
-	public Long searchContSelect(Class<? extends Entidade> classe, String sql) throws BusinessException {
-		return loadBusiness.loadUtil().searchContSelect(classe, sql);
-	}
-
-	@Override
 	public void saveFinanceiro(Financeiro entidade) throws BusinessException {
 		loadBusiness.loadFinanceiro().save(entidade);
 	}
@@ -494,11 +484,6 @@ public class Fachada implements IFachada {
 	}
 
 	@Override
-	public Long searchCont(Class<? extends Entidade> classe) throws BusinessException {
-		return loadBusiness.loadUtil().searchCont(classe);
-	}
-
-	@Override
 	public BigInteger verificarAtrasadosFinanceiro() throws BusinessException {
 		return loadBusiness.loadFinanceiro().verificarAtrasados();
 	}
@@ -511,5 +496,20 @@ public class Fachada implements IFachada {
 	@Override
 	public BigInteger verificarManutencaoVeiculo() throws BusinessException {
 		return loadBusiness.loadVeiculo().verificarManutencao();
+	}
+
+	@Override
+	public List<Log> searchLog(LocalDate date, TipoHistorico tipoHistorico) throws BusinessException {
+		return loadBusiness.loadUtil().searchLog(date, tipoHistorico);
+	}
+
+	@Override
+	public Long searchContSelect(Class<? extends Entidade> classe, String sql) throws BusinessException {
+		return loadBusiness.loadUtil().searchContSelect(classe, sql);
+	}
+
+	@Override
+	public Long searchCont(Class<? extends Entidade> classe) throws BusinessException {
+		return loadBusiness.loadUtil().searchCont(classe);
 	}
 }

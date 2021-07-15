@@ -16,7 +16,7 @@ import br.com.VeiculosPajeu.Business.BusinessPassageiro;
 import br.com.VeiculosPajeu.Business.BusinessReserva;
 import br.com.VeiculosPajeu.Business.BusinessSuperUsuario;
 import br.com.VeiculosPajeu.Business.BusinessUsuario;
-import br.com.VeiculosPajeu.Business.BusinessUtil;
+import br.com.VeiculosPajeu.Business.BusinessUtilProxy;
 import br.com.VeiculosPajeu.Business.BusinessVeiculo;
 import br.com.VeiculosPajeu.Business.Interface.IBusinessAutomovel;
 import br.com.VeiculosPajeu.Business.Interface.IBusinessCarga;
@@ -176,7 +176,7 @@ public class LoadBusiness {
 
 	public IBusinessUtil loadUtil() {
 		if (businessUtil == null)
-			businessUtil = new BusinessUtil();
+			businessUtil = new BusinessUtilProxy();
 		return businessUtil;
 	}
 }
