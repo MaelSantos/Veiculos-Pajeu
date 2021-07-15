@@ -100,4 +100,4 @@ Para mais informações consultar a pasta `docs` do projeto.
 	- `Controle > ControleBusca`
  
 - Proxy
-	- `Util > BusinessUtilProxy`
+	- `Business > BusinessUtilProxy`
